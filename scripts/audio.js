@@ -57,7 +57,6 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   }
   
   $wrapper.html(audio);
-  this.$element = $wrapper.children();
 };
 
 /**
