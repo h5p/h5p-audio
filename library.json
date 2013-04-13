@@ -1,0 +1,19 @@
+{
+  "title": "Audio",
+  "contentType": "Library",
+  "description": "Simple library that displays an audio player.",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 0,
+  "machineName": "H5P.Audio",
+  "author": "Frode Petterson",
+  "preloadedJs": [
+    {
+      "path": "scripts/audio.js"
+    },
+    {
+      "path": "scripts/flowplayer-3.2.12.min.js"
+    }
+  ]
+}
