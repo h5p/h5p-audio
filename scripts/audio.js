@@ -5,7 +5,6 @@ var H5P = H5P || {};
  * 
  * @param {object} params Options for this library.
  * @param {string} contentPath The path to our content folder.
- * @returns {undefined}
  */
 H5P.Audio = function (params, contentPath) {
   for (var i = 0; i < params.files.length; i++) {
@@ -20,10 +19,9 @@ H5P.Audio = function (params, contentPath) {
  * Wipe out the content of the wrapper and put our HTML in it.
  * 
  * @param {jQuery} $wrapper Our poor container.
- * @returns {undefined}
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
-  // Check if browser supports video.
+  // Check if browser supports audio.
   var audio = document.createElement('audio');
   if (audio.canPlayType === undefined) {
     // Try flash
@@ -60,10 +58,9 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 };
 
 /**
- * Attaches a flash video player to the wrapper.
+ * Attaches a flash audio player to the wrapper.
  * 
  * @param {jQuery} $wrapper Our dear container.
- * @returns {undefined}
  */
 H5P.Audio.prototype.attachFlash = function ($wrapper) {
   for (var i = 0; i < this.params.files.length; i++) {

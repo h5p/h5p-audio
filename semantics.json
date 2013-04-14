@@ -7,12 +7,14 @@
   {
     "name": "fitToWrapper",
     "type": "boolean",
-    "label": "Fit to wrapper"
+    "label": "Fit to wrapper",
+    "default": true
   },
   {
     "name": "controls",
     "type": "boolean",
-    "label": "Enable controls"
+    "label": "Enable controls",
+    "default": true
   },
   {
     "name": "autoplay",
