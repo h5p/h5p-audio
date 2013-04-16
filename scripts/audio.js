@@ -7,12 +7,8 @@ var H5P = H5P || {};
  * @param {string} contentPath The path to our content folder.
  */
 H5P.Audio = function (params, contentPath) {
-  for (var i = 0; i < params.files.length; i++) {
-    var file = params.files[i];
-    file.path = contentPath + file.path;
-  }
-  
   this.params = params;
+  this.contentPath = contentPath;
 };
 
 /**
@@ -35,7 +31,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     
     if (audio.canPlayType(file.mime)) {
       var source = document.createElement('source');
-      source.src = file.path;
+      source.src = this.contentPath + file.path;
       source.type = file.mime;
       audio.appendChild(source);
     }
@@ -66,7 +62,7 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
   for (var i = 0; i < this.params.files.length; i++) {
     var file = this.params.files[i];
     if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
-      var audioSource = file.path;
+      var audioSource = this.contentPath + file.path;
       break;
     }
   }
