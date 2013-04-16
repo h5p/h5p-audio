@@ -44,6 +44,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     return;
   }
   
+  audio.className = 'h5p-audio';
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
   audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
   
