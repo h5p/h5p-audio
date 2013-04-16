@@ -26,14 +26,16 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   }
   
   // Add supported source files.
-  for (var i = 0; i < this.params.files.length; i++) {
-    var file = this.params.files[i];
+  if (this.params.files !== undefined) {
+    for (var i = 0; i < this.params.files.length; i++) {
+      var file = this.params.files[i];
     
-    if (audio.canPlayType(file.mime)) {
-      var source = document.createElement('source');
-      source.src = this.contentPath + file.path;
-      source.type = file.mime;
-      audio.appendChild(source);
+      if (audio.canPlayType(file.mime)) {
+        var source = document.createElement('source');
+        source.src = this.contentPath + file.path;
+        source.type = file.mime;
+        audio.appendChild(source);
+      }
     }
   }
   
@@ -59,11 +61,13 @@ H5P.Audio.prototype.attach = function ($wrapper) {
  * @param {jQuery} $wrapper Our dear container.
  */
 H5P.Audio.prototype.attachFlash = function ($wrapper) {
-  for (var i = 0; i < this.params.files.length; i++) {
-    var file = this.params.files[i];
-    if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
-      var audioSource = this.contentPath + file.path;
-      break;
+  if (this.params.files !== undefined) {
+    for (var i = 0; i < this.params.files.length; i++) {
+      var file = this.params.files[i];
+      if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
+        var audioSource = this.contentPath + file.path;
+        break;
+      }
     }
   }
   
