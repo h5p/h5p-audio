@@ -11,6 +11,7 @@ H5P.Audio = function (params, contentPath) {
   this.contentPath = contentPath;
   
   if (window['H5PEditor'] !== undefined) {
+    // TODO: Clean up tmp stuff
     this.tmpPath = H5PEditor.filesPath + '/h5peditor/';
   }
 };
