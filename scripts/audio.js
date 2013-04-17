@@ -9,6 +9,10 @@ var H5P = H5P || {};
 H5P.Audio = function (params, contentPath) {
   this.params = params;
   this.contentPath = contentPath;
+  
+  if (window['H5PEditor'] !== undefined) {
+    this.tmpPath = H5PEditor.filesPath + '/h5peditor/';
+  }
 };
 
 /**
@@ -32,7 +36,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     
       if (audio.canPlayType(file.mime)) {
         var source = document.createElement('source');
-        source.src = this.contentPath + file.path;
+        source.src = (file.tmp !== undefined && file.tmp ? this.tmpPath : this.contentPath) + file.path;
         source.type = file.mime;
         audio.appendChild(source);
       }
@@ -66,7 +70,7 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
     for (var i = 0; i < this.params.files.length; i++) {
       var file = this.params.files[i];
       if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
-        var audioSource = this.contentPath + file.path;
+        var audioSource = (file.tmp !== undefined && file.tmp ? this.tmpPath : this.contentPath) + file.path;
         break;
       }
     }
