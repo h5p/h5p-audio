@@ -1,0 +1,19 @@
+{
+  "semantics": [
+    {
+      "label": "Lydfiler"
+    },
+    {
+      "label": "Tilpass størrelse",
+      "description": "Forstør og forminsk avhengig av tilgjengelig størrelse"
+    },
+    {
+      "label": "Slå på kontroller",
+      "description": "Kontrollene lar bl.a. brukeren sette lydavspillingen på pause"
+    },
+    {
+      "label": "Slå på automatisk avspilling",
+      "description": "Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått må brukeren klikke for å starte avspillingen."
+    }
+  ]
+}

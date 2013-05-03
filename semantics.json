@@ -8,17 +8,20 @@
     "name": "fitToWrapper",
     "type": "boolean",
     "label": "Fit to wrapper",
-    "default": true
+    "default": true,
+    "descriptions": "Adjust audioplayer size to use available space"
   },
   {
     "name": "controls",
     "type": "boolean",
     "label": "Enable controls",
-    "default": true
+    "default": true,
+    "description": "Controls allow the user to for instance pause the audio"
   },
   {
     "name": "autoplay",
     "type": "boolean",
-    "label": "Enable autoplay"
+    "label": "Enable autoplay",
+    "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
   }
 ]
