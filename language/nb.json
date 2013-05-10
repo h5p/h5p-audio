@@ -13,7 +13,7 @@
     },
     {
       "label": "Slå på automatisk avspilling",
-      "description": "Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått må brukeren klikke for å starte avspillingen."
+      "description": "Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått, må brukeren klikke for å starte avspillingen."
     }
   ]
 }
