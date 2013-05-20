@@ -57,6 +57,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   audio.className = 'h5p-audio';
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
   audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
+  audio.preload = 'auto';
 
   if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
     audio.style.width = '100%';
@@ -122,7 +123,7 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
 };
 
 /**
- * Stop the video. TODO: Rename to pause?
+ * Stop the audio. TODO: Rename to pause?
  *
  * @returns {undefined}
  */
@@ -134,3 +135,13 @@ H5P.Audio.prototype.stop = function () {
     this.audio.pause();
   }
 };
+
+H5P.Audio.prototype.play = function () {
+  if (this.flowplayer !== undefined) {
+    this.flowplayer.play();
+  }
+  if (this.audio !== undefined) {
+    this.audio.currentTime = 0;
+    this.audio.play();
+  }
+}
