@@ -3,12 +3,13 @@ var H5P = H5P || {};
 /**
  * Constructor.
  *
- * @param {object} params Options for this library.
- * @param {string} contentPath The path to our content folder.
+ * @param {Object} params Options for this library.
+ * @param {Number} id Content identifier
+ * @returns {undefined}
  */
-H5P.Audio = function (params, contentPath) {
+H5P.Audio = function (params, id) {
   this.params = params;
-  this.contentPath = contentPath;
+  this.contentPath = H5P.getContentPath(id);
 };
 
 /**
