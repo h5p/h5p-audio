@@ -27,7 +27,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   }
 
   // Add supported source files.
-  if (this.params.files !== undefined) {
+  if (this.params.files !== undefined && this.params.files instanceof Object) {
     for (var i = 0; i < this.params.files.length; i++) {
       var file = this.params.files[i];
 
@@ -70,7 +70,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
  * @param {jQuery} $wrapper Our dear container.
  */
 H5P.Audio.prototype.attachFlash = function ($wrapper) {
-  if (this.params.files !== undefined) {
+  if (this.params.files !== undefined && this.params.files instanceof Object) {
     for (var i = 0; i < this.params.files.length; i++) {
       var file = this.params.files[i];
       if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
