@@ -33,7 +33,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
       if (audio.canPlayType(file.mime)) {
         var source = document.createElement('source');
-        source.src = H5P.getPath(this.contentId, file.path);
+        source.src = H5P.getPath(file.path, this.contentId);
         source.type = file.mime;
         audio.appendChild(source);
       }
@@ -74,7 +74,7 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
     for (var i = 0; i < this.params.files.length; i++) {
       var file = this.params.files[i];
       if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
-        var audioSource = H5P.getPath(this.contentId, file.path);
+        var audioSource = H5P.getPath(file.path, this.contentId);
         break;
       }
     }
