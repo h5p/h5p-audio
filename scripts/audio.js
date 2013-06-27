@@ -9,7 +9,7 @@ var H5P = H5P || {};
  */
 H5P.Audio = function (params, id) {
   this.params = params;
-  this.contentPath = H5P.getContentPath(id);
+  this.contentId = id;
 };
 
 /**
@@ -33,7 +33,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
       if (audio.canPlayType(file.mime)) {
         var source = document.createElement('source');
-        source.src = this.contentPath + file.path;
+        source.src = H5P.getPath(this.contentId, file.path);
         source.type = file.mime;
         audio.appendChild(source);
       }
@@ -74,7 +74,7 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
     for (var i = 0; i < this.params.files.length; i++) {
       var file = this.params.files[i];
       if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
-        var audioSource = this.contentPath + file.path;
+        var audioSource = H5P.getPath(this.contentId, file.path);
         break;
       }
     }
