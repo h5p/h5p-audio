@@ -37,6 +37,8 @@ H5P.Audio = function (params, id) {
  * @param {jQuery} $wrapper Our poor container.
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
+  $wrapper.addClass('h5p-audio-wrapper');
+  
   // Check if browser supports audio.
   var audio = document.createElement('audio');
   if (audio.canPlayType === undefined) {
@@ -73,6 +75,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
   audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
   audio.preload = 'auto';
+  audio.style.display = 'block';
 
   if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
     audio.style.width = '100%';
