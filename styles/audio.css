@@ -1,0 +1,20 @@
+.h5p-audio-inner {
+}
+
+.h5p-audio-minimal-button {
+    font-family: 'H5PFontAwesome4';
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.h5p-audio-minimal-button:hover {
+    cursor: pointer;
+}
+
+.h5p-audio-minimal-play:before {
+    content: "\f04b";
+}
+
+.h5p-audio-minimal-pause:before {
+    content: "\f04c";
+}

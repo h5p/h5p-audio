@@ -5,6 +5,23 @@
     "label": "Source files"
   },
   {
+    "name": "playerMode",
+    "type": "select",
+    "label": "Player mode",
+    "description": "Select the layout of the player.",
+    "options": [
+      {
+        "value": "minimalistic",
+        "label": "Minimalistic"
+      },
+      {
+        "value": "full",
+        "label": "Full"
+      }
+    ],
+    "default": "full"
+  },
+  {
     "name": "fitToWrapper",
     "type": "boolean",
     "label": "Fit to wrapper",
