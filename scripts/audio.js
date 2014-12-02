@@ -36,7 +36,7 @@ H5P.Audio = (function ($) {
   }
 
   /**
-   * Adds a minimalistic look to the audio player.
+   * Adds a minimalistic audio player with only "play" and "pause" functionality.
    *
    * @param {jQuery} $container Container for the player.
    */
@@ -47,33 +47,26 @@ H5P.Audio = (function ($) {
     var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
 
     var self = this;
+
     self.$inner = $('<div/>', {
       class: INNER_CONTAINER
     }).appendTo($container);
 
     var audioButton = $('<button/>', {
-      class: AUDIO_BUTTON
+      class: AUDIO_BUTTON+" "+PLAY_BUTTON
     }).appendTo(self.$inner)
       .click( function () {
-        if (audioButton.hasClass(PLAY_BUTTON)) {
-          audioButton.removeClass(PLAY_BUTTON);
-          audioButton.addClass(PAUSE_BUTTON);
+        if (self.audio.paused) {
           self.play();
         }
         else {
-          audioButton.removeClass(PAUSE_BUTTON);
-          audioButton.addClass(PLAY_BUTTON);
-          self.stop();
+          self.pause();
         }
       });
 
-    //Auto start playing
+    // cpAutoplay is passed from coursepresentation
     if (this.params.autoplay || this.params.cpAutoplay) {
-      audioButton.removeClass(PLAY_BUTTON);
-      audioButton.addClass(PAUSE_BUTTON);
-    }
-    else {
-      audioButton.addClass(PLAY_BUTTON);
+      self.play();
     }
 
     if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
@@ -81,9 +74,17 @@ H5P.Audio = (function ($) {
       self.$inner.css({height: '100%', display: 'flex'});
     }
 
+    //Event listeners that change the look of the player depending on events.
     self.audio.addEventListener('ended', function () {
-      audioButton.removeClass(PAUSE_BUTTON);
-      audioButton.addClass(PLAY_BUTTON);
+      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
+    });
+
+    self.audio.addEventListener('play', function () {
+      audioButton.removeClass(PLAY_BUTTON).addClass(PAUSE_BUTTON);
+    });
+
+    self.audio.addEventListener('pause', function () {
+      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
     });
 
     this.$audioButton = audioButton;
@@ -149,7 +150,6 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   audio.className = 'h5p-audio';
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
-  audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
   audio.preload = 'auto';
   audio.style.display = 'block';
 
@@ -158,7 +158,6 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     audio.style.height = '100%';
   }
 
-
   this.audio = audio;
 
   if (this.params.playerMode === 'minimalistic') {
@@ -166,6 +165,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     this.addMinimalAudioPlayer($wrapper);
   }
   else {
+    audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
   }
 };
@@ -246,8 +246,17 @@ H5P.Audio.prototype.play = function () {
     this.flowplayer.play();
   }
   if (this.audio !== undefined) {
-    this.audio.currentTime = 0;
     this.audio.play();
+  }
+};
+
+/**
+ * @public
+ * Pauses the audio.
+ */
+H5P.Audio.prototype.pause = function () {
+  if (this.audio !== undefined) {
+    this.audio.pause();
   }
 };
 
