@@ -70,7 +70,7 @@ H5P.Audio = (function ($) {
     }
 
     // cpAutoplay is passed from coursepresentation
-    if (this.params.autoplay || this.params.cpAutoplay) {
+    if (this.params.autoplay) {
       self.play();
     }
 
