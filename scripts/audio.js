@@ -47,6 +47,7 @@ H5P.Audio = (function ($) {
     var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
 
     var self = this;
+    this.$container = $container;
 
     self.$inner = $('<div/>', {
       class: INNER_CONTAINER
@@ -64,14 +65,13 @@ H5P.Audio = (function ($) {
         }
       });
 
-    // cpAutoplay is passed from coursepresentation
-    if (this.params.autoplay || this.params.cpAutoplay) {
-      self.play();
+    if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
+      audioButton.css({width: '100%', height: '100%'});
     }
 
-    if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
-      audioButton.css({ width: '100%' });
-      self.$inner.css({height: '100%', display: 'flex'});
+    // cpAutoplay is passed from coursepresentation
+    if (this.params.autoplay) {
+      self.play();
     }
 
     //Event listeners that change the look of the player depending on events.
@@ -99,10 +99,10 @@ H5P.Audio = (function ($) {
     // Find the smallest value of height and width, and use it to choose the font size.
     if (this.params.fitToWrapper) {
       var smallest = (this.$inner.width() < this.$inner.height()) ? (this.$inner.width() / 2) : (this.$inner.height() / 2);
-      this.$audioButton.css({'font-size': smallest+'px'});
+      this.$audioButton.css({'font-size': smallest + 'px'});
+      this.$container.css({'width': smallest*2, 'height': smallest*2});
     }
   };
-
 
 
   return C;
