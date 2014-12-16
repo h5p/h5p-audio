@@ -97,10 +97,23 @@ H5P.Audio = (function ($) {
    */
   C.prototype.resize = function () {
     // Find the smallest value of height and width, and use it to choose the font size.
-    if (this.params.fitToWrapper) {
-      var smallest = (this.$inner.width() < this.$inner.height()) ? (this.$inner.width() / 2) : (this.$inner.height() / 2);
-      this.$audioButton.css({'font-size': smallest + 'px'});
-      this.$container.css({'width': smallest*2, 'height': smallest*2});
+    if (this.params.fitToWrapper && this.$container.width()) {
+      var w = this.$container.width();
+      var h = this.$container.height();
+      if (w < h) {
+        this.$audioButton.css({'font-size': w / 2 + 'px'});
+        this.$inner.css({
+          'height': w / h * 100 + '%',
+          'width': '100%'
+        });
+      }
+      else {
+        this.$audioButton.css({'font-size': h / 2 + 'px'});
+        this.$inner.css({
+          'width': h / w * 100 + '%',
+          'height': '100%'
+        });
+      }
     }
   };
 
