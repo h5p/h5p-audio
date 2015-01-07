@@ -3,24 +3,23 @@
 }
 
 .h5p-course-presentation .h5p-element.h5p-audio-wrapper {
-    overflow: visible !important;;
-    min-width: 2em;
-    min-height: 2em;
+    overflow: visible !important;
+    width: 1.2em;
+    height: 1.2em;
 }
 
 .h5p-audio-minimal-button {
     font-family: 'H5PFontAwesome4';
 
     display: inline-block;
-    font-size: 1.1em;
-    border: 0.2em solid #fff;
+    font-size: 0.6em;
+    border: 0.1em solid #fff;
     border-radius: 50%;
     cursor: pointer;
     color: #fff;
     box-shadow: 0 0 0.5em #999;
     text-decoration: none;
-    width: 2em;
-    height: 2em;
+    padding: 0.3em;
 
     background: rgb(100,152,254); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
