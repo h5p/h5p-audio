@@ -65,10 +65,6 @@ H5P.Audio = (function ($) {
         }
       });
 
-    if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
-      audioButton.css({width: '100%', height: '100%'});
-    }
-
     // cpAutoplay is passed from coursepresentation
     if (this.params.autoplay) {
       self.play();
@@ -102,17 +98,9 @@ H5P.Audio = (function ($) {
       var h = this.$container.height();
       if (w < h) {
         this.$audioButton.css({'font-size': w / 2 + 'px'});
-        this.$inner.css({
-          'height': w / h * 100 + '%',
-          'width': '100%'
-        });
       }
       else {
         this.$audioButton.css({'font-size': h / 2 + 'px'});
-        this.$inner.css({
-          'width': h / w * 100 + '%',
-          'height': '100%'
-        });
       }
     }
   };

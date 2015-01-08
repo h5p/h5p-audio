@@ -4,6 +4,18 @@
       "label": "Lydfiler"
     },
     {
+      "label": "Avspiller modus",
+      "description": "Velg avspiller modus.",
+      "options": [
+        {
+          "label": "Minimal"
+        },
+        {
+          "label": "Full"
+        }
+      ]
+    },
+    {
       "label": "Tilpass størrelse",
       "description": "Forstørr og forminsk avhengig av tilgjengelig størrelse"
     },
