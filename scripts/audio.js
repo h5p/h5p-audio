@@ -1,27 +1,113 @@
 var H5P = H5P || {};
 
 /**
- * Constructor.
+ * H5P audio module
  *
- * @param {Object} params Options for this library.
- * @param {Number} id Content identifier
- * @returns {undefined}
+ * @external {jQuery} $ H5P.jQuery
  */
-H5P.Audio = function (params, id) {
-  this.params = params;
-  this.contentId = id;
-  
-  // Use new copyright information if available. Fallback to old.
-  if (params.files !== undefined
+H5P.Audio = (function ($) {
+  /**
+  * @param {Object} params Options for this library.
+  * @param {Number} id Content identifier
+  * @returns {undefined}
+  */
+  function C(params, id) {
+    this.$ = $(this);
+    this.contentId = id;
+    this.params = params;
+
+    this.params = $.extend({}, {
+      playerMode: 'full',
+      fitToWrapper: true,
+      controls: true,
+      autoplay: false
+    }, params);
+
+    // Use new copyright information if available. Fallback to old.
+    if (params.files !== undefined
       && params.files[0] !== undefined
       && params.files[0].copyright !== undefined) {
-      
-    this.copyright = params.files[0].copyright;
+
+      this.copyright = params.files[0].copyright;
+    }
+    else if (params.copyright !== undefined) {
+      this.copyright = params.copyright;
+    }
   }
-  else if (params.copyright !== undefined) {
-    this.copyright = params.copyright;
-  }
-};
+
+  /**
+   * Adds a minimalistic audio player with only "play" and "pause" functionality.
+   *
+   * @param {jQuery} $container Container for the player.
+   */
+  C.prototype.addMinimalAudioPlayer = function ($container) {
+    var INNER_CONTAINER = 'h5p-audio-inner';
+    var AUDIO_BUTTON = 'h5p-audio-minimal-button';
+    var PLAY_BUTTON = 'h5p-audio-minimal-play';
+    var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
+
+    var self = this;
+    this.$container = $container;
+
+    self.$inner = $('<div/>', {
+      class: INNER_CONTAINER
+    }).appendTo($container);
+
+    var audioButton = $('<button/>', {
+      class: AUDIO_BUTTON+" "+PLAY_BUTTON
+    }).appendTo(self.$inner)
+      .click( function () {
+        if (self.audio.paused) {
+          self.play();
+        }
+        else {
+          self.pause();
+        }
+      });
+
+    // cpAutoplay is passed from coursepresentation
+    if (this.params.autoplay) {
+      self.play();
+    }
+
+    //Event listeners that change the look of the player depending on events.
+    self.audio.addEventListener('ended', function () {
+      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
+    });
+
+    self.audio.addEventListener('play', function () {
+      audioButton.removeClass(PLAY_BUTTON).addClass(PAUSE_BUTTON);
+    });
+
+    self.audio.addEventListener('pause', function () {
+      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
+    });
+
+    this.$audioButton = audioButton;
+    //Scale icon to container
+    self.resize();
+  };
+
+  /**
+   * Resizes the audio player icon when the wrapper is resized.
+   */
+  C.prototype.resize = function () {
+    // Find the smallest value of height and width, and use it to choose the font size.
+    if (this.params.fitToWrapper && this.$container.width()) {
+      var w = this.$container.width();
+      var h = this.$container.height();
+      if (w < h) {
+        this.$audioButton.css({'font-size': w / 2 + 'px'});
+      }
+      else {
+        this.$audioButton.css({'font-size': h / 2 + 'px'});
+      }
+    }
+  };
+
+
+  return C;
+})(H5P.jQuery);
 
 /**
  * Wipe out the content of the wrapper and put our HTML in it.
@@ -65,7 +151,6 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   audio.className = 'h5p-audio';
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
-  audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
   audio.preload = 'auto';
   audio.style.display = 'block';
 
@@ -74,8 +159,16 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     audio.style.height = '100%';
   }
 
-  $wrapper.html(audio);
   this.audio = audio;
+
+  if (this.params.playerMode === 'minimalistic') {
+    audio.controls = false;
+    this.addMinimalAudioPlayer($wrapper);
+  }
+  else {
+    audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
+    $wrapper.html(audio);
+  }
 };
 
 /**
@@ -154,10 +247,19 @@ H5P.Audio.prototype.play = function () {
     this.flowplayer.play();
   }
   if (this.audio !== undefined) {
-    this.audio.currentTime = 0;
     this.audio.play();
   }
-}
+};
+
+/**
+ * @public
+ * Pauses the audio.
+ */
+H5P.Audio.prototype.pause = function () {
+  if (this.audio !== undefined) {
+    this.audio.pause();
+  }
+};
 
 /**
  * Gather copyright information for the current content.

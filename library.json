@@ -4,7 +4,7 @@
   "description": "Simple library that displays an audio player.",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 18,
+  "patchVersion": 19,
   "runnable": 0,
   "machineName": "H5P.Audio",
   "author": "Amendor AS",
@@ -17,11 +17,21 @@
       "path": "scripts/audio.js"
     }
   ],
+  "preloadedCss": [
+    {
+      "path": "styles/audio.css"
+    }
+  ],
   "preloadedDependencies": [
     {
       "machineName": "flowplayer",
       "majorVersion": 1,
       "minorVersion": 0
+    },
+    {
+      "machineName": "FontAwesome",
+      "majorVersion": 4,
+      "minorVersion": 1
     }
   ]
 }
