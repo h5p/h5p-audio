@@ -1,24 +1,25 @@
 .h5p-audio-inner {
     height: 100%;
+    width: 100%
 }
 
 .h5p-course-presentation .h5p-element.h5p-audio-wrapper {
     overflow: visible !important;
-    width: 1.2em;
-    height: 1.2em;
 }
 
-.h5p-audio-minimal-button {
+.h5p-audio-inner .h5p-audio-minimal-button {
     font-family: 'H5PFontAwesome4';
 
-    display: inline-block;
+    display: block;
+    padding: 0.3em;
+
     font-size: 0.6em;
     border: 0.1em solid #fff;
     border-radius: 50%;
+
     cursor: pointer;
     color: #fff;
     text-decoration: none;
-    padding: 0.3em;
 
     background: rgb(100,152,254); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
@@ -29,14 +30,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6498fe', endColorstr='#0468ce',GradientType=0 ); /* IE6-9 */
 }
 
-.h5p-audio-minimal-button:hover {
+.h5p-audio-inner .h5p-audio-minimal-button:hover {
     cursor: pointer;
 }
 
-.h5p-audio-minimal-play:before {
+.h5p-audio-inner .h5p-audio-minimal-play:before {
     content: "\f028";
 }
 
-.h5p-audio-minimal-pause:before {
+.h5p-audio-inner .h5p-audio-minimal-pause:before {
     content: "\f04c";
 }

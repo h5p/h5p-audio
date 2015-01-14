@@ -59,11 +59,18 @@ H5P.Audio = (function ($) {
       .click( function () {
         if (self.audio.paused) {
           self.play();
-        }
-        else {
+        } else {
           self.pause();
         }
       });
+
+    //Fit to wrapper
+    if (this.params.fitToWrapper) {
+      audioButton.css({
+        'width': '100%',
+        'height': '100%'
+      });
+    }
 
     // cpAutoplay is passed from coursepresentation
     if (this.params.autoplay) {
