@@ -50,11 +50,11 @@ H5P.Audio = (function ($) {
     this.$container = $container;
 
     self.$inner = $('<div/>', {
-      class: INNER_CONTAINER
+      'class': INNER_CONTAINER
     }).appendTo($container);
 
     var audioButton = $('<button/>', {
-      class: AUDIO_BUTTON+" "+PLAY_BUTTON
+      'class': AUDIO_BUTTON+" "+PLAY_BUTTON
     }).appendTo(self.$inner)
       .click( function () {
         if (self.audio.paused) {
