@@ -17,8 +17,8 @@ H5P.Audio = (function ($) {
     this.params = params;
 
     this.params = $.extend({}, {
-      playerMode: 'full',
-      fitToWrapper: true,
+      playerMode: 'minimalistic',
+      fitToWrapper: false,
       controls: true,
       autoplay: false
     }, params);
