@@ -12,7 +12,7 @@ H5P.Audio = (function ($) {
   * @returns {undefined}
   */
   function C(params, id) {
-    this.$ = $(this);
+    H5P.EventDispatcher.call(this);
     this.contentId = id;
     this.params = params;
 
@@ -33,7 +33,11 @@ H5P.Audio = (function ($) {
     else if (params.copyright !== undefined) {
       this.copyright = params.copyright;
     }
+    this.on('resize', this.resize, this);
   }
+  
+  C.prototype = Object.create(H5P.EventDispatcher.prototype);
+  C.prototype.constructor = C;
 
   /**
    * Adds a minimalistic audio player with only "play" and "pause" functionality.
