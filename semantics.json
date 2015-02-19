@@ -19,13 +19,13 @@
         "label": "Full"
       }
     ],
-    "default": "full"
+    "default": "minimalistic"
   },
   {
     "name": "fitToWrapper",
     "type": "boolean",
     "label": "Fit to wrapper",
-    "default": true,
+    "default": false,
     "descriptions": "Adjust audioplayer size to use available space"
   },
   {

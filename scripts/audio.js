@@ -12,13 +12,13 @@ H5P.Audio = (function ($) {
   * @returns {undefined}
   */
   function C(params, id) {
-    this.$ = $(this);
+    H5P.EventDispatcher.call(this);
     this.contentId = id;
     this.params = params;
 
     this.params = $.extend({}, {
-      playerMode: 'full',
-      fitToWrapper: true,
+      playerMode: 'minimalistic',
+      fitToWrapper: false,
       controls: true,
       autoplay: false
     }, params);
@@ -33,7 +33,11 @@ H5P.Audio = (function ($) {
     else if (params.copyright !== undefined) {
       this.copyright = params.copyright;
     }
+    this.on('resize', this.resize, this);
   }
+  
+  C.prototype = Object.create(H5P.EventDispatcher.prototype);
+  C.prototype.constructor = C;
 
   /**
    * Adds a minimalistic audio player with only "play" and "pause" functionality.
@@ -50,20 +54,27 @@ H5P.Audio = (function ($) {
     this.$container = $container;
 
     self.$inner = $('<div/>', {
-      class: INNER_CONTAINER
+      'class': INNER_CONTAINER
     }).appendTo($container);
 
     var audioButton = $('<button/>', {
-      class: AUDIO_BUTTON+" "+PLAY_BUTTON
+      'class': AUDIO_BUTTON+" "+PLAY_BUTTON
     }).appendTo(self.$inner)
       .click( function () {
         if (self.audio.paused) {
           self.play();
-        }
-        else {
+        } else {
           self.pause();
         }
       });
+
+    //Fit to wrapper
+    if (this.params.fitToWrapper) {
+      audioButton.css({
+        'width': '100%',
+        'height': '100%'
+      });
+    }
 
     // cpAutoplay is passed from coursepresentation
     if (this.params.autoplay) {
