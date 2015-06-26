@@ -283,7 +283,12 @@ H5P.Audio.prototype.getCopyrights = function () {
   }
 
   var info = new H5P.ContentCopyrights();
-  info.addMedia(new H5P.MediaCopyright(this.copyright));
+  var newMediaCopyrights = new H5P.MediaCopyright(this.copyright);
+  newMediaCopyrights.setMediaType(H5P.copyrightTypes.audio);
+  info.addMedia(newMediaCopyrights);
+
+  // Remove sub level for audio
+  info.removeSubLevel();
 
   return info;
 };
