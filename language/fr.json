@@ -36,8 +36,7 @@
           "label": "Auteur"
         },
         {
-          "label": "Source",
-          "regexp": {}
+          "label": "Source"
         },
         {
           "label": "Licence",
