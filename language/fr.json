@@ -4,8 +4,8 @@
       "label": "Fichiers sources"
     },
     {
-      "label": "Mode de jeu",
-      "description": "Selectionne le cadre de jeu.",
+      "label": "Contrôles",
+      "description": "Selectionne la barre des contrôles.",
       "options": [
         {
           "label": "Minimaliste"
@@ -36,7 +36,8 @@
           "label": "Auteur"
         },
         {
-          "label": "Source"
+          "label": "Source",
+          "regexp": {}
         },
         {
           "label": "Licence",
