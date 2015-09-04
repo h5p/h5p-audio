@@ -35,7 +35,7 @@ H5P.Audio = (function ($) {
     }
     this.on('resize', this.resize, this);
   }
-  
+
   C.prototype = Object.create(H5P.EventDispatcher.prototype);
   C.prototype.constructor = C;
 
@@ -104,7 +104,7 @@ H5P.Audio = (function ($) {
    */
   C.prototype.resize = function () {
     // Find the smallest value of height and width, and use it to choose the font size.
-    if (this.params.fitToWrapper && this.$container.width()) {
+    if (this.params.fitToWrapper && this.$container && this.$container.width()) {
       var w = this.$container.width();
       var h = this.$container.height();
       if (w < h) {
@@ -127,7 +127,7 @@ H5P.Audio = (function ($) {
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
   $wrapper.addClass('h5p-audio-wrapper');
-  
+
   // Check if browser supports audio.
   var audio = document.createElement('audio');
   if (audio.canPlayType === undefined) {
@@ -281,9 +281,9 @@ H5P.Audio.prototype.getCopyrights = function () {
   if (this.copyright === undefined) {
     return;
   }
-  
+
   var info = new H5P.ContentCopyrights();
   info.addMedia(new H5P.MediaCopyright(this.copyright));
-  
+
   return info;
 };
