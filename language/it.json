@@ -4,7 +4,7 @@
       "label": "File sorgenti"
     },
     {
-      "label": "Modalit� player",
+      "label": "Modalità player",
       "description": "Seleziona il layout del player.",
       "options": [
         {
@@ -24,7 +24,7 @@
     },
     {
       "label": "Abilita autoplay",
-      "description": "Con l'autoplay l'audio si avvia immediatamente. Se l�autoplay � disattivato l'utente premer� il pulsante play per avviare l'audio."
+      "description": "Con l'autoplay l'audio si avvia immediatamente. Se lìautoplay è disattivato l'utente premerà il pulsante play per avviare l'audio."
     },
     {
       "label": "Informazioni Copyright",
