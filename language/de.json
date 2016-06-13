@@ -1,0 +1,96 @@
+{
+  "semantics": [
+    {
+      "label": "Quelldateien"
+    },
+    {
+      "label": "Spielermodus",
+      "description": "Wählen des Spielerlayouts.",
+      "options": [
+        {
+          "label": "Minimalistisch"
+        },
+        {
+          "label": "Komplett"
+        }
+      ],
+      "default": "minimalistisch"
+    },
+    {
+      "label": "An Umschlag anpassen",
+      "descriptions": "Die Größe des Audioplayers anpassen, um den verfügbaren Platz zu nutzen."
+    },
+    {
+      "label": "Steuerung freigeben",
+      "description": "Die Steuerung ermöglicht es dem Benutzer zum Beispiel die Wiedergabe zu pausieren"
+    },
+    {
+      "label": "Autoplay aktivieren",
+      "description": "Mit Autoplay startet die Wiedergabe sofort. Wenn Autoplay deaktiviert ist, dann drückt der Benutzer einen Play Button, um die Wiedergabe zu starten."
+    },
+    {
+      "label": "Urheberrechtsinformationen",
+      "fields": [
+        {
+          "label": "Titel",
+
+        },
+        {
+          "label": "Autor",
+
+        },
+        {
+          "label": "Quelle",
+
+          "regexp": {
+          }
+        },
+        {
+          "label": "Lizenz",
+
+          "options": [
+            {
+              "label": "Nicht veröffentlicht"
+            },
+            {
+              "label": "Attribution"
+            },
+            {
+              "label": "Attribution-Weitergabe unter gleichen Bedingungen"
+            },
+            {
+              "label": "Attribution-Keine Änderungen"
+            },
+            {
+              "label": "Attribution-Nicht Kommerziell"
+            },
+            {
+              "label": "Attribution-Nicht Kommerziell, Weitergabe unter gleichen Bedingungen"
+            },
+            {
+              "label": "Attribution-Nicht Kommerziell, keine Änderungen"
+            },
+            {
+              "label": "Allgemeine Veröffentlichungserlaubnis"
+            },
+            {
+              "label": "Gemeinfreiheit"
+            },
+            {
+              "label": "Gemeinfreiheit Verzichtserklärung und Lizenz"
+            },
+            {
+              "label": "Public Domain Mark"
+            },
+            {
+              "label": "Urheberrecht"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Name des Audioinhaltes",
+      "default": "Audio"
+    }
+  ]
