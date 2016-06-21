@@ -167,7 +167,10 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
     audio.style.width = '100%';
-    audio.style.height = '100%';
+    if (!this.isRoot()) {
+      // Only set height if this isn't a root
+      audio.style.height = '100%';
+    }
   }
 
   this.audio = audio;
