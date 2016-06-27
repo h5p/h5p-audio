@@ -18,7 +18,7 @@
     },
     {
       "label": "An Umschlag anpassen",
-      "descriptions": "Die Größe des Audioplayers anpassen, um den verfügbaren Platz zu nutzen."
+      "descriptions": "Die Größe des Audioplayers anpassen um den verfügaren Platz zu nutzen"
     },
     {
       "label": "Steuerung freigeben",
@@ -26,17 +26,17 @@
     },
     {
       "label": "Autoplay aktivieren",
-      "description": "Mit Autoplay startet die Wiedergabe sofort. Wenn Autoplay deaktiviert ist, dann drückt der Benutzer einen Play Button, um die Wiedergabe zu starten."
+      "description": "Mit Autoplay startet die Wiedergabe sofort. Wenn Autoplay deaktiviert ist, dann drückt der Benutzer einen Play Button um die Wiedergabe zu starten."
     },
     {
       "label": "Urheberrechtsinformationen",
       "fields": [
         {
-          "label": "Titel",
+          "label": "Titel"
 
         },
         {
-          "label": "Autor",
+          "label": "Autor"
 
         },
         {
@@ -94,3 +94,4 @@
       "default": "Audio"
     }
   ]
+}
