@@ -32,15 +32,15 @@
       "fields": [
         {
           "label": "Titre",
-           "placeholder": "Für Elise",
+          "placeholder": "Für Elise"
         },
         {
           "label": "Auteur",
-          "placeholder": "Ludwig van Beethoven",
+          "placeholder": "Ludwig van Beethoven"
         },
         {
           "label": "Source",
-          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
+          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
         },
         {
           "label": "Licence",
