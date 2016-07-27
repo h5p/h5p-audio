@@ -4,39 +4,43 @@
       "label": "Fichiers sources"
     },
     {
-      "label": "Contrôles",
-      "description": "Selectionne la barre des contrôles.",
+      "label": "Mode d'affichage du lecteur",
+      "description": "Selectionnez le mode d'affichage du lecteur.",
       "options": [
         {
           "label": "Minimaliste"
         },
         {
-          "label": "Plein"
+          "label": "Complet"
         }
       ]
     },
     {
-      "label": "Remplir le cadre"
+      "label": "Remplir le contenant",
+      "description": "Ajuste la taille du lecteur pour qu'il utilise tout l'espace disponible"
     },
     {
       "label": "Activer les contrôles",
-      "description": "Les contrôles permettent à l'utilisateur de mettre l'audio en pause"
+      "description": "Les contrôles permettent, par exemple, à l'utilisateur de mettre le son sur pause"
     },
     {
-      "label": "Activer l'autoplay",
-      "description": "L'audio démarre directement sans appuyer sur un bouton."
+      "label": "Activer le démarrage automatique",
+      "description": "Le son démarre directement sans appuyer sur un bouton. Si cette option est désactivée, l'utilisateur doit appuyer sur le bouton PLAY pour lancer la lecture."
     },
     {
       "label": "Information sur le Copyright",
       "fields": [
         {
-          "label": "Titre"
+          "label": "Titre",
+          "placeholder": "Für Elise"
         },
         {
-          "label": "Auteur"
+          "label": "Auteur",
+          "placeholder": "Ludwig van Beethoven"
         },
         {
-          "label": "Source"
+          "label": "Source",
+          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
         },
         {
           "label": "Licence",
