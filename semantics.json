@@ -2,11 +2,13 @@
   {
     "name": "files",
     "type": "audio",
+    "importance": "high",
     "label": "Source files"
   },
   {
     "name": "playerMode",
     "type": "select",
+    "importance": "low",
     "label": "Player mode",
     "description": "Select the layout of the player.",
     "options": [
@@ -24,6 +26,7 @@
   {
     "name": "fitToWrapper",
     "type": "boolean",
+    "importance": "low",
     "label": "Fit to wrapper",
     "default": false,
     "descriptions": "Adjust audioplayer size to use available space"
@@ -31,6 +34,7 @@
   {
     "name": "controls",
     "type": "boolean",
+    "importance": "low",
     "label": "Enable controls",
     "default": true,
     "description": "Controls allow the user to for instance pause the audio"
@@ -38,12 +42,14 @@
   {
     "name": "autoplay",
     "type": "boolean",
+    "importance": "low",
     "label": "Enable autoplay",
     "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
   },
   {
     "name": "copyright",
     "type": "group",
+    "importance": "low",
     "label": "Copyright information",
     "deprecated": true,
     "optional": true,
@@ -134,6 +140,7 @@
   {
     "name": "contentName",
     "type": "text",
+    "importance": "low",
     "label": "Audio content name",
     "common": true,
     "default": "Audio"
