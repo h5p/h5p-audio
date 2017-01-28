@@ -19,6 +19,10 @@
       {
         "value": "full",
         "label": "Full"
+      },
+	  {
+        "value": "transparent",
+        "label": "Transparent"
       }
     ],
     "default": "minimalistic"
