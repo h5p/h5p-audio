@@ -7,7 +7,7 @@
   "patchVersion": 7,
   "runnable": 1,
   "machineName": "H5P.Audio",
-  "author": "Joubel AS",
+  "author": "Joubel",
   "coreApi": {
     "majorVersion": 1,
     "minorVersion": 4
