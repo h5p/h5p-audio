@@ -1,4 +1,4 @@
-var H5P = H5P || {};
+﻿var H5P = H5P || {};
 
 /**
  * H5P audio module
@@ -43,9 +43,11 @@ H5P.Audio = (function ($) {
    * Adds a minimalistic audio player with only "play" and "pause" functionality.
    *
    * @param {jQuery} $container Container for the player.
+   * @param {boolean} transparentMode true: the player is only visible when hovering over it; false: player's UI always visible
    */
-  C.prototype.addMinimalAudioPlayer = function ($container) {
+  C.prototype.addMinimalAudioPlayer = function ($container, transparentMode) {
     var INNER_CONTAINER = 'h5p-audio-inner';
+    var TRANSPARENCY_MODE = transparentMode ? 'h5p-audio-transparent' : 'h5p-audio-visible';
     var AUDIO_BUTTON = 'h5p-audio-minimal-button';
     var PLAY_BUTTON = 'h5p-audio-minimal-play';
     var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
@@ -54,11 +56,11 @@ H5P.Audio = (function ($) {
     this.$container = $container;
 
     self.$inner = $('<div/>', {
-      'class': INNER_CONTAINER
+      'class': INNER_CONTAINER + " " + TRANSPARENCY_MODE 
     }).appendTo($container);
 
     var audioButton = $('<button/>', {
-      'class': AUDIO_BUTTON+" "+PLAY_BUTTON
+      'class': AUDIO_BUTTON + " " + PLAY_BUTTON
     }).appendTo(self.$inner)
       .click( function () {
         if (self.audio.paused) {
@@ -177,7 +179,11 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   if (this.params.playerMode === 'minimalistic') {
     audio.controls = false;
-    this.addMinimalAudioPlayer($wrapper);
+    this.addMinimalAudioPlayer($wrapper, false);
+  }
+  else if (this.params.playerMode === 'transparent') {
+    audio.controls = false;
+    this.addMinimalAudioPlayer($wrapper, true);
   }
   else {
     audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
