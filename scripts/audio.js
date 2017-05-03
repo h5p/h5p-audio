@@ -47,7 +47,6 @@ H5P.Audio = (function ($) {
    */
   C.prototype.addMinimalAudioPlayer = function ($container, transparentMode) {
     var INNER_CONTAINER = 'h5p-audio-inner';
-    var TRANSPARENCY_MODE = transparentMode ? 'h5p-audio-transparent' : 'h5p-audio-visible';
     var AUDIO_BUTTON = 'h5p-audio-minimal-button';
     var PLAY_BUTTON = 'h5p-audio-minimal-play';
     var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
@@ -56,7 +55,7 @@ H5P.Audio = (function ($) {
     this.$container = $container;
 
     self.$inner = $('<div/>', {
-      'class': INNER_CONTAINER + " " + TRANSPARENCY_MODE 
+      'class': INNER_CONTAINER + (transparentMode ? ' h5p-audio-transparent' : '')
     }).appendTo($container);
 
     var audioButton = $('<button/>', {
