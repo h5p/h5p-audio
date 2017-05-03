@@ -1,4 +1,4 @@
-﻿var H5P = H5P || {};
+var H5P = H5P || {};
 
 /**
  * H5P audio module
