@@ -1,92 +1,97 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Lydfiler"
+      "label":"Lydfiler"
     },
     {
-      "label": "Avspiller modus",
-      "description": "Velg avspiller modus.",
-      "options": [
+      "label":"Avspiller modus",
+      "description":"Velg avspiller modus.",
+      "options":[
         {
-          "label": "Minimal"
+          "label":"Minimal"
         },
         {
-          "label": "Full"
+          "label":"Full"
         },
         {
-          "label": "Gjennomsiktig"
+          "label":"Gjennomsiktig"
         }
       ]
     },
     {
-      "label": "Tilpass størrelse",
-      "description": "Forstørr og forminsk avhengig av tilgjengelig størrelse"
+      "label":"Tilpass størrelse"
     },
     {
-      "label": "Slå på kontroller",
-      "description": "Kontrollene lar bl.a. brukeren sette lydavspillingen på pause"
+      "label":"Slå på kontroller",
+      "description":"Kontrollene lar bl.a. brukeren sette lydavspillingen på pause"
     },
     {
-      "label": "Slå på automatisk avspilling",
-      "description": "Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått må brukeren trykke for å starte avspillingen."
+      "label":"Slå på automatisk avspilling",
+      "description":"Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått må brukeren trykke for å starte avspillingen."
     },
     {
-      "label": "Informasjon om opphavsrett",
-      "fields": [
+      "label":"Informasjon om opphavsrett",
+      "fields":[
         {
-          "label": "Tittel"
+          "label":"Tittel",
+          "placeholder":"Für Elise"
         },
         {
-          "label": "Opphavsmann"
+          "label":"Opphavsmann",
+          "placeholder":"Ludwig van Beethoven"
         },
         {
-          "label": "Kilde"
+          "label":"Kilde",
+          "placeholder":"http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
+          "regexp":{
+            
+          }
         },
         {
-          "label": "Lisens",
-          "options": [
+          "label":"Lisens",
+          "options":[
             {
-              "label": "Ukjent"
+              "label":"Ukjent"
             },
             {
-              "label": "Navngivelse"
+              "label":"Navngivelse"
             },
             {
-              "label": "Navngivelse - Del på samme vilkår"
+              "label":"Navngivelse - Del på samme vilkår"
             },
             {
-              "label": "Navngivelse - Ingen bearbeidelse"
+              "label":"Navngivelse - Ingen bearbeidelse"
             },
             {
-              "label": "Navngivelse - Ikke kommersiell"
+              "label":"Navngivelse - Ikke kommersiell"
             },
             {
-              "label": "Navngivelse - Ikke kommersiell - Del på samme vilkår"
+              "label":"Navngivelse - Ikke kommersiell - Del på samme vilkår"
             },
             {
-              "label": "Navngivelse - Ikke kommersiell - Ingen bearbeidelse"
+              "label":"Navngivelse - Ikke kommersiell - Ingen bearbeidelse"
             },
             {
-              "label": "Generell offentlig lisens"
+              "label":"Generell offentlig lisens"
             },
             {
-              "label": "Offentlig eiendom"
+              "label":"Offentlig eiendom"
             },
             {
-              "label": "Offentlig eiendom engasjement og lisens"
+              "label":"Offentlig eiendom engasjement og lisens"
             },
             {
-              "label": "Offentlig eiendom merke"
+              "label":"Offentlig eiendom merke"
             },
             {
-              "label": "Opphavsrett"
+              "label":"Opphavsrett"
             }
           ]
         }
       ]
     },
     {
-      "label": "Innholdsnavn for lyd"
+      "label":"Innholdsnavn for lyd"
     }
   ]
 }
