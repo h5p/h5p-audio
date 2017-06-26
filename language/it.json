@@ -16,7 +16,8 @@
         {
           "label":"Transparent"
         }
-      ]
+      ],
+      "default":"minimalistic"
     },
     {
       "label":"Adatta al contenitore"
@@ -49,6 +50,7 @@
         },
         {
           "label":"Licenza",
+          "default":"U",
           "options":[
             {
               "label":"Anonimo"
@@ -91,7 +93,8 @@
       ]
     },
     {
-      "label":"Nome contenuto audio"
+      "label":"Nome contenuto audio",
+      "default":"Audio"
     }
   ]
 }
