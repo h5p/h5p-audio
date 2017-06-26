@@ -16,7 +16,8 @@
         {
           "label":"Transparent"
         }
-      ]
+      ],
+      "default":"minimalistic"
     },
     {
       "label":"ملء الحاوية"
@@ -49,6 +50,7 @@
         },
         {
           "label":"رخصة الاستعمال",
+          "default":"U",
           "options":[
             {
               "label":"لم يكشف عنها"
@@ -91,7 +93,8 @@
       ]
     },
     {
-      "label":"اسم ملف الصوت"
+      "label":"اسم ملف الصوت",
+      "default":"Audio"
     }
   ]
 }
