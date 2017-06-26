@@ -16,7 +16,8 @@
         {
           "label":"Transparent"
         }
-      ]
+      ],
+      "default":"minimalistic"
     },
     {
       "label":"Remplir le contenant"
@@ -49,6 +50,7 @@
         },
         {
           "label":"Licence",
+          "default":"U",
           "options":[
             {
               "label":"Non communiqué"
@@ -91,7 +93,8 @@
       ]
     },
     {
-      "label":"Nom du contenu audio"
+      "label":"Nom du contenu audio",
+      "default":"Audio"
     }
   ]
 }
