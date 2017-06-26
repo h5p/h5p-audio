@@ -16,7 +16,8 @@
         {
           "label": "Transparent"
         }
-      ]
+      ],
+      "default": "minimalistic"
     },
     {
       "label": "Fit to wrapper"
@@ -47,6 +48,7 @@
         },
         {
           "label": "License",
+          "default": "U",
           "options": [
             {
               "label": "Undisclosed"
@@ -89,7 +91,8 @@
       ]
     },
     {
-      "label": "Audio content name"
+      "label": "Audio content name",
+      "default": "Audio"
     }
   ]
 }
