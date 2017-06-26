@@ -16,7 +16,8 @@
         {
           "label":"Gjennomsiktig"
         }
-      ]
+      ],
+      "default":"minimalistic"
     },
     {
       "label":"Tilpass størrelse"
@@ -49,6 +50,7 @@
         },
         {
           "label":"Lisens",
+          "default":"U",
           "options":[
             {
               "label":"Ukjent"
@@ -91,7 +93,8 @@
       ]
     },
     {
-      "label":"Innhaldsnamn for lyd"
+      "label":"Innhaldsnamn for lyd",
+      "default":"Audio"
     }
   ]
 }
