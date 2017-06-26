@@ -16,7 +16,8 @@
         {
           "label":"Transparent"
         }
-      ]
+      ],
+      "default":"minimalistic"
     },
     {
       "label":"Verfügbaren Platz nutzen"
@@ -49,6 +50,7 @@
         },
         {
           "label":"Lizenz",
+          "default":"U",
           "options":[
             {
               "label":"Unbestimmt"
@@ -91,7 +93,8 @@
       ]
     },
     {
-      "label":"Name des Audioinhalts"
+      "label":"Name des Audioinhalts",
+      "default":"Audio"
     }
   ]
 }
