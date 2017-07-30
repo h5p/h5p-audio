@@ -59,42 +59,42 @@
               "label":"帰属"
             },
             {
-              "label":"Attribution-ShareAlike"
+              "label":"表示—継承"
             },
             {
-              "label":"Attribution-NoDerivs"
+              "label":"表示ー改変禁止"
             },
             {
-              "label":"Attribution-NonCommercial"
+              "label":"表示ー非営利"
             },
             {
-              "label":"Attribution-NonCommercial-ShareAlike"
+              "label":"表示ー非営利ー継承"
             },
             {
-              "label":"Attribution-NonCommercial-NoDerivs"
+              "label":"表示ー非営利ー改変禁止"
             },
             {
-              "label":"General Public License"
+              "label":"一般公衆利用許諾書"
             },
             {
-              "label":"Public Domain"
+              "label":"パブリック・ドメイン"
             },
             {
               "label":"Public Domain Dedication and Licence"
             },
             {
-              "label":"Public Domain Mark"
+              "label":"パブリック・ドメインのマーク"
             },
             {
-              "label":"Copyright"
+              "label":"著作権"
             }
           ]
         }
       ]
     },
     {
-      "label":"Audio content name",
-      "default":"Audio"
+      "label":"オーディオコンテンツ名",
+      "default":"オーディオ"
     }
   ]
 }
