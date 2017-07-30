@@ -1,62 +1,62 @@
 {
   "semantics":[
     {
-      "label":"Source files"
+      "label":"ソースファイル"
     },
     {
-      "label":"Player mode",
-      "description":"Select the layout of the player.",
+      "label":"プレーヤーモード",
+      "description":"プレーヤーのレイアウトを選択してください。",
       "options":[
         {
-          "label":"Minimalistic"
+          "label":"最小限"
         },
         {
-          "label":"Full"
+          "label":"最大"
         },
         {
-          "label":"Transparent"
+          "label":"透明"
         }
       ],
       "default":"minimalistic"
     },
     {
-      "label":"Fit to wrapper"
+      "label":"ラッパーに合わせる"
     },
     {
-      "label":"Enable controls",
-      "description":"Controls allow the user to for instance pause the audio"
+      "label":"コントロールを有効にします",
+      "description":"コントロールを使用すると、たとえば、オーディオを一時停止することができます"
     },
     {
-      "label":"Enable autoplay",
-      "description":"With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label":"自動再生を有効にします",
+      "description":"自動再生では、オーディオはすぐに再生を開始します。 自動再生が無効になっている場合、ユーザーは再生ボタンを押して音声を開始します。"
     },
     {
-      "label":"Copyright information",
+      "label":"著作権情報",
       "fields":[
         {
-          "label":"Title",
+          "label":"タイトル",
           "placeholder":"Für Elise"
         },
         {
-          "label":"Author",
+          "label":"作者",
           "placeholder":"Ludwig van Beethoven"
         },
         {
-          "label":"Source",
+          "label":"ソース",
           "placeholder":"http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
           "regexp":{
             
           }
         },
         {
-          "label":"License",
+          "label":"ライセンス",
           "default":"U",
           "options":[
             {
-              "label":"Undisclosed"
+              "label":"非公開"
             },
             {
-              "label":"Attribution"
+              "label":"帰属"
             },
             {
               "label":"Attribution-ShareAlike"
