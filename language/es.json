@@ -1,99 +1,99 @@
 {
   "semantics":[
     {
-      "label":"Source files"
+      "label":"Archivo de origen"
     },
     {
-      "label":"Player mode",
-      "description":"Select the layout of the player.",
+      "label":"Modo reproductor",
+      "description":"Seleccione el diseño del reproductor.",
       "options":[
         {
-          "label":"Minimalistic"
+          "label":"Minimalista"
         },
         {
-          "label":"Full"
+          "label":"Completo"
         },
         {
-          "label":"Transparent"
+          "label":"Transparente"
         }
       ],
       "default":"minimalistic"
     },
     {
-      "label":"Fit to wrapper"
+      "label":"Ajustar al marco"
     },
     {
-      "label":"Enable controls",
-      "description":"Controls allow the user to for instance pause the audio"
+      "label":"Habilitar controles",
+      "description":"Los controles permiten al usuario por ejemplo pausar el audio"
     },
     {
-      "label":"Enable autoplay",
-      "description":"With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label":"Habilitar reproduccion automatica",
+      "description":"Con la reproducción automática el audio empieza a reproducirse inmediatamente. Si la reproducción automática está deshabilitada, el usuario presiona un botón de reproducción para iniciar el audio."
     },
     {
-      "label":"Copyright information",
+      "label":"Información de derechos de autor",
       "fields":[
         {
-          "label":"Title",
+          "label":"Título",
           "placeholder":"Für Elise"
         },
         {
-          "label":"Author",
+          "label":"Autor",
           "placeholder":"Ludwig van Beethoven"
         },
         {
-          "label":"Source",
+          "label":"Origen",
           "placeholder":"http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
           "regexp":{
             
           }
         },
         {
-          "label":"License",
+          "label":"Licencia",
           "default":"U",
           "options":[
             {
-              "label":"Undisclosed"
+              "label":"No divulgado"
             },
             {
-              "label":"Attribution"
+              "label":"Atribución"
             },
             {
-              "label":"Attribution-ShareAlike"
+              "label":"Atribución - Compartir por igual"
             },
             {
-              "label":"Attribution-NoDerivs"
+              "label":"Atribución-No derivados"
             },
             {
-              "label":"Attribution-NonCommercial"
+              "label":"Atribución-No comercial"
             },
             {
-              "label":"Attribution-NonCommercial-ShareAlike"
+              "label":"Atribución - No comercial - Compartir por igual"
             },
             {
-              "label":"Attribution-NonCommercial-NoDerivs"
+              "label":"Atribución - No comercial - Sin derivados"
             },
             {
-              "label":"General Public License"
+              "label":"Licencia pública general GNU"
             },
             {
-              "label":"Public Domain"
+              "label":"Dominio público"
             },
             {
-              "label":"Public Domain Dedication and Licence"
+              "label":"Dedicación y Licencia de Dominio Público"
             },
             {
-              "label":"Public Domain Mark"
+              "label":"Marca de dominio público"
             },
             {
-              "label":"Copyright"
+              "label":"Derechos de autor"
             }
           ]
         }
       ]
     },
     {
-      "label":"Audio content name",
+      "label":"Nombre contenido de audio",
       "default":"Audio"
     }
   ]
