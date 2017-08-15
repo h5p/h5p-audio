@@ -14,7 +14,7 @@
           "label":"Intero"
         },
         {
-          "label":"Transparent"
+          "label":"Trasparente"
         }
       ],
       "default":"minimalistic"
@@ -77,7 +77,7 @@
               "label":"General Public License"
             },
             {
-              "label":"Public Domain"
+              "label":"Dominio Pubblico"
             },
             {
               "label":"Public Domain Dedication and Licence"
