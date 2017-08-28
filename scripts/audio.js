@@ -207,7 +207,12 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
   }
 
   if (audioSource === undefined) {
-    $wrapper.text('No supported audio files found.');
+    $wrapper.addClass('h5p-audio-not-supported');
+    $wrapper.html(
+      '<div class="h5p-audio-not-supported-icon"><span/></div>' +
+      '<span>Your browser does not support this audios</span>'
+    );
+
     if (this.endedCallback !== undefined) {
       this.endedCallback();
     }
