@@ -1,96 +1,100 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Fichiers sources"
+      "label":"Fichiers sources"
     },
     {
-      "label": "Mode d'affichage du lecteur",
-      "description": "Selectionnez le mode d'affichage du lecteur.",
-      "options": [
+      "label":"Mode d'affichage du lecteur",
+      "description":"Selectionnez le mode d'affichage du lecteur.",
+      "options":[
         {
-          "label": "Minimaliste"
+          "label":"Minimaliste"
         },
         {
-          "label": "Complet"
+          "label":"Complet"
         },
         {
-          "label": "Transparent"
+          "label":"Transparent"
         }
-      ]
+      ],
+      "default":"minimalistic"
     },
     {
-      "label": "Remplir le contenant",
-      "description": "Ajuste la taille du lecteur pour qu'il utilise tout l'espace disponible"
+      "label":"Remplir le contenant"
     },
     {
-      "label": "Activer les contrôles",
-      "description": "Les contrôles permettent, par exemple, à l'utilisateur de mettre le son sur pause"
+      "label":"Activer les contrôles",
+      "description":"Les contrôles permettent, par exemple, à l'utilisateur de mettre le son sur pause"
     },
     {
-      "label": "Activer le démarrage automatique",
-      "description": "Le son démarre directement sans appuyer sur un bouton. Si cette option est désactivée, l'utilisateur doit appuyer sur le bouton PLAY pour lancer la lecture."
+      "label":"Activer le démarrage automatique",
+      "description":"Le son démarre directement sans appuyer sur un bouton. Si cette option est désactivée, l'utilisateur doit appuyer sur le bouton PLAY pour lancer la lecture."
     },
     {
-      "label": "Information sur le Copyright",
-      "fields": [
+      "label":"Information sur le Copyright",
+      "fields":[
         {
-          "label": "Titre",
-          "placeholder": "Für Elise"
+          "label":"Titre",
+          "placeholder":"Für Elise"
         },
         {
-          "label": "Auteur",
-          "placeholder": "Ludwig van Beethoven"
+          "label":"Auteur",
+          "placeholder":"Ludwig van Beethoven"
         },
         {
-          "label": "Source",
-          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
+          "label":"Source",
+          "placeholder":"http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
+          "regexp":{
+            
+          }
         },
         {
-          "label": "Licence",
-          "options": [
+          "label":"Licence",
+          "default":"U",
+          "options":[
             {
-              "label": "Non communiqué"
+              "label":"Non communiqué"
             },
             {
-              "label": "Attribution"
+              "label":"Attribution"
             },
             {
-              "label": "Attribution-Partage à l'identique"
+              "label":"Attribution-Partage à l'identique"
             },
             {
-              "label": "Attribution-Pas de modification"
+              "label":"Attribution-Pas de modification"
             },
             {
-              "label": "Attribution-Pas d'utilisation commerciale"
+              "label":"Attribution-Pas d'utilisation commerciale"
             },
             {
-              "label": "Attribution-Pas d'utilisation commerciale-Partage à l'identique"
+              "label":"Attribution-Pas d'utilisation commerciale-Partage à l'identique"
             },
             {
-              "label": "Attribution-Pas d'utilisation commerciale-Pas de modifications"
+              "label":"Attribution-Pas d'utilisation commerciale-Pas de modifications"
             },
             {
-              "label": "GPL"
+              "label":"GPL"
             },
             {
-              "label": "Domaine public"
+              "label":"Domaine public"
             },
             {
-              "label": "Domaine public"
+              "label":"Domaine public"
             },
             {
-              "label": "Domaine public"
+              "label":"Domaine public"
             },
             {
-              "label": "Copyright"
+              "label":"Copyright"
             }
           ]
         }
       ]
     },
     {
-      "label": "Nom du contenu audio",
-      "default": "Audio"
+      "label":"Nom du contenu audio",
+      "default":"Audio"
     }
   ]
 }
