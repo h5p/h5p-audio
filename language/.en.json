@@ -93,6 +93,15 @@
     {
       "label": "Audio content name",
       "default": "Audio"
+    },
+    {
+      "label": "Audio localization",
+      "fields": [
+        {
+          "label": "Audio not supported message",
+          "default": "Your browser does not support this audio"
+        }
+      ]
     }
   ]
 }

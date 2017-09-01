@@ -148,5 +148,22 @@
     "label": "Audio content name",
     "common": true,
     "default": "Audio"
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "Audio localization",
+    "importance": "low",
+    "common": true,
+    "fields": [
+      {
+        "name": "audioNotSupported",
+        "type": "text",
+        "importance": "low",
+        "label": "Audio not supported message",
+        "common": true,
+        "default": "Your browser does not support this audio"
+      }
+    ]
   }
 ]

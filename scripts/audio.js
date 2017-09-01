@@ -20,7 +20,10 @@ H5P.Audio = (function ($) {
       playerMode: 'minimalistic',
       fitToWrapper: false,
       controls: true,
-      autoplay: false
+      autoplay: false,
+      l10n: {
+        audioNotSupported: "Your browser does not support this audio"
+      }
     }, params);
 
     // Use new copyright information if available. Fallback to old.
@@ -210,7 +213,7 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
     $wrapper.addClass('h5p-audio-not-supported');
     $wrapper.html(
       '<div class="h5p-audio-not-supported-icon"><span/></div>' +
-      '<span>Your browser does not support this audios</span>'
+      '<span>' + this.params.l10n.audioNotSupported + '</span>'
     );
 
     if (this.endedCallback !== undefined) {
