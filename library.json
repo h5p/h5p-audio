@@ -4,10 +4,12 @@
   "description": "Simple library that displays an audio player.",
   "majorVersion": 1,
   "minorVersion": 2,
-  "patchVersion": 10,
+  "patchVersion": 11,
   "runnable": 1,
   "machineName": "H5P.Audio",
-  "embedTypes": ["iframe"],
+  "embedTypes": [
+    "iframe"
+  ],
   "author": "Joubel",
   "coreApi": {
     "majorVersion": 1,
