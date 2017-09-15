@@ -1,77 +1,77 @@
 {
   "semantics":[
     {
-      "label":"Source files"
+      "label":"Vælg fil"
     },
     {
-      "label":"Player mode",
-      "description":"Select the layout of the player.",
+      "label":"Indstillinger for afspilning",
+      "description":"Vælg layout for afspiller.",
       "options":[
         {
-          "label":"Minimalistic"
+          "label":"Minimalistisk"
         },
         {
-          "label":"Full"
+          "label":"Fuld"
         },
         {
-          "label":"Transparent"
+          "label":"Gennemsigtig"
         }
       ],
-      "default":"minimalistic"
+      "default":"minimalistisk"
     },
     {
-      "label":"Fit to wrapper"
+      "label":"Tilpas til område"
     },
     {
-      "label":"Enable controls",
-      "description":"Controls allow the user to for instance pause the audio"
+      "label":"Aktiver kontrolpanel",
+      "description":"Kontrolpanel giver mulighed for at pause afspilningen."
     },
     {
-      "label":"Enable autoplay",
-      "description":"With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label":"Aktiver automatisk afspilning",
+      "description":"Vælges automatisk afspilning startes afspilningen med det samme. Hvis antomatisk afspilning er fravalgt skal brugeren starte afspilning ved at klikke på playknappen."
     },
     {
-      "label":"Copyright information",
+      "label":"Copyright informationer",
       "fields":[
         {
-          "label":"Title",
+          "label":"Titel",
           "placeholder":"Für Elise"
         },
         {
-          "label":"Author",
+          "label":"Komponist",
           "placeholder":"Ludwig van Beethoven"
         },
         {
-          "label":"Source",
+          "label":"Kilde",
           "placeholder":"http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
           "regexp":{
             
           }
         },
         {
-          "label":"License",
+          "label":"Licens",
           "default":"U",
           "options":[
             {
-              "label":"Undisclosed"
+              "label":"Frigivet"
             },
             {
-              "label":"Attribution"
+              "label":"Kreditering"
             },
             {
-              "label":"Attribution-ShareAlike"
+              "label":"Kreditering-DelPåSammeVilkår"
             },
             {
-              "label":"Attribution-NoDerivs"
+              "label":"Navngivelse-IngenBearbejdelse"
             },
             {
-              "label":"Attribution-NonCommercial"
+              "label":"Navngivelse-IkkeKommerciel"
             },
             {
-              "label":"Attribution-NonCommercial-ShareAlike"
+              "label":"Kreditering-IkkeKommerciel–DelPåSammeVilkår"
             },
             {
-              "label":"Attribution-NonCommercial-NoDerivs"
+              "label":"Kreditering-IkkeKommerciel-IngenBearbejdelse"
             },
             {
               "label":"General Public License"
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "label":"Audio content name",
+      "label":"Audio fil-navn",
       "default":"Audio"
     }
   ]
