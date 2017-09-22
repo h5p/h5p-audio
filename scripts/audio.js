@@ -210,8 +210,10 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
   if (audioSource === undefined) {
     $wrapper.addClass('h5p-audio-not-supported');
     $wrapper.html(
-      '<div class="h5p-audio-not-supported-icon"><span/></div>' +
-      '<span>' + this.params.audioNotSupported + '</span>'
+      '<div class="h5p-audio-inner">' +
+        '<div class="h5p-audio-not-supported-icon"><span/></div>' +
+        '<span>' + this.params.audioNotSupported + '</span>' +
+      '</div>'
     );
 
     if (this.endedCallback !== undefined) {
