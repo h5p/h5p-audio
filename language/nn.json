@@ -1,100 +1,99 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Lydfiler"
+      "label": "Lydfiler"
     },
     {
-      "label":"Avspiller modus",
-      "description":"Velg avspiller modus.",
-      "options":[
+      "label": "Avspiller modus",
+      "description": "Velg avspiller modus.",
+      "options": [
         {
-          "label":"Minimal"
+          "label": "Minimal"
         },
         {
-          "label":"Full"
+          "label": "Full"
         },
         {
-          "label":"Gjennomsiktig"
+          "label": "Gjennomsiktig"
         }
-      ],
-      "default":"minimalistic"
+      ]
     },
     {
-      "label":"Tilpass størrelse"
+      "label": "Tilpass størrelse"
     },
     {
-      "label":"Slå på kontrollar",
-      "description":"Kontrollane lar mellom anna brukaren setje lydavspelinga på pause"
+      "label": "Slå på kontrollar",
+      "description": "Kontrollane lar mellom anna brukaren setje lydavspelinga på pause"
     },
     {
-      "label":"Slå på automatisk avspeling",
-      "description":"Med automatisk avspeling begynner lyden å spele av seg sjølv med ein gang. Viss automatisk avspeling er slått av må brukaren trykkje for å starte avspelinga."
+      "label": "Slå på automatisk avspeling",
+      "description": "Med automatisk avspeling begynner lyden å spele av seg sjølv med ein gang. Viss automatisk avspeling er slått av må brukaren trykkje for å starte avspelinga."
     },
     {
-      "label":"Informasjon om opphavsrett",
-      "fields":[
+      "label": "Informasjon om opphavsrett",
+      "fields": [
         {
-          "label":"Tittel",
-          "placeholder":"Für Elise"
+          "label": "Tittel",
+          "placeholder": "Für Elise"
         },
         {
-          "label":"Opphavsmann",
-          "placeholder":"Ludwig van Beethoven"
+          "label": "Opphavsmann",
+          "placeholder": "Ludwig van Beethoven"
         },
         {
-          "label":"Kjelde",
-          "placeholder":"http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
-          "regexp":{
-            
-          }
+          "label": "Kjelde",
+          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
         },
         {
-          "label":"Lisens",
-          "default":"U",
-          "options":[
+          "label": "Lisens",
+          "options": [
             {
-              "label":"Ukjent"
+              "label": "Ukjent"
             },
             {
-              "label":"Namngjeving"
+              "label": "Namngjeving"
             },
             {
-              "label":"Namngjeving - Del på same vilkår"
+              "label": "Namngjeving - Del på same vilkår"
             },
             {
-              "label":"Namngjeving - Inga bearbeiding"
+              "label": "Namngjeving - Inga bearbeiding"
             },
             {
-              "label":"Namngjeving - Ikkje kommersiell"
+              "label": "Namngjeving - Ikkje kommersiell"
             },
             {
-              "label":"Namngjeving - Ikkje kommersiell - Del på same vilkår"
+              "label": "Namngjeving - Ikkje kommersiell - Del på same vilkår"
             },
             {
-              "label":"Namngjeving - Ikkje kommersiell - Inga bearbeiding"
+              "label": "Namngjeving - Ikkje kommersiell - Inga bearbeiding"
             },
             {
-              "label":"Generell offentleg lisens"
+              "label": "Generell offentleg lisens"
             },
             {
-              "label":"Offentleg eigedom"
+              "label": "Offentleg eigedom"
             },
             {
-              "label":"Offentleg eigedom engasjement og lisens"
+              "label": "Offentleg eigedom engasjement og lisens"
             },
             {
-              "label":"Offentleg eigedom merke"
+              "label": "Offentleg eigedom merke"
             },
             {
-              "label":"Opphavsrett"
+              "label": "Opphavsrett"
             }
           ]
         }
       ]
     },
     {
-      "label":"Innhaldsnamn for lyd",
-      "default":"Audio"
+      "label": "Innhaldsnamn for lyd",
+      "default": "Audio"
+    },
+    {
+      "label": "Audio not supported message",
+      "default": "Your browser does not support this audio"
     }
   ]
 }

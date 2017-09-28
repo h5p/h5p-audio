@@ -16,8 +16,7 @@
         {
           "label": "Transparent"
         }
-      ],
-      "default": "minimalistic"
+      ]
     },
     {
       "label": "Fit to wrapper"
@@ -43,12 +42,10 @@
         },
         {
           "label": "Source",
-          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise",
-          "regexp": {}
+          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
         },
         {
           "label": "License",
-          "default": "U",
           "options": [
             {
               "label": "Undisclosed"
