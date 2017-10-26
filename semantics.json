@@ -148,5 +148,13 @@
     "label": "Audio content name",
     "common": true,
     "default": "Audio"
+  },
+  {
+    "name": "audioNotSupported",
+    "type": "text",
+    "label": "Audio not supported message",
+    "importance": "low",
+    "common": true,
+    "default": "Your browser does not support this audio"
   }
 ]
