@@ -1,51 +1,51 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Lähdetiedostot"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Soittimen teema",
+      "description": "Valitse soittimelle ulkoasu.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalistinen"
         },
         {
-          "label": "Full"
+          "label": "Täysi"
         },
         {
-          "label": "Transparent"
+          "label": "Läpinäkyvä"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Sovita kehykseen"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Salli säätimet",
+      "description": "Säätimillä käyttäjä voi esimerkiksi pysäyttää äänen toiston."
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Salli automaattinen toisto",
+      "description": "Toisto alkaa välittömästi. Muussa tapauksessa käyttäjä aloittaa toiston."
     },
     {
-      "label": "Copyright information",
+      "label": "Tekijänoikeustiedot",
       "fields": [
         {
-          "label": "Title",
+          "label": "Nimi",
           "placeholder": "Für Elise"
         },
         {
-          "label": "Author",
+          "label": "Tekijä",
           "placeholder": "Ludwig van Beethoven"
         },
         {
-          "label": "Source",
+          "label": "Lähde",
           "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
         },
         {
-          "label": "License",
+          "label": "Lisenssi",
           "options": [
             {
               "label": "Undisclosed"
@@ -88,12 +88,12 @@
       ]
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Äänisisällön nimi",
+      "default": "Ääni"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Ääntä ei tueta -viesti",
+      "default": "Selaimesi ei tue tätä ääntä."
     }
   ]
 }
