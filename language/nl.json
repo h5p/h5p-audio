@@ -1,84 +1,84 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Bronbestanden"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Spelermodus",
+      "description": "Selecteer de spelermodus.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalistisch"
         },
         {
-          "label": "Full"
+          "label": "Volledig"
         },
         {
-          "label": "Transparent"
+          "label": "Onzichtbaar"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Past in de wrapper"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Activeer audiobediening",
+      "description": "De audiobediening stelt je in staat om bijvoorbeeld de audio te pauzeren."
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Activeer automatisch afspelen",
+      "description": "Met autoplay begint de audio direct met afspelen. Als autoplay is uitgeschakeld, dan dient de gebruiker de audio te starten met de playknop ."
     },
     {
-      "label": "Copyright information",
+      "label": "Copyright informatie",
       "fields": [
         {
-          "label": "Title",
+          "label": "Titel",
           "placeholder": "Für Elise"
         },
         {
-          "label": "Author",
+          "label": "Auteur",
           "placeholder": "Ludwig van Beethoven"
         },
         {
-          "label": "Source",
+          "label": "Bron",
           "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
         },
         {
-          "label": "License",
+          "label": "Licentie",
           "options": [
             {
-              "label": "Undisclosed"
+              "label": "Geheim"
             },
             {
-              "label": "Attribution"
+              "label": "Naamsvermelding"
             },
             {
-              "label": "Attribution-ShareAlike"
+              "label": "Naamsvermelding-Gelijk delen"
             },
             {
-              "label": "Attribution-NoDerivs"
+              "label": "Naamsvermelding-Geen derivaten"
             },
             {
-              "label": "Attribution-NonCommercial"
+              "label": "Naamsvermelding-Niet commercieel"
             },
             {
-              "label": "Attribution-NonCommercial-ShareAlike"
+              "label": "Naamsvermelding-Niet commercieel-Gelijk delen"
             },
             {
-              "label": "Attribution-NonCommercial-NoDerivs"
+              "label": "Naamsvermelding-Niet commercieel-Geen derivaten"
             },
             {
-              "label": "General Public License"
+              "label": "Algemene publieke licentie"
             },
             {
-              "label": "Public Domain"
+              "label": "Publiek domein"
             },
             {
-              "label": "Public Domain Dedication and Licence"
+              "label": "Publiek domein opdracht en licentie"
             },
             {
-              "label": "Public Domain Mark"
+              "label": "Publiek domein marketing"
             },
             {
               "label": "Copyright"
@@ -88,12 +88,12 @@
       ]
     },
     {
-      "label": "Audio content name",
+      "label": "Audionaam",
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Statusbericht niet ondersteunde audio",
+      "default": "Je browser ondersteunt deze audio-opname niet"
     }
   ]
 }
