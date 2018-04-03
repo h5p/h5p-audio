@@ -29,7 +29,10 @@ H5PUpgrades['H5P.Audio'] = (function ($) {
 
             extras.metadata = metadata;
 
-            delete parameters.files[0].copyright;
+            parameters.files.forEach(function (file) {
+              delete file.copyright;              
+            });
+
           }
         }
 
