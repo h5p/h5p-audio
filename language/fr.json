@@ -92,8 +92,8 @@
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Message L'audio n'est pas supporté",
+      "default": "Votre navigateur ne supporte pas l'audio"
     }
   ]
 }
