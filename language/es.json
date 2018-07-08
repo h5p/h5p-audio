@@ -92,8 +92,8 @@
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Mensaje de audio no permitido",
+      "default": "Su navegador no es compatible con este audio"
     }
   ]
 }
