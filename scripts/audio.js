@@ -8,13 +8,20 @@ var H5P = H5P || {};
 H5P.Audio = (function ($) {
   /**
   * @param {Object} params Options for this library.
-  * @param {Number} id Content identifier
+  * @param {Number} id Content identifier.
+  * @param {Object} extras Extras.
   * @returns {undefined}
   */
-  function C(params, id) {
+  function C(params, id, extras) {
     H5P.EventDispatcher.call(this);
     this.contentId = id;
     this.params = params;
+    this.extras = extras;
+
+    // Retrieve previous state
+    if (extras && extras.previousState !== undefined) {
+      this.oldTime = extras.previousState.currentTime;
+    }
 
     this.params = $.extend({}, {
       playerMode: 'minimalistic',
@@ -189,6 +196,11 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
   }
+
+  // Set time to saved time from previous run
+  if (this.oldTime) {
+    this.seekTo(this.oldTime);
+  }
 };
 
 /**
@@ -289,6 +301,18 @@ H5P.Audio.prototype.pause = function () {
 };
 
 /**
+ * @public
+ * Seek to audio position.
+ *
+ * @param {number} seekTo Time to seek to in seconds.
+ */
+H5P.Audio.prototype.seekTo = function (seekTo) {
+  if (this.audio !== undefined) {
+    this.audio.currentTime = seekTo;
+  }
+};
+
+/**
  * Gather copyright information for the current content.
  *
  * @returns {H5P.ContentCopyrights} Copyright information
@@ -302,4 +326,19 @@ H5P.Audio.prototype.getCopyrights = function () {
   info.addMedia(new H5P.MediaCopyright(this.copyright));
 
   return info;
+};
+
+/**
+ * @public
+ * Get current state for resetting it later.
+ *
+ * @returns {object} Current state.
+ */
+H5P.Audio.prototype.getCurrentState = function () {
+  if (this.audio !== undefined) {
+    const currentTime = this.audio.ended ? 0 : this.audio.currentTime;
+    return {
+      currentTime: currentTime
+    };
+  }
 };
