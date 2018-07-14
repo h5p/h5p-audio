@@ -5,7 +5,7 @@
     },
     {
       "label": "Audioplayermodus",
-      "description": "Wählen Sie den gewünschten Audiplayermodus.",
+      "description": "Wähle den gewünschten Audioplayer-Modus.",
       "options": [
         {
           "label": "Minimaler Funktionsumfang"
@@ -23,11 +23,11 @@
     },
     {
       "label": "Steuerelemente aktivieren",
-      "description": "Dies gibt den Nutzer die Möglichkeit z. B. das Audio zu pausieren."
+      "description": "Dies gibt dem Nutzer etwa die Möglichkeit, das Abspielen zu pausieren."
     },
     {
       "label": "Automatische Wiedergabe aktivieren",
-      "description": "Bei aktivierter, automatischer Wiedergabe wird das Audio sofort vorgespielt. Ansonsten wird das Audio erst abgespielt, wenn der Nutzer den Playbutton gedrückt hat."
+      "description": "Bei aktivierter, automatischer Wiedergabe wird die Tondatei sofort abgespielt. Ansonsten wird die Tondatei erst abgespielt, wenn der Nutzer den Play-Button gedrückt hat."
     },
     {
       "label": "Urheberrecht bearbeiten",
@@ -75,7 +75,7 @@
               "label": "Public Domain"
             },
             {
-              "label": "Public Domain Dedication and Licence"
+              "label": "Public Domain Dedication and License"
             },
             {
               "label": "Public Domain Mark"
@@ -92,8 +92,8 @@
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Hinweis: Audio nicht unterstützt",
+      "default": "Dein Browser unterstützt dieses Audioformat nicht."
     }
   ]
 }
