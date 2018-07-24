@@ -1,7 +1,7 @@
 /** @namespace H5PUpgrades */
 var H5PUpgrades = H5PUpgrades || {};
 
-H5PUpgrades['H5P.Audio'] = (function ($) {
+H5PUpgrades['H5P.Audio'] = (function () {
   return {
     1: {
       3: function (parameters, finished, extras) {
@@ -45,4 +45,4 @@ H5PUpgrades['H5P.Audio'] = (function ($) {
       }
     }
   };
-})(H5P.jQuery);
+})();
