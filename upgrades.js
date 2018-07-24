@@ -22,7 +22,7 @@ H5PUpgrades['H5P.Audio'] = (function ($) {
             // Build metadata object
             var metadata = {
               title: copyright.title,
-              authors: (copyright.author) ? [{name: copyright.author}] : undefined,
+              authors: (copyright.author) ? [{name: copyright.author, role: ''}] : undefined,
               source: copyright.source,
               yearFrom: isNaN(yearFrom) ? undefined : yearFrom,
               yearTo: isNaN(yearTo) ? undefined : yearTo,
@@ -30,6 +30,7 @@ H5PUpgrades['H5P.Audio'] = (function ($) {
               licenseVersion: copyright.version
             };
 
+            extras = extras || {};
             extras.metadata = metadata;
 
             parameters.files.forEach(function (file) {
