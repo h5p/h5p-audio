@@ -31,16 +31,6 @@ H5P.Audio = (function ($) {
       audioNotSupported: "Your browser does not support this audio"
     }, params);
 
-    // Use new copyright information if available. Fallback to old.
-    if (params.files !== undefined
-      && params.files[0] !== undefined
-      && params.files[0].copyright !== undefined) {
-
-      this.copyright = params.files[0].copyright;
-    }
-    else if (params.copyright !== undefined) {
-      this.copyright = params.copyright;
-    }
     this.on('resize', this.resize, this);
   }
 
@@ -310,22 +300,6 @@ H5P.Audio.prototype.seekTo = function (seekTo) {
   if (this.audio !== undefined) {
     this.audio.currentTime = seekTo;
   }
-};
-
-/**
- * Gather copyright information for the current content.
- *
- * @returns {H5P.ContentCopyrights} Copyright information
- */
-H5P.Audio.prototype.getCopyrights = function () {
-  if (this.copyright === undefined) {
-    return;
-  }
-
-  var info = new H5P.ContentCopyrights();
-  info.addMedia(new H5P.MediaCopyright(this.copyright));
-
-  return info;
 };
 
 /**

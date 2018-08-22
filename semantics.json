@@ -3,7 +3,8 @@
     "name": "files",
     "type": "audio",
     "importance": "high",
-    "label": "Source files"
+    "label": "Source files",
+    "disableCopyright": true
   },
   {
     "name": "playerMode",
