@@ -30,64 +30,6 @@
       "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
     },
     {
-      "label": "Copyright information",
-      "fields": [
-        {
-          "label": "Title",
-          "placeholder": "Für Elise"
-        },
-        {
-          "label": "Author",
-          "placeholder": "Ludwig van Beethoven"
-        },
-        {
-          "label": "Source",
-          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
-        },
-        {
-          "label": "License",
-          "options": [
-            {
-              "label": "Undisclosed"
-            },
-            {
-              "label": "Attribution"
-            },
-            {
-              "label": "Attribution-ShareAlike"
-            },
-            {
-              "label": "Attribution-NoDerivs"
-            },
-            {
-              "label": "Attribution-NonCommercial"
-            },
-            {
-              "label": "Attribution-NonCommercial-ShareAlike"
-            },
-            {
-              "label": "Attribution-NonCommercial-NoDerivs"
-            },
-            {
-              "label": "General Public License"
-            },
-            {
-              "label": "Public Domain"
-            },
-            {
-              "label": "Public Domain Dedication and Licence"
-            },
-            {
-              "label": "Public Domain Mark"
-            },
-            {
-              "label": "Copyright"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "Audio content name",
       "default": "Audio"
     },

@@ -30,64 +30,6 @@
       "description": "Vælges automatisk afspilning startes afspilningen med det samme. Hvis antomatisk afspilning er fravalgt skal brugeren starte afspilning ved at klikke på playknappen."
     },
     {
-      "label": "Copyright informationer",
-      "fields": [
-        {
-          "label": "Titel",
-          "placeholder": "Für Elise"
-        },
-        {
-          "label": "Komponist",
-          "placeholder": "Ludwig van Beethoven"
-        },
-        {
-          "label": "Kilde",
-          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
-        },
-        {
-          "label": "Licens",
-          "options": [
-            {
-              "label": "Frigivet"
-            },
-            {
-              "label": "Kreditering"
-            },
-            {
-              "label": "Kreditering-DelPåSammeVilkår"
-            },
-            {
-              "label": "Navngivelse-IngenBearbejdelse"
-            },
-            {
-              "label": "Navngivelse-IkkeKommerciel"
-            },
-            {
-              "label": "Kreditering-IkkeKommerciel–DelPåSammeVilkår"
-            },
-            {
-              "label": "Kreditering-IkkeKommerciel-IngenBearbejdelse"
-            },
-            {
-              "label": "General Public License"
-            },
-            {
-              "label": "Public Domain"
-            },
-            {
-              "label": "Public Domain Dedication and Licence"
-            },
-            {
-              "label": "Public Domain Mark"
-            },
-            {
-              "label": "Copyright"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "Audio fil-navn",
       "default": "Audio"
     },

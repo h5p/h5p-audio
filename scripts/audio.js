@@ -8,13 +8,20 @@ var H5P = H5P || {};
 H5P.Audio = (function ($) {
   /**
   * @param {Object} params Options for this library.
-  * @param {Number} id Content identifier
+  * @param {Number} id Content identifier.
+  * @param {Object} extras Extras.
   * @returns {undefined}
   */
-  function C(params, id) {
+  function C(params, id, extras) {
     H5P.EventDispatcher.call(this);
     this.contentId = id;
     this.params = params;
+    this.extras = extras;
+
+    // Retrieve previous state
+    if (extras && extras.previousState !== undefined) {
+      this.oldTime = extras.previousState.currentTime;
+    }
 
     this.params = $.extend({}, {
       playerMode: 'minimalistic',
@@ -24,16 +31,6 @@ H5P.Audio = (function ($) {
       audioNotSupported: "Your browser does not support this audio"
     }, params);
 
-    // Use new copyright information if available. Fallback to old.
-    if (params.files !== undefined
-      && params.files[0] !== undefined
-      && params.files[0].copyright !== undefined) {
-
-      this.copyright = params.files[0].copyright;
-    }
-    else if (params.copyright !== undefined) {
-      this.copyright = params.copyright;
-    }
     this.on('resize', this.resize, this);
   }
 
@@ -189,6 +186,11 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
   }
+
+  // Set time to saved time from previous run
+  if (this.oldTime) {
+    this.seekTo(this.oldTime);
+  }
 };
 
 /**
@@ -289,17 +291,28 @@ H5P.Audio.prototype.pause = function () {
 };
 
 /**
- * Gather copyright information for the current content.
+ * @public
+ * Seek to audio position.
  *
- * @returns {H5P.ContentCopyrights} Copyright information
+ * @param {number} seekTo Time to seek to in seconds.
  */
-H5P.Audio.prototype.getCopyrights = function () {
-  if (this.copyright === undefined) {
-    return;
+H5P.Audio.prototype.seekTo = function (seekTo) {
+  if (this.audio !== undefined) {
+    this.audio.currentTime = seekTo;
   }
+};
 
-  var info = new H5P.ContentCopyrights();
-  info.addMedia(new H5P.MediaCopyright(this.copyright));
-
-  return info;
+/**
+ * @public
+ * Get current state for resetting it later.
+ *
+ * @returns {object} Current state.
+ */
+H5P.Audio.prototype.getCurrentState = function () {
+  if (this.audio !== undefined) {
+    const currentTime = this.audio.ended ? 0 : this.audio.currentTime;
+    return {
+      currentTime: currentTime
+    };
+  }
 };
