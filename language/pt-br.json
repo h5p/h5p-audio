@@ -1,0 +1,99 @@
+{
+  "semantics": [
+    {
+      "label": "Arquivos fonte"
+    },
+    {
+      "label": "Modo do reprodutor",
+      "description": "Selecione o layout do reprodutor.",
+      "options": [
+        {
+          "label": "Minimalista"
+        },
+        {
+          "label": "Completo"
+        },
+        {
+          "label": "Transparente"
+        }
+      ]
+    },
+    {
+      "label": "Preencher"
+    },
+    {
+      "label": "Habilitar controles",
+      "description": "Controles permitem que o usuário por exemplo, pause o áudio"
+    },
+    {
+      "label": "Habilitar reprodução automática",
+      "description": "O áudio é reproduzido automaticamente. Se a reprodução automática estiver desabilitada, o usuário deve pressionar o botão de reprodução para iniciar o áudio."
+    },
+    {
+      "label": "Informações sobre direitos autorais",
+      "fields": [
+        {
+          "label": "Título",
+          "placeholder": "Für Elise"
+        },
+        {
+          "label": "Autor",
+          "placeholder": "Ludwig van Beethoven"
+        },
+        {
+          "label": "Fonte",
+          "placeholder": "https://pt.wikipedia.org/wiki/F%C3%BCr_Elise"
+        },
+        {
+          "label": "Licença",
+          "options": [
+            {
+              "label":"Não revelado"
+            },
+            {
+              "label":"Atribuição"
+            },
+            {
+              "label":"Atribuição-CompartilhaIgual"
+            },
+            {
+              "label":"Atribuição-SemDerivações"
+            },
+            {
+              "label":"Atribuição-NãoComercial"
+            },
+            {
+              "label":"Atribuição-NãoComercial-CompartilhaIgual"
+            },
+            {
+              "label":"Atribuição-NãoComercial-SemDerivações"
+            },
+            {
+              "label":"Licença Pública Geral (GPL)"
+            },
+            {
+              "label":"Domínio Público"
+            },
+            {
+              "label":"Dedicação e Licença de Domínio Público"
+            },
+            {
+              "label":"Marca de Domínio Público"
+            },
+            {
+              "label":"Direitos autorais"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Nome do conteúdo de áudio",
+      "default": "Áudio"
+    },
+    {
+      "label": "Mensagem de áudio não suportado",
+      "default": "Seu navegador não suporta este áudio"
+    }
+  ]
+}
