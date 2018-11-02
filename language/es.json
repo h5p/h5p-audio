@@ -30,70 +30,12 @@
       "description": "Con la reproducción automática el audio empieza a reproducirse inmediatamente. Si la reproducción automática está deshabilitada, el usuario presiona un botón de reproducción para iniciar el audio."
     },
     {
-      "label": "Información de derechos de autor",
-      "fields": [
-        {
-          "label": "Título",
-          "placeholder": "Für Elise"
-        },
-        {
-          "label": "Autor",
-          "placeholder": "Ludwig van Beethoven"
-        },
-        {
-          "label": "Origen",
-          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
-        },
-        {
-          "label": "Licencia",
-          "options": [
-            {
-              "label": "No divulgado"
-            },
-            {
-              "label": "Atribución"
-            },
-            {
-              "label": "Atribución - Compartir por igual"
-            },
-            {
-              "label": "Atribución-No derivados"
-            },
-            {
-              "label": "Atribución-No comercial"
-            },
-            {
-              "label": "Atribución - No comercial - Compartir por igual"
-            },
-            {
-              "label": "Atribución - No comercial - Sin derivados"
-            },
-            {
-              "label": "Licencia pública general GNU"
-            },
-            {
-              "label": "Dominio público"
-            },
-            {
-              "label": "Dedicación y Licencia de Dominio Público"
-            },
-            {
-              "label": "Marca de dominio público"
-            },
-            {
-              "label": "Derechos de autor"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "Nombre contenido de audio",
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Mensaje de audio no permitido",
+      "default": "Su navegador no es compatible con este audio"
     }
   ]
 }

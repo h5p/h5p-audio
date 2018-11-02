@@ -3,8 +3,8 @@
   "contentType": "Media",
   "description": "Simple library that displays an audio player.",
   "majorVersion": 1,
-  "minorVersion": 2,
-  "patchVersion": 14,
+  "minorVersion": 3,
+  "patchVersion": 2,
   "runnable": 1,
   "machineName": "H5P.Audio",
   "embedTypes": [
@@ -13,7 +13,7 @@
   "author": "Joubel",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 4
+    "minorVersion": 19
   },
   "preloadedJs": [
     {
