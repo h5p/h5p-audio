@@ -30,6 +30,14 @@
       "description": "مع التشغيل التلقائي يبدأ الصوت للعب على الفور. إذا تم تعطيل التشغيل التلقائي يقوم المستخدم بالضغط على زر التشغيل لبدء الصوت"
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "اسم ملف الصوت",
       "default": "Audio"
     },
