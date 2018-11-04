@@ -62,7 +62,8 @@ H5P.Audio = (function ($) {
       .click( function () {
         if (self.audio.paused) {
           self.play();
-        } else {
+        }
+        else {
           self.pause();
         }
       });
