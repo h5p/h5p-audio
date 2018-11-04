@@ -52,6 +52,22 @@
     "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
   },
   {
+    "name": "playAudio",
+    "type": "text",
+    "importance": "low",
+    "label": "Play audio (Readspeaker)",
+    "common": true,
+    "default": "Play audio"
+  },
+  {
+    "name": "pauseAudio",
+    "type": "text",
+    "importance": "low",
+    "label": "Pause audio (Readspeaker)",
+    "common": true,
+    "default": "Pause audio"
+  },
+  {
     "name": "contentName",
     "type": "text",
     "importance": "low",
