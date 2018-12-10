@@ -47,6 +47,7 @@ H5P.Audio = (function ($) {
     var INNER_CONTAINER = 'h5p-audio-inner';
     var AUDIO_BUTTON = 'h5p-audio-minimal-button';
     var PLAY_BUTTON = 'h5p-audio-minimal-play';
+    var PLAY_BUTTON_PAUSED = 'h5p-audio-minimal-play-paused';
     var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
 
     var self = this;
@@ -82,15 +83,15 @@ H5P.Audio = (function ($) {
 
     //Event listeners that change the look of the player depending on events.
     self.audio.addEventListener('ended', function () {
-      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
+      audioButton.removeClass(PAUSE_BUTTON).removeClass(PLAY_BUTTON_PAUSED).addClass(PLAY_BUTTON);
     });
 
     self.audio.addEventListener('play', function () {
-      audioButton.removeClass(PLAY_BUTTON).addClass(PAUSE_BUTTON);
+      audioButton.removeClass(PLAY_BUTTON).removeClass(PLAY_BUTTON_PAUSED).addClass(PAUSE_BUTTON);
     });
 
     self.audio.addEventListener('pause', function () {
-      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
+      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON_PAUSED);
     });
 
     this.$audioButton = audioButton;
