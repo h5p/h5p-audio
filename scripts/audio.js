@@ -47,6 +47,7 @@ H5P.Audio = (function ($) {
     var INNER_CONTAINER = 'h5p-audio-inner';
     var AUDIO_BUTTON = 'h5p-audio-minimal-button';
     var PLAY_BUTTON = 'h5p-audio-minimal-play';
+    var PLAY_BUTTON_PAUSED = 'h5p-audio-minimal-play-paused';
     var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
 
     var self = this;
@@ -94,6 +95,7 @@ H5P.Audio = (function ($) {
         .attr('aria-hidden', false)
         .attr('aria-label', self.params.playAudio)
         .removeClass(PAUSE_BUTTON)
+        .removeClass(PLAY_BUTTON_PAUSED)
         .addClass(PLAY_BUTTON);
     });
 
@@ -101,6 +103,7 @@ H5P.Audio = (function ($) {
       audioButton
         .attr('aria-label', self.params.pauseAudio)
         .removeClass(PLAY_BUTTON)
+        .removeClass(PLAY_BUTTON_PAUSED)
         .addClass(PAUSE_BUTTON);
     });
 
@@ -109,7 +112,7 @@ H5P.Audio = (function ($) {
         .attr('aria-hidden', false)
         .attr('aria-label', self.params.playAudio)
         .removeClass(PAUSE_BUTTON)
-        .addClass(PLAY_BUTTON);
+        .addClass(PLAY_BUTTON_PAUSED);
     });
 
     this.$audioButton = audioButton;
