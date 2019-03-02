@@ -23,7 +23,7 @@
     },
     {
       "label": "Steuerelemente aktivieren",
-      "description": "Dies gibt dem Nutzer etwa die Möglichkeit, das Abspielen zu pausieren."
+      "description": "Dies gibt dem Nutzer z.B. die Möglichkeit, das Abspielen zu pausieren."
     },
     {
       "label": "Automatische Wiedergabe aktivieren",
@@ -34,8 +34,8 @@
       "default": "Audio"
     },
     {
-      "label": "Hinweis: Audio nicht unterstützt",
-      "default": "Dein Browser unterstützt dieses Audioformat nicht."
+      "label": "Hinweis, dass keine Tonaufnahmen abgespielt werden können",
+      "default": "Dein Browser unterstützt diese Tondatei nicht."
     }
   ]
 }
