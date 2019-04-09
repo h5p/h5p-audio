@@ -1,41 +1,41 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Lähtefailid"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Pleieri teema",
+      "description": "Vali pleieri teema.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalistlik"
         },
         {
-          "label": "Full"
+          "label": "Täielik"
         },
         {
-          "label": "Transparent"
+          "label": "Läbipaistev"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Täida ümbrisraam"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Luba juhised",
+      "description": "Juhised võimaldavad kasutajal näiteks heli mängimist peatada."
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Luba automaatne esitus",
+      "description": "Automaatse esituse korral hakkab heli koheselt mängima. Kui automaatne esitus on keelatud, tuleb kasutajal ise nupuvajutusega heli mängimine käivitada."
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Helisisu nimi",
+      "default": "Heli"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Heli ei ole toetatud sõnum",
+      "default": "Su brauser ei toeta heli esitamist"
     }
   ]
 }
