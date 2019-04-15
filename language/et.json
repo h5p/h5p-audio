@@ -1,7 +1,7 @@
-{
+Ôªø{
   "semantics": [
     {
-      "label": "L‰htefailid"
+      "label": "L√§htefailid"
     },
     {
       "label": "Pleieri teema",
@@ -11,30 +11,30 @@
           "label": "Minimalistlik"
         },
         {
-          "label": "T‰ielik"
+          "label": "T√§ielik"
         },
         {
-          "label": "L‰bipaistev"
+          "label": "L√§bipaistev"
         }
       ]
     },
     {
-      "label": "T‰ida ¸mbrisraam"
+      "label": "T√§ida √ºmbrisraam"
     },
     {
       "label": "Luba juhised",
-      "description": "Juhised vıimaldavad kasutajal n‰iteks heli m‰ngimist peatada."
+      "description": "Juhised v√µimaldavad kasutajal n√§iteks heli m√§ngimist peatada."
     },
     {
       "label": "Luba automaatne esitus",
-      "description": "Automaatse esituse korral hakkab heli koheselt m‰ngima. Kui automaatne esitus on keelatud, tuleb kasutajal ise nupuvajutusega heli m‰ngimine k‰ivitada."
+      "description": "Automaatse esituse korral hakkab heli koheselt m√§ngima. Kui automaatne esitus on keelatud, tuleb kasutajal ise nupuvajutusega heli m√§ngimine k√§ivitada."
     },
     {
       "label": "Helisisu nimi",
       "default": "Heli"
     },
     {
-      "label": "Heli ei ole toetatud sınum",
+      "label": "Heli ei ole toetatud s√µnum",
       "default": "Su brauser ei toeta heli esitamist"
     }
   ]
