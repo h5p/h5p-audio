@@ -30,6 +30,14 @@
       "description": "自動再生では、オーディオはすぐに再生を開始します。 自動再生が無効になっている場合、ユーザーは再生ボタンを押して音声を開始します。"
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "オーディオコンテンツ名",
       "default": "オーディオ"
     },

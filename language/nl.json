@@ -30,6 +30,14 @@
       "description": "Met autoplay begint de audio direct met afspelen. Als autoplay is uitgeschakeld, dan dient de gebruiker de audio te starten met de playknop ."
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "Audionaam",
       "default": "Audio"
     },
