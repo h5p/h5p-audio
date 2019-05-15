@@ -28,7 +28,9 @@ H5P.Audio = (function ($) {
       fitToWrapper: false,
       controls: true,
       autoplay: false,
-      audioNotSupported: "Your browser does not support this audio"
+      audioNotSupported: "Your browser does not support this audio",
+      playAudio: "Play audio",
+      pauseAudio: "Pause audio"
     }, params);
 
     this.on('resize', this.resize, this);
