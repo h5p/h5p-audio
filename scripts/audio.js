@@ -18,6 +18,8 @@ H5P.Audio = (function ($) {
     this.params = params;
     this.extras = extras;
 
+    this.toggleButtonEnabled = true;
+
     // Retrieve previous state
     if (extras && extras.previousState !== undefined) {
       this.oldTime = extras.previousState.currentTime;
@@ -61,7 +63,7 @@ H5P.Audio = (function ($) {
       'class': AUDIO_BUTTON + " " + PLAY_BUTTON
     }).appendTo(self.$inner)
       .click( function () {
-        if (!self.isEnabled) {
+        if (!self.isEnabledToggleButton()) {
           return;
         }
 
@@ -98,14 +100,6 @@ H5P.Audio = (function ($) {
     self.audio.addEventListener('pause', function () {
       audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON_PAUSED);
     });
-
-    // Prevent play/pause interaction on button when disabled.
-    audioButton.get(0).addEventListener('keydown', function (event) {
-      event = event || window.event;
-      if (!self.isEnabled() && (event.keyCode === 13 || event.keyCode === 32)) {
-        event.preventDefault();
-      }
-    }, false);
 
     this.$audioButton = audioButton;
     //Scale icon to container
@@ -336,12 +330,12 @@ H5P.Audio.prototype.getCurrentState = function () {
  * Disable button.
  * Not using disabled attribute to block button activation, because it will
  * implicitly set tabindex = -1 and confuse ChromeVox navigation. Clicks handled
- * using "pointer-events: none" in CSS, keydown on enter or space prevented by
- * interception in event listener on button.
+ * using "pointer-events: none" in CSS.
  */
-H5P.Audio.prototype.disable = function () {
+H5P.Audio.prototype.disableToggleButton = function () {
+  this.toggleButtonEnabled = false;
   if (this.$audioButton) {
-    this.$audioButton.toggleClass(H5P.Audio.BUTTON_DISABLED, true);
+    this.$audioButton.addClass(H5P.Audio.BUTTON_DISABLED);
   }
 };
 
@@ -349,9 +343,10 @@ H5P.Audio.prototype.disable = function () {
  * @public
  * Enable button.
  */
-H5P.Audio.prototype.enable = function () {
+H5P.Audio.prototype.enableToggleButton = function () {
+  this.toggleButtonEnabled = true;
   if (this.$audioButton) {
-    this.$audioButton.toggleClass(H5P.Audio.BUTTON_DISABLED, false);
+    this.$audioButton.removeClass(H5P.Audio.BUTTON_DISABLED);
   }
 };
 
@@ -360,11 +355,8 @@ H5P.Audio.prototype.enable = function () {
  * Check if button is enabled.
  * @return {boolean} True, if button is enabled. Else false.
  */
-H5P.Audio.prototype.isEnabled = function () {
-  if (!this.$audioButton) {
-    return false;
-  }
-  return !this.$audioButton.hasClass(H5P.Audio.BUTTON_DISABLED);
+H5P.Audio.prototype.isEnabledToggleButton = function () {
+  return this.toggleButtonEnabled;
 };
 
 /** @constant {string} */
