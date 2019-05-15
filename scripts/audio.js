@@ -18,6 +18,8 @@ H5P.Audio = (function ($) {
     this.params = params;
     this.extras = extras;
 
+    this.toggleButtonEnabled = true;
+
     // Retrieve previous state
     if (extras && extras.previousState !== undefined) {
       this.oldTime = extras.previousState.currentTime;
@@ -64,8 +66,13 @@ H5P.Audio = (function ($) {
       'aria-label': this.params.playAudio
     }).appendTo(self.$inner)
       .click( function () {
+        if (!self.isEnabledToggleButton()) {
+          return;
+        }
+
         // Prevent ARIA from playing over audio on click
         this.setAttribute('aria-hidden', 'true');
+
         if (self.audio.paused) {
           self.play();
         }
@@ -340,3 +347,40 @@ H5P.Audio.prototype.getCurrentState = function () {
     };
   }
 };
+
+/**
+ * @public
+ * Disable button.
+ * Not using disabled attribute to block button activation, because it will
+ * implicitly set tabindex = -1 and confuse ChromeVox navigation. Clicks handled
+ * using "pointer-events: none" in CSS.
+ */
+H5P.Audio.prototype.disableToggleButton = function () {
+  this.toggleButtonEnabled = false;
+  if (this.$audioButton) {
+    this.$audioButton.addClass(H5P.Audio.BUTTON_DISABLED);
+  }
+};
+
+/**
+ * @public
+ * Enable button.
+ */
+H5P.Audio.prototype.enableToggleButton = function () {
+  this.toggleButtonEnabled = true;
+  if (this.$audioButton) {
+    this.$audioButton.removeClass(H5P.Audio.BUTTON_DISABLED);
+  }
+};
+
+/**
+ * @public
+ * Check if button is enabled.
+ * @return {boolean} True, if button is enabled. Else false.
+ */
+H5P.Audio.prototype.isEnabledToggleButton = function () {
+  return this.toggleButtonEnabled;
+};
+
+/** @constant {string} */
+H5P.Audio.BUTTON_DISABLED = 'h5p-audio-disabled';
