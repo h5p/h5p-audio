@@ -30,6 +30,14 @@
       "description": "Le son démarre directement sans appuyer sur un bouton. Si cette option est désactivée, l'utilisateur doit appuyer sur le bouton PLAY pour lancer la lecture."
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "Nom du contenu audio",
       "default": "Audio"
     },

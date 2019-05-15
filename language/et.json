@@ -30,6 +30,14 @@
       "description": "Automaatse esituse korral hakkab heli koheselt mängima. Kui automaatne esitus on keelatud, tuleb kasutajal ise nupuvajutusega heli mängimine käivitada."
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "Helisisu nimi",
       "default": "Heli"
     },

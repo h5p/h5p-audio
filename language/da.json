@@ -30,6 +30,14 @@
       "description": "Vælges automatisk afspilning startes afspilningen med det samme. Hvis antomatisk afspilning er fravalgt skal brugeren starte afspilning ved at klikke på playknappen."
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "Audio fil-navn",
       "default": "Audio"
     },

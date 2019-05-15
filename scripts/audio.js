@@ -30,7 +30,9 @@ H5P.Audio = (function ($) {
       fitToWrapper: false,
       controls: true,
       autoplay: false,
-      audioNotSupported: "Your browser does not support this audio"
+      audioNotSupported: "Your browser does not support this audio",
+      playAudio: "Play audio",
+      pauseAudio: "Pause audio"
     }, params);
 
     this.on('resize', this.resize, this);
@@ -60,12 +62,16 @@ H5P.Audio = (function ($) {
     }).appendTo($container);
 
     var audioButton = $('<button/>', {
-      'class': AUDIO_BUTTON + " " + PLAY_BUTTON
+      'class': AUDIO_BUTTON + " " + PLAY_BUTTON,
+      'aria-label': this.params.playAudio
     }).appendTo(self.$inner)
       .click( function () {
         if (!self.isEnabledToggleButton()) {
           return;
         }
+
+        // Prevent ARIA from playing over audio on click
+        this.setAttribute('aria-hidden', 'true');
 
         if (self.audio.paused) {
           self.play();
@@ -73,6 +79,10 @@ H5P.Audio = (function ($) {
         else {
           self.pause();
         }
+      })
+      .on('focusout', function () {
+        // Restore ARIA, required when playing longer audio and tabbing out and back in
+        this.setAttribute('aria-hidden', 'false');
       });
 
     //Fit to wrapper
@@ -90,15 +100,28 @@ H5P.Audio = (function ($) {
 
     //Event listeners that change the look of the player depending on events.
     self.audio.addEventListener('ended', function () {
-      audioButton.removeClass(PAUSE_BUTTON).removeClass(PLAY_BUTTON_PAUSED).addClass(PLAY_BUTTON);
+      audioButton
+        .attr('aria-hidden', false)
+        .attr('aria-label', self.params.playAudio)
+        .removeClass(PAUSE_BUTTON)
+        .removeClass(PLAY_BUTTON_PAUSED)
+        .addClass(PLAY_BUTTON);
     });
 
     self.audio.addEventListener('play', function () {
-      audioButton.removeClass(PLAY_BUTTON).removeClass(PLAY_BUTTON_PAUSED).addClass(PAUSE_BUTTON);
+      audioButton
+        .attr('aria-label', self.params.pauseAudio)
+        .removeClass(PLAY_BUTTON)
+        .removeClass(PLAY_BUTTON_PAUSED)
+        .addClass(PAUSE_BUTTON);
     });
 
     self.audio.addEventListener('pause', function () {
-      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON_PAUSED);
+      audioButton
+        .attr('aria-hidden', false)
+        .attr('aria-label', self.params.playAudio)
+        .removeClass(PAUSE_BUTTON)
+        .addClass(PLAY_BUTTON_PAUSED);
     });
 
     this.$audioButton = audioButton;

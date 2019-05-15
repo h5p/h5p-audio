@@ -30,6 +30,14 @@
       "description": "Med automatisk avspeling begynner lyden å spele av seg sjølv med ein gang. Viss automatisk avspeling er slått av må brukaren trykkje for å starte avspelinga."
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "Innhaldsnamn for lyd",
       "default": "Audio"
     },

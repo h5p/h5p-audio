@@ -30,6 +30,14 @@
       "description": "Bei aktivierter, automatischer Wiedergabe wird die Tondatei sofort abgespielt. Ansonsten wird die Tondatei erst abgespielt, wenn der Nutzer den Play-Button gedrückt hat."
     },
     {
+      "label": "Audio abspielen (Screenreader)",
+      "default": "Audio abspielen"
+    },
+    {
+      "label": "Audio pausieren (Screenreader)",
+      "default": "Audio pausieren"
+    },
+    {
       "label": "Name des Audioinhalts",
       "default": "Audio"
     },
