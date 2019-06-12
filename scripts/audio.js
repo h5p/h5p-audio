@@ -8,31 +8,33 @@ var H5P = H5P || {};
 H5P.Audio = (function ($) {
   /**
   * @param {Object} params Options for this library.
-  * @param {Number} id Content identifier
+  * @param {Number} id Content identifier.
+  * @param {Object} extras Extras.
   * @returns {undefined}
   */
-  function C(params, id) {
+  function C(params, id, extras) {
     H5P.EventDispatcher.call(this);
     this.contentId = id;
     this.params = params;
+    this.extras = extras;
+
+    this.toggleButtonEnabled = true;
+
+    // Retrieve previous state
+    if (extras && extras.previousState !== undefined) {
+      this.oldTime = extras.previousState.currentTime;
+    }
 
     this.params = $.extend({}, {
       playerMode: 'minimalistic',
       fitToWrapper: false,
       controls: true,
-      autoplay: false
+      autoplay: false,
+      audioNotSupported: "Your browser does not support this audio",
+      playAudio: "Play audio",
+      pauseAudio: "Pause audio"
     }, params);
 
-    // Use new copyright information if available. Fallback to old.
-    if (params.files !== undefined
-      && params.files[0] !== undefined
-      && params.files[0].copyright !== undefined) {
-
-      this.copyright = params.files[0].copyright;
-    }
-    else if (params.copyright !== undefined) {
-      this.copyright = params.copyright;
-    }
     this.on('resize', this.resize, this);
   }
 
@@ -43,29 +45,44 @@ H5P.Audio = (function ($) {
    * Adds a minimalistic audio player with only "play" and "pause" functionality.
    *
    * @param {jQuery} $container Container for the player.
+   * @param {boolean} transparentMode true: the player is only visible when hovering over it; false: player's UI always visible
    */
-  C.prototype.addMinimalAudioPlayer = function ($container) {
+  C.prototype.addMinimalAudioPlayer = function ($container, transparentMode) {
     var INNER_CONTAINER = 'h5p-audio-inner';
     var AUDIO_BUTTON = 'h5p-audio-minimal-button';
     var PLAY_BUTTON = 'h5p-audio-minimal-play';
+    var PLAY_BUTTON_PAUSED = 'h5p-audio-minimal-play-paused';
     var PAUSE_BUTTON = 'h5p-audio-minimal-pause';
 
     var self = this;
     this.$container = $container;
 
     self.$inner = $('<div/>', {
-      'class': INNER_CONTAINER
+      'class': INNER_CONTAINER + (transparentMode ? ' h5p-audio-transparent' : '')
     }).appendTo($container);
 
     var audioButton = $('<button/>', {
-      'class': AUDIO_BUTTON+" "+PLAY_BUTTON
+      'class': AUDIO_BUTTON + " " + PLAY_BUTTON,
+      'aria-label': this.params.playAudio
     }).appendTo(self.$inner)
       .click( function () {
+        if (!self.isEnabledToggleButton()) {
+          return;
+        }
+
+        // Prevent ARIA from playing over audio on click
+        this.setAttribute('aria-hidden', 'true');
+
         if (self.audio.paused) {
           self.play();
-        } else {
+        }
+        else {
           self.pause();
         }
+      })
+      .on('focusout', function () {
+        // Restore ARIA, required when playing longer audio and tabbing out and back in
+        this.setAttribute('aria-hidden', 'false');
       });
 
     //Fit to wrapper
@@ -83,15 +100,28 @@ H5P.Audio = (function ($) {
 
     //Event listeners that change the look of the player depending on events.
     self.audio.addEventListener('ended', function () {
-      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
+      audioButton
+        .attr('aria-hidden', false)
+        .attr('aria-label', self.params.playAudio)
+        .removeClass(PAUSE_BUTTON)
+        .removeClass(PLAY_BUTTON_PAUSED)
+        .addClass(PLAY_BUTTON);
     });
 
     self.audio.addEventListener('play', function () {
-      audioButton.removeClass(PLAY_BUTTON).addClass(PAUSE_BUTTON);
+      audioButton
+        .attr('aria-label', self.params.pauseAudio)
+        .removeClass(PLAY_BUTTON)
+        .removeClass(PLAY_BUTTON_PAUSED)
+        .addClass(PAUSE_BUTTON);
     });
 
     self.audio.addEventListener('pause', function () {
-      audioButton.removeClass(PAUSE_BUTTON).addClass(PLAY_BUTTON);
+      audioButton
+        .attr('aria-hidden', false)
+        .attr('aria-label', self.params.playAudio)
+        .removeClass(PAUSE_BUTTON)
+        .addClass(PLAY_BUTTON_PAUSED);
     });
 
     this.$audioButton = audioButton;
@@ -177,11 +207,20 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   if (this.params.playerMode === 'minimalistic') {
     audio.controls = false;
-    this.addMinimalAudioPlayer($wrapper);
+    this.addMinimalAudioPlayer($wrapper, false);
+  }
+  else if (this.params.playerMode === 'transparent') {
+    audio.controls = false;
+    this.addMinimalAudioPlayer($wrapper, true);
   }
   else {
     audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
+  }
+
+  // Set time to saved time from previous run
+  if (this.oldTime) {
+    this.seekTo(this.oldTime);
   }
 };
 
@@ -202,7 +241,14 @@ H5P.Audio.prototype.attachFlash = function ($wrapper) {
   }
 
   if (audioSource === undefined) {
-    $wrapper.text('No supported audio files found.');
+    $wrapper.addClass('h5p-audio-not-supported');
+    $wrapper.html(
+      '<div class="h5p-audio-inner">' +
+        '<div class="h5p-audio-not-supported-icon"><span/></div>' +
+        '<span>' + this.params.audioNotSupported + '</span>' +
+      '</div>'
+    );
+
     if (this.endedCallback !== undefined) {
       this.endedCallback();
     }
@@ -276,17 +322,65 @@ H5P.Audio.prototype.pause = function () {
 };
 
 /**
- * Gather copyright information for the current content.
+ * @public
+ * Seek to audio position.
  *
- * @returns {H5P.ContentCopyrights} Copyright information
+ * @param {number} seekTo Time to seek to in seconds.
  */
-H5P.Audio.prototype.getCopyrights = function () {
-  if (this.copyright === undefined) {
-    return;
+H5P.Audio.prototype.seekTo = function (seekTo) {
+  if (this.audio !== undefined) {
+    this.audio.currentTime = seekTo;
   }
-
-  var info = new H5P.ContentCopyrights();
-  info.addMedia(new H5P.MediaCopyright(this.copyright));
-
-  return info;
 };
+
+/**
+ * @public
+ * Get current state for resetting it later.
+ *
+ * @returns {object} Current state.
+ */
+H5P.Audio.prototype.getCurrentState = function () {
+  if (this.audio !== undefined) {
+    const currentTime = this.audio.ended ? 0 : this.audio.currentTime;
+    return {
+      currentTime: currentTime
+    };
+  }
+};
+
+/**
+ * @public
+ * Disable button.
+ * Not using disabled attribute to block button activation, because it will
+ * implicitly set tabindex = -1 and confuse ChromeVox navigation. Clicks handled
+ * using "pointer-events: none" in CSS.
+ */
+H5P.Audio.prototype.disableToggleButton = function () {
+  this.toggleButtonEnabled = false;
+  if (this.$audioButton) {
+    this.$audioButton.addClass(H5P.Audio.BUTTON_DISABLED);
+  }
+};
+
+/**
+ * @public
+ * Enable button.
+ */
+H5P.Audio.prototype.enableToggleButton = function () {
+  this.toggleButtonEnabled = true;
+  if (this.$audioButton) {
+    this.$audioButton.removeClass(H5P.Audio.BUTTON_DISABLED);
+  }
+};
+
+/**
+ * @public
+ * Check if button is enabled.
+ * @return {boolean} True, if button is enabled. Else false.
+ */
+H5P.Audio.prototype.isEnabledToggleButton = function () {
+  return this.toggleButtonEnabled;
+};
+
+/** @constant {string} */
+H5P.Audio.BUTTON_DISABLED = 'h5p-audio-disabled';

@@ -12,6 +12,9 @@
         },
         {
           "label": "مكبر"
+        },
+        {
+          "label": "Transparent"
         }
       ]
     },
@@ -27,63 +30,20 @@
       "description": "مع التشغيل التلقائي يبدأ الصوت للعب على الفور. إذا تم تعطيل التشغيل التلقائي يقوم المستخدم بالضغط على زر التشغيل لبدء الصوت"
     },
     {
-      "label": "معلومات عن حقوق النشر",
-      "fields": [
-        {
-          "label": "العنوان"
-        },
-        {
-          "label": "المؤلف"
-        },
-        {
-          "label": "مصدر الملف",
-          "regexp": {}
-        },
-        {
-          "label": "رخصة الاستعمال",
-          "options": [
-            {
-              "label": "لم يكشف عنها"
-            },
-            {
-              "label": "منسوبة"
-            },
-            {
-              "label": "منسوبة - بالمثل"
-            },
-            {
-              "label": "منسوبة - للمشتقات"
-            },
-            {
-              "label": "منسوبة - لغير التجاري"
-            },
-            {
-              "label": "منسوبة - بالمثل الغير تجارية"
-            },
-            {
-              "label": "منسوبة - للمشتقات الغير تجارية"
-            },
-            {
-              "label": "رخصة عمومية عامة"
-            },
-            {
-              "label": "الملكية العامة"
-            },
-            {
-              "label": "تفاني رخصة الاستعمال للعامة"
-            },
-            {
-              "label": "مجال الأقسام العامة"
-            },
-            {
-              "label": "رخصة الاستعمال"
-            }
-          ]
-        }
-      ]
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
     },
     {
-      "label": "اسم ملف الصوت"
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
+      "label": "اسم ملف الصوت",
+      "default": "Audio"
+    },
+    {
+      "label": "Audio not supported message",
+      "default": "Your browser does not support this audio"
     }
   ]
 }

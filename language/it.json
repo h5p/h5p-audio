@@ -12,6 +12,9 @@
         },
         {
           "label": "Intero"
+        },
+        {
+          "label": "Trasparente"
         }
       ]
     },
@@ -19,71 +22,28 @@
       "label": "Adatta al contenitore"
     },
     {
-      "label": "Abilita controlli",
-      "description": "I controlli consentono all'utente di mettere in pausa, per esempio l'audio."
+      "label": "Attiva controlli",
+      "description": "I controlli consentono all'utente di mettere, per esempio, in pausa l'audio"
     },
     {
-      "label": "Abilita autoplay",
-      "description": "Con l'autoplay l'audio si avvia immediatamente. Se lìautoplay è disattivato l'utente premerà il pulsante play per avviare l'audio."
+      "label": "Attiva autoplay",
+      "description": "Con l'autoplay l'audio si avvia immediatamente. Se l'autoplay è disattivato l'utente premerà il pulsante play per avviarlo."
     },
     {
-      "label": "Informazioni Copyright",
-      "fields": [
-        {
-          "label": "Titolo"
-        },
-        {
-          "label": "Autore"
-        },
-        {
-          "label": "Sorgente",
-          "regexp": {}
-        },
-        {
-          "label": "Licenza",
-          "options": [
-            {
-              "label": "Anonimo"
-            },
-            {
-              "label": "Distribuzione"
-            },
-            {
-              "label": "Distribuzione-ShareAlike"
-            },
-            {
-              "label": "Distribuzione-NoDerivs"
-            },
-            {
-              "label": "Distribuzione-NonCommercial"
-            },
-            {
-              "label": "Distribuzione-NonCommercial-ShareAlike"
-            },
-            {
-              "label": "Distribuzione-NonCommercial-NoDerivs"
-            },
-            {
-              "label": "General Public License"
-            },
-            {
-              "label": "Public Domain"
-            },
-            {
-              "label": "Public Domain Dedication and Licence"
-            },
-            {
-              "label": "Public Domain Mark"
-            },
-            {
-              "label": "Copyright"
-            }
-          ]
-        }
-      ]
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
     },
     {
-      "label": "Nome contenuto audio"
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
+      "label": "Nome del contenuto audio",
+      "default": "Audio"
+    },
+    {
+      "label": "Audio not supported message",
+      "default": "Your browser does not support this audio"
     }
   ]
 }
