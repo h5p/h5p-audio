@@ -30,12 +30,12 @@
       "description": "Toisto alkaa välittömästi. Muussa tapauksessa käyttäjä aloittaa toiston."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Toista audio (Readspeakerilla)",
+      "default": "Toista audio"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Keskeytä audio (Readspeakerilla)",
+      "default": "Keskeytä audio"
     },
     {
       "label": "Äänisisällön nimi",
