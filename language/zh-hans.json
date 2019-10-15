@@ -30,6 +30,14 @@
       "description": "让画面载入后就开始播放，如果停用，使用者就必须点击播放按钮才能开始。"
     },
     {
+      "label": "Play audio (Readspeaker)",
+      "default": "Play audio"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "Pause audio"
+    },
+    {
       "label": "音乐名称",
       "default": "Audio"
     },
