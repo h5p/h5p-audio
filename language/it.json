@@ -30,20 +30,20 @@
       "description": "Con l'autoplay l'audio si avvia immediatamente. Se l'autoplay è disattivato l'utente premerà il pulsante play per avviarlo."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Avvia audio (lettore vocale)",
+      "default": "Avvia audio"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Metti in pausa audio (lettore vocale)",
+      "default": "Metti in pausa audio"
     },
     {
       "label": "Nome del contenuto audio",
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Messaggio per audio non supportato",
+      "default": "Il tuo browser non supporta questo file audio"
     }
   ]
 }
