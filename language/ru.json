@@ -1,49 +1,49 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Исходный файл"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Режим плеера",
+      "description": "Выберите макет плеера.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Минималистичная эмблема"
         },
         {
-          "label": "Full"
+          "label": "Полная звуковая дорожка"
         },
         {
-          "label": "Transparent"
+          "label": "Прозрачный"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Расположить по всей горизонтали"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Разрешить контроль",
+      "description": "Контроль позволит пользователю, например, поставить аудио на паузу"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Разрешить автоматическое воспроизведение",
+      "description": "С автоматическим воспроизведением дорожка начнёт воспроизводиться сразу. Если автовоспроизведение запрещено, пользователю необходимо нажать кнопку воспроизведения самостоятельно."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Воспроизвести аудио (Readspeaker)",
+      "default": "Воспроизвести аудио"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Пауза (Readspeaker)",
+      "default": "Пауза"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Название контента аудио",
+      "default": "Аудио"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Сообщение об ошибке аудио",
+      "default": "Ваш браузер не поддерживает аудио"
     }
   ]
 }
