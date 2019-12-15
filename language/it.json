@@ -30,15 +30,15 @@
       "description": "Con l'autoplay l'audio si avvia immediatamente. Se l'autoplay è disattivato l'utente premerà il pulsante play per avviarlo."
     },
     {
-      "label": "Avvia audio (lettore vocale)",
-      "default": "Avvia audio"
+      "label": "Avvia l'audio (lettore vocale)",
+      "default": "Avvia l'audio"
     },
     {
-      "label": "Metti in pausa audio (lettore vocale)",
-      "default": "Metti in pausa audio"
+      "label": "Metti in pausa l'audio (lettore vocale)",
+      "default": "Metti in pausa l'audio"
     },
     {
-      "label": "Nome del contenuto audio",
+      "label": "Nome del contenuto dell'audio",
       "default": "Audio"
     },
     {
