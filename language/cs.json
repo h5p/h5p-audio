@@ -1,49 +1,49 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Zdrojové soubory"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Režim  přehrávače",
+      "description": "Vyberte rozložení přehrávače.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalistický"
         },
         {
-          "label": "Full"
+          "label": "Úplný"
         },
         {
-          "label": "Transparent"
+          "label": "Transparentní"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Přizpůsobit obalu"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Povolit ovládací prvky",
+      "description": "Ovládací prvky umožňují uživateli například pozastavit zvuk"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Povolit automatické přehrávání",
+      "description": "Při automatickém přehrávání se zvuk začne okamžitě přehrávat. Pokud je automatické přehrávání zakázáno, uživatel spustí zvuk stiskem tlačítka přehrávání."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Přehrát zvuk (Čtecí zařízení)",
+      "default": "Přehrát zvuk"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Pozastavit zvuk (Čtecí zařízení)",
+      "default": "Pozastavit zvuk"
     },
     {
-      "label": "Audio content name",
+      "label": "Název zvukového obsahu",
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Zvuk není podporován",
+      "default": "Váš prohlížeč nepodporuje tento zvuk"
     }
   ]
 }
