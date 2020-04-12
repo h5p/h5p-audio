@@ -30,12 +30,12 @@
       "description": "Con la reproducción automática el audio empieza a reproducirse inmediatamente. Si la reproducción automática está deshabilitada, el usuario presiona un botón de reproducción para iniciar el audio."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Reproducir audio (Herramienta de lectura)",
+      "default": "Reproducir audio"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Pausar audio (Herramienta de lectura)",
+      "default": "Pausar audio"
     },
     {
       "label": "Nombre contenido de audio",
