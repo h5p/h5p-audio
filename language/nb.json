@@ -30,20 +30,20 @@
       "description": "Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått må brukeren trykke for å starte avspillingen."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Spill lyd (Readspeaker)",
+      "default": "Spill lyd"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Pause lyd (Readspeaker)",
+      "default": "Pause lyd"
     },
     {
       "label": "Innholdsnavn for lyd",
-      "default": "Audio"
+      "default": "Lyd"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Melding vist når lydkilde ikke er støttet",
+      "default": "Nettleseren din støtter ikke denne lydkilden"
     }
   ]
 }
