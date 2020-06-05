@@ -4,7 +4,8 @@
     "type": "audio",
     "importance": "high",
     "label": "Source files",
-    "disableCopyright": true
+    "disableCopyright": true,
+    "widgetExtensions": ["AudioRecorder"]
   },
   {
     "name": "playerMode",
