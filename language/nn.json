@@ -31,19 +31,19 @@
     },
     {
       "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "default": "Spel lyd"
     },
     {
       "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "default": "Pause lyd"
     },
     {
       "label": "Innhaldsnamn for lyd",
-      "default": "Audio"
+      "default": "Lyd"
     },
     {
       "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "default": "Nettlesaren din støttar ikkje denne lyden"
     }
   ]
 }
