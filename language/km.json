@@ -1,0 +1,49 @@
+{
+  "semantics": [
+    {
+      "label": "Source files"
+    },
+    {
+      "label": "Player mode",
+      "description": "Select the layout of the player.",
+      "options": [
+        {
+          "label": "Minimalistic"
+        },
+        {
+          "label": "Full"
+        },
+        {
+          "label": "Transparent"
+        }
+      ]
+    },
+    {
+      "label": "Fit to wrapper"
+    },
+    {
+      "label": "Enable controls",
+      "description": "Controls allow the user to for instance pause the audio"
+    },
+    {
+      "label": "Enable autoplay",
+      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+    },
+    {
+      "label": "Play audio (Readspeaker)",
+      "default": "លេងសម្លេង"
+    },
+    {
+      "label": "Pause audio (Readspeaker)",
+      "default": "ផ្អាកសម្លេង"
+    },
+    {
+      "label": "Audio content name",
+      "default": "សម្លេង"
+    },
+    {
+      "label": "Audio not supported message",
+      "default": "កម្មវិធីបើកវេបសាយរបស់អ្នកមិនអាចបើកឯកសារសម្លេងនេះទេ"
+    }
+  ]
+}
