@@ -1,17 +1,17 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Fitxers d’origen"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Mode del reproductor",
+      "description": "Seleccioneu el disseny del reproductor.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalista"
         },
         {
-          "label": "Full"
+          "label": "Complet"
         },
         {
           "label": "Transparent"
@@ -19,31 +19,31 @@
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Ajusta al continent"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Activa els controls",
+      "description": "Els controls permeten, per exemple, que l’usuari posi en pausa l’àudio."
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Activa la reproducció automàtica",
+      "description": "Amb la reproducció automàtica, l’àudio comença a reproduir-se immediatament. Si la reproducció automàtica està desactivada, l’usuari ha de prémer el botó de reproducció perquè l’àudio s’iniciï."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Reprodueix l’àudio (altaveu de lectura)",
+      "default": "Reprodueix l’àudio"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Posa en pausa l’àudio (Readspeaker)",
+      "default": "Posa en pausa l’àudio"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Nom del contingut d’àudio",
+      "default": "Àudio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Missatge “No s’admet àudio”",
+      "default": "El vostre navegador no admet aquest àudio."
     }
   ]
 }
