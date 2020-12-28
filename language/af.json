@@ -1,49 +1,49 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Brondokument"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Spelermodus",
+      "description": "Kies die uitleg van die speler.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalisties"
         },
         {
-          "label": "Full"
+          "label": "Vol"
         },
         {
-          "label": "Transparent"
+          "label": "Deursigtig"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Pas op voublokkie"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Aktiveer kontroles",
+      "description": "Kontroles laat die gebruiker toe om byvoorbeeld die klank te stop"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Aktiveer selfspeel",
+      "description": "Met selfspeel begin die klank onmiddellik speel. As selfspeel gedeaktiveer is, druk die gebruiker op 'n afspeelknoppie om die klank te begin."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Speel klank (Spreekleser)",
+      "default": "Speel klank"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Pouseer klank (Spreekleser)",
+      "default": "Pouseer klank"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Klankinhoud naam",
+      "default": "Klank"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Klank word nie ondersteun nie boodskap",
+      "default": "Jou webleser ondersteun nie hierdie klankgreep nie"
     }
   ]
 }
