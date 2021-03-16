@@ -14,7 +14,7 @@
           "label": "مكبر"
         },
         {
-          "label": "Transparent"
+          "label": "شفاف"
         }
       ]
     },
@@ -30,20 +30,20 @@
       "description": "مع التشغيل التلقائي يبدأ الصوت للعب على الفور. إذا تم تعطيل التشغيل التلقائي يقوم المستخدم بالضغط على زر التشغيل لبدء الصوت"
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "تشغيل الصوت (Readspeaker)",
+      "default": "تشغيل الصوت"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "إيقاف الصوت مؤقتًا (Readspeaker)",
+      "default": "إيقاف الصوت مؤقتًا"
     },
     {
       "label": "اسم ملف الصوت",
-      "default": "Audio"
+      "default": "ملف صوتي"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "الملف الصوتي غير مدعوم",
+      "default": "متصفحك لا يدعم هذا الملف الصوتي"
     }
   ]
 }
