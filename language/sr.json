@@ -1,49 +1,49 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Изворне датотеке"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Режим плејера",
+      "description": "Изаберите изглед плејера.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Минималистички"
         },
         {
-          "label": "Full"
+          "label": "Цео"
         },
         {
-          "label": "Transparent"
+          "label": "Провидан"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Одговара омоту"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Омогући контроле",
+      "description": "Контроле омогућавају кориснику да, на пример, искључи звук"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Омогући аутоматску репродукцију",
+      "description": "Са аутоматском репродукцијом звук почиње одмах да се репродукује. Ако је аутоматска репродукција онемогућена, корисник притиска дугме за репродукцију да би покренуо звук."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Репродукујте звук (читач звучника)",
+      "default": "Репродукујте"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Паузирање звука (читач звучника)",
+      "default": "Паузирај"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Назив аудио садржаја",
+      "default": "Звучни запис"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Порука није подржана за аудио",
+      "default": "Ваш прегледач не подржава овај звучни запис"
     }
   ]
 }
