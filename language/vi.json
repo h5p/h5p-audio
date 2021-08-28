@@ -1,20 +1,20 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Tập tin nguồn"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Chế độ của trình phát",
+      "description": "Chọn giao diện của trình phát.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Tối giản"
         },
         {
-          "label": "Full"
+          "label": "Đầy đủ"
         },
         {
-          "label": "Transparent"
+          "label": "Trong suốt"
         }
       ]
     },
@@ -22,28 +22,28 @@
       "label": "Fit to wrapper"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Bật nút điều khiển",
+      "description": "Các nút điều khiển cho phép người dùng ngừng phát âm thanh chẳng hạn."
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Bật tự động phát",
+      "description": "Khi bật tự động phát, âm thanh sẽ được phát ngay lập tức. Nếu tắt tự động phát thì người dùng cần nhấn nút phát để âm thanh bắt đầu phát."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Phát âm thanh (Readspeaker)",
+      "default": "Phát âm thanh"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Dừng âm thanh (Readspeaker)",
+      "default": "Dừng âm thanh"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Tên của nội dung âm thanh",
+      "default": "Âm thanh"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Thông báo âm thanh không được hỗ trợ",
+      "default": "Trình duyệt của bạn không thể phát âm thanh này"
     }
   ]
 }
