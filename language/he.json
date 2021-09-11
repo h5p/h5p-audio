@@ -4,46 +4,46 @@
       "label": "Source files"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "מצב נגן",
+      "description": "בחירת מערך הנגן",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "בסיסי"
         },
         {
-          "label": "Full"
+          "label": "מלאה"
         },
         {
-          "label": "Transparent"
+          "label": "שקופה"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "מתאימה לעטיפה"
     },
     {
       "label": "Enable controls",
       "description": "Controls allow the user to for instance pause the audio"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "הפעלת ניגון אוטומטי",
+      "description": "עם נגן אוטומטי השמע מתחיל לנגן מיד. אם נגן אוטומטי מושבת המשתמש לוחץ על כפתור הפעל כדי להתחיל את השמע."
     },
     {
       "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "default": "נגן שמע"
     },
     {
       "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "default": "השהיית שמע"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "שם תוכן שמע",
+      "default": "שמע"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "הודעה: שמע לא נתמך",
+      "default": "הדפדפן שלך לא תומך בסוג שמע זה"
     }
   ]
 }
