@@ -35,6 +35,11 @@ H5P.Audio = (function ($) {
       pauseAudio: "Pause audio"
     }, params);
 
+    // Required if e.g. used in CoursePresentation as area to click on
+    if (playerMode === 'transparent') {
+      this.params.fitToWrapper = true;
+    }
+
     this.on('resize', this.resize, this);
   }
 
