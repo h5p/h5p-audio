@@ -1,49 +1,49 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Kaynak dosyaları"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Oynatıcı modu",
+      "description": "Oynatıcı düzenini seçin.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalist"
         },
         {
-          "label": "Full"
+          "label": "Tam"
         },
         {
-          "label": "Transparent"
+          "label": "Şeffaf"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Sarıcıya sığdır"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Kontrolleri etkinleştir",
+      "description": "Kontroller, kullanıcının örneğin sesi duraklatmasına izin verir"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Otomatik oynatmayı etkinleştir",
+      "description": "Otomatik oynatma ile ses hemen çalmaya başlar. Otomatik oynatma devre dışı bırakılırsa, kullanıcı sesi başlatmak için bir oynat düğmesine basar."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Ses çal (Okuyucular için)",
+      "default": "Ses çal"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Sesi duraklat (Okuyucular için)",
+      "default": "Sesi duraklat"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Ses içeriği adı",
+      "default": "Ses"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Ses desteklenmiyor mesajı",
+      "default": "Tarayıcınız bu sesi desteklemiyor"
     }
   ]
 }
