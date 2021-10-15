@@ -1,49 +1,49 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Kaynak dosyalar"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Oynatıcı modu",
+      "description": "Oynatıcının görünümünü seç.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalist"
         },
         {
-          "label": "Full"
+          "label": "Eksiksiz"
         },
         {
-          "label": "Transparent"
+          "label": "Saydam"
         }
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Sarmalayıcıya uydur"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Kontrol düğmeleri devrede",
+      "description": "Kontrol düğmeleriyle kullanıcı örneğin ses dosyasını duraklatabilir"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+      "label": "Kendiliğinden oynat devrede",
+      "description": "Kendiliğinden oynat ile ses dosyası derhal devreye girer. Kendiliğinden oynat devrede değilse kullanıcı ses dosyasını başlatmak için oynat tuşunu tıklar."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Ses dosyasını başlat (Readspeaker)",
+      "default": "Ses dosyasını başlat"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Ses dosyasını duraklat (Readspeaker)",
+      "default": "Ses dosyasını duraklat"
     },
     {
-      "label": "Audio content name",
-      "default": "Audio"
+      "label": "Ses içeriğin adı",
+      "default": "Ses"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Ses dosyası desteklenmiyor mesajı",
+      "default": "Tarayıcınız bu ses dosyasını desteklemiyor"
     }
   ]
 }
