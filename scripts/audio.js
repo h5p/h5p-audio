@@ -35,6 +35,11 @@ H5P.Audio = (function ($) {
       pauseAudio: "Pause audio"
     }, params);
 
+    // Required if e.g. used in CoursePresentation as area to click on
+    if (this.params.playerMode === 'transparent') {
+      this.params.fitToWrapper = true;
+    }
+
     this.on('resize', this.resize, this);
   }
 
@@ -216,6 +221,10 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   else {
     audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
+  }
+
+  if (audio.controls) {
+    $wrapper.addClass('h5p-audio-controls');
   }
 
   // Set time to saved time from previous run
