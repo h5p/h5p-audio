@@ -197,6 +197,11 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   audio.className = 'h5p-audio';
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
+
+  // Menu removed, because it's cut off if audio is used as H5P.Question intro
+  const controlsList = 'nodownload noplaybackrate';
+  audio.setAttribute('controlsList', controlsList);
+
   audio.preload = 'auto';
   audio.style.display = 'block';
 
