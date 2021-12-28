@@ -4,7 +4,7 @@
   "description": "Simple library that displays an audio player.",
   "majorVersion": 1,
   "minorVersion": 4,
-  "patchVersion": 5,
+  "patchVersion": 7,
   "runnable": 1,
   "machineName": "H5P.Audio",
   "embedTypes": [
@@ -35,6 +35,13 @@
       "machineName": "FontAwesome",
       "majorVersion": 4,
       "minorVersion": 5
+    }
+  ],
+  "editorDependencies": [
+    {
+      "machineName": "H5PEditor.ShowWhen",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ]
 }

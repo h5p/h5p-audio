@@ -5,13 +5,13 @@
     },
     {
       "label": "מצב נגן",
-      "description": "בחירת תצורת נגן.",
+      "description": "בחירת מערך הנגן",
       "options": [
         {
           "label": "בסיסי"
         },
         {
-          "label": "מלא"
+          "label": "מלאה"
         },
         {
           "label": "שקופה"

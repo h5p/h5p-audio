@@ -35,6 +35,11 @@ H5P.Audio = (function ($) {
       pauseAudio: "Pause audio"
     }, params);
 
+    // Required if e.g. used in CoursePresentation as area to click on
+    if (this.params.playerMode === 'transparent') {
+      this.params.fitToWrapper = true;
+    }
+
     this.on('resize', this.resize, this);
   }
 
@@ -192,6 +197,11 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   audio.className = 'h5p-audio';
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
+
+  // Menu removed, because it's cut off if audio is used as H5P.Question intro
+  const controlsList = 'nodownload noplaybackrate';
+  audio.setAttribute('controlsList', controlsList);
+
   audio.preload = 'auto';
   audio.style.display = 'block';
 
@@ -216,6 +226,10 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   else {
     audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
+  }
+
+  if (audio.controls) {
+    $wrapper.addClass('h5p-audio-controls');
   }
 
   // Set time to saved time from previous run

@@ -4,7 +4,7 @@
       "label": "Archivo de origen"
     },
     {
-      "label": "Modo reproductor",
+      "label": "Modo de reproductor",
       "description": "Seleccione el diseño del reproductor.",
       "options": [
         {
@@ -19,31 +19,31 @@
       ]
     },
     {
-      "label": "Ajustar al marco"
+      "label": "Ajustar al envoltorio"
     },
     {
       "label": "Habilitar controles",
       "description": "Los controles permiten al usuario por ejemplo pausar el audio"
     },
     {
-      "label": "Habilitar reproduccion automatica",
+      "label": "Habilitar reproducción automática",
       "description": "Con la reproducción automática el audio empieza a reproducirse inmediatamente. Si la reproducción automática está deshabilitada, el usuario presiona un botón de reproducción para iniciar el audio."
     },
     {
-      "label": "Reproducir audio (Herramienta de lectura)",
+      "label": "Reproducir audio (Lector de texto en voz alta)",
       "default": "Reproducir audio"
     },
     {
-      "label": "Pausar audio (Herramienta de lectura)",
+      "label": "Pausar audio (Lector de texto en voz alta)",
       "default": "Pausar audio"
     },
     {
-      "label": "Nombre contenido de audio",
+      "label": "Nombre del contenido de audio",
       "default": "Audio"
     },
     {
-      "label": "Mensaje de audio no permitido",
-      "default": "Su navegador no es compatible con este audio"
+      "label": "Mensaje de audio no soportado",
+      "default": "Su navegador no soporta este audio"
     }
   ]
 }

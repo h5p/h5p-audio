@@ -34,7 +34,20 @@
     "importance": "low",
     "label": "Fit to wrapper",
     "default": false,
-    "descriptions": "Adjust audioplayer size to use available space"
+    "descriptions": "Adjust audioplayer size to use available space",
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "playerMode",
+          "equals": "minimalistic"
+        },
+        {
+          "field": "playerMode",
+          "equals": "full"
+        }
+      ]
+    }
   },
   {
     "name": "controls",
@@ -42,7 +55,16 @@
     "importance": "low",
     "label": "Enable controls",
     "default": true,
-    "description": "Controls allow the user to for instance pause the audio"
+    "description": "Controls allow the user to for instance pause the audio",
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "playerMode",
+          "equals": "full"
+        }
+      ]
+    }
   },
   {
     "name": "autoplay",
