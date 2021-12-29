@@ -14,7 +14,7 @@
           "label": "Volledig"
         },
         {
-          "label": "Onzichtbaar"
+          "label": "Transparant"
         }
       ]
     },
@@ -27,18 +27,18 @@
     },
     {
       "label": "Activeer automatisch afspelen",
-      "description": "Met autoplay begint de audio direct met afspelen. Als autoplay is uitgeschakeld, dan dient de gebruiker de audio te starten met de playknop ."
+      "description": "Met automatisch afspelen begint de audio direct met afspelen. Als automatisch afspelen is uitgeschakeld, dan dient de gebruiker de audio te starten met de afspeelknop ."
     },
     {
-      "label": "Afspelen audio (Readspeaker)",
+      "label": "Afspelen audio (Schermlezer)",
       "default": "Afspelen audio"
     },
     {
-      "label": "Pauzeren audio (Readspeaker)",
+      "label": "Pauzeren audio (Schermlezer)",
       "default": "Pauzeren audio"
     },
     {
-      "label": "Audionaam",
+      "label": "Naam van audio-inhoud",
       "default": "Audio"
     },
     {
