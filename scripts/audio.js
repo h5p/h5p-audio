@@ -321,7 +321,12 @@ H5P.Audio.prototype.play = function () {
     this.flowplayer.play();
   }
   if (this.audio !== undefined) {
-    this.audio.play();
+    const playPromise = this.audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        // Purpose is to handle the exception and autoplay policy of google chrome
+      });
+    }
   }
 };
 
