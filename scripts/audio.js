@@ -249,6 +249,10 @@ H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
       '<span>' + this.params.audioNotSupported + '</span>' +
     '</div>'
   );
+
+  if (this.endedCallback !== undefined) {
+    this.endedCallback();
+  }
 }
 
 /**
