@@ -239,21 +239,21 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     new IntersectionObserver(function (entries) {
       const entry = entries[0];
 
-      // This audio element became visible
-      if (entry.isIntersecting) {
-        // Autoplay if autoplay is enabled and it was not explicitly
-        // paused by a user
+      if (entry['intersectionRatio'] == 0 && !self.audio.paused) {
+        // Audio element is hidden, pause it
+        self.autoPaused = true;
+        self.audio.pause();
+      }
+      else {
+        // Audio element is visible. Autoplay if autoplay is enabled and it was
+        // not explicitly paused by a user
         if (self.params.autoplay && self.autoPaused) {
           self.autoPaused = false;
           self.audio.play();
         }
       }
-      else if (!self.audio.paused) {
-        self.autoPaused = true;
-        self.audio.pause();
-      }
     }, {
-      root: null,
+      root: document.documentElement,
       threshold: [0, 1] // Get events when it is shown and hidden
     }).observe($wrapper.get(0));
   }
