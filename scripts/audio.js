@@ -161,8 +161,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   // Check if browser supports audio.
   var audio = document.createElement('audio');
   if (audio.canPlayType === undefined) {
-    // Try flash
-    this.attachFlash($wrapper);
+    this.attachNotSupportedMessage($wrapper);
     return;
   }
 
@@ -181,8 +180,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   }
 
   if (!audio.children.length) {
-    // Try flash
-    this.attachFlash($wrapper);
+    this.attachNotSupportedMessage($wrapper);
     return;
   }
 
@@ -262,65 +260,23 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 };
 
 /**
- * Attaches a flash audio player to the wrapper.
+ * Attaches not supported message.
  *
  * @param {jQuery} $wrapper Our dear container.
  */
-H5P.Audio.prototype.attachFlash = function ($wrapper) {
-  if (this.params.files !== undefined && this.params.files instanceof Object) {
-    for (var i = 0; i < this.params.files.length; i++) {
-      var file = this.params.files[i];
-      if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
-        var audioSource = H5P.getPath(file.path, this.contentId);
-        break;
-      }
-    }
-  }
-
-  if (audioSource === undefined) {
-    $wrapper.addClass('h5p-audio-not-supported');
-    $wrapper.html(
-      '<div class="h5p-audio-inner">' +
-        '<div class="h5p-audio-not-supported-icon"><span/></div>' +
-        '<span>' + this.params.audioNotSupported + '</span>' +
-      '</div>'
-    );
-
-    if (this.endedCallback !== undefined) {
-      this.endedCallback();
-    }
-    return;
-  }
-
-  var options = {
-    buffering: true,
-    clip: {
-      url: window.location.protocol + '//' + window.location.host + audioSource,
-      autoPlay: this.params.autoplay === undefined ? false : this.params.autoplay,
-      scaling: 'fit'
-    },
-    plugins: {
-      controls: null
-    }
-  };
-
-  if (this.params.controls === undefined || this.params.controls) {
-    options.plugins.controls = {
-      fullscreen: false,
-      autoHide: false
-    };
-  }
+H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
+  $wrapper.addClass('h5p-audio-not-supported');
+  $wrapper.html(
+    '<div class="h5p-audio-inner">' +
+      '<div class="h5p-audio-not-supported-icon"><span/></div>' +
+      '<span>' + this.params.audioNotSupported + '</span>' +
+    '</div>'
+  );
 
   if (this.endedCallback !== undefined) {
-    options.clip.onFinish = this.endedCallback;
-    options.clip.onError = this.endedCallback;
+    this.endedCallback();
   }
-
-  this.flowplayer = flowplayer($wrapper[0], {
-    src: "http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf",
-    wmode: "opaque"
-  }, options);
-};
+}
 
 /**
  * Stop the audio. TODO: Rename to pause?
