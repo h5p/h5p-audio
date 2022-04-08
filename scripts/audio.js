@@ -239,7 +239,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     new IntersectionObserver(function (entries) {
       const entry = entries[0];
 
-      if (entry['intersectionRatio'] == 0) {
+      if (entry.intersectionRatio == 0) {
         if (!self.audio.paused) {
           // Audio element is hidden, pause it
           self.autoPaused = true;
