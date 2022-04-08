@@ -14,10 +14,10 @@ H5P.Audio = (function ($) {
   */
   function C(params, id, extras) {
     H5P.EventDispatcher.call(this);
+
     this.contentId = id;
     this.params = params;
     this.extras = extras;
-
     this.toggleButtonEnabled = true;
 
     // Retrieve previous state
@@ -90,17 +90,12 @@ H5P.Audio = (function ($) {
         this.setAttribute('aria-hidden', 'false');
       });
 
-    //Fit to wrapper
+    // Fit to wrapper
     if (this.params.fitToWrapper) {
       audioButton.css({
         'width': '100%',
         'height': '100%'
       });
-    }
-
-    // cpAutoplay is passed from coursepresentation
-    if (this.params.autoplay) {
-      self.play();
     }
 
     //Event listeners that change the look of the player depending on events.
@@ -130,7 +125,7 @@ H5P.Audio = (function ($) {
     });
 
     this.$audioButton = audioButton;
-    //Scale icon to container
+    // Scale icon to container
     self.resize();
   };
 
@@ -151,7 +146,6 @@ H5P.Audio = (function ($) {
     }
   };
 
-
   return C;
 })(H5P.jQuery);
 
@@ -161,6 +155,7 @@ H5P.Audio = (function ($) {
  * @param {jQuery} $wrapper Our poor container.
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
+  const self = this;
   $wrapper.addClass('h5p-audio-wrapper');
 
   // Check if browser supports audio.
@@ -222,7 +217,6 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     this.addMinimalAudioPlayer($wrapper, true);
   }
   else {
-    audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
   }
 
@@ -233,6 +227,35 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   // Set time to saved time from previous run
   if (this.oldTime) {
     this.seekTo(this.oldTime);
+  }
+
+  // Avoid autoplaying in authoring tool
+  if (window.H5PEditor === undefined) {
+    // Keep record of autopauses.
+    // I.e: we don't wanna autoplay if the user has excplicitly paused.
+    self.autoPaused = true;
+
+    // Set up intersection observer
+    new IntersectionObserver(function (entries) {
+      const entry = entries[0];
+
+      if (entry.intersectionRatio == 0) {
+        if (!self.audio.paused) {
+          // Audio element is hidden, pause it
+          self.autoPaused = true;
+          self.audio.pause();
+        }
+      }
+      else if (self.params.autoplay && self.autoPaused) {
+        // Audio element is visible. Autoplay if autoplay is enabled and it was
+        // not explicitly paused by a user
+        self.autoPaused = false;
+        self.audio.play();
+      }
+    }, {
+      root: document.documentElement,
+      threshold: [0, 1] // Get events when it is shown and hidden
+    }).observe($wrapper.get(0));
   }
 };
 
