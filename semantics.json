@@ -71,7 +71,7 @@
     "type": "boolean",
     "importance": "low",
     "label": "Enable autoplay",
-    "description": "With autoplay the audio starts to play immediately. If autoplay is disabled the user presses a play button to start the audio."
+    "description": "With autoplay the audio starts to play immediately. Do note that this is not supported by all browsers"
   },
   {
     "name": "playAudio",

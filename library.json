@@ -3,8 +3,8 @@
   "contentType": "Media",
   "description": "Simple library that displays an audio player.",
   "majorVersion": 1,
-  "minorVersion": 4,
-  "patchVersion": 7,
+  "minorVersion": 5,
+  "patchVersion": 0,
   "runnable": 1,
   "machineName": "H5P.Audio",
   "embedTypes": [
@@ -26,11 +26,6 @@
     }
   ],
   "preloadedDependencies": [
-    {
-      "machineName": "flowplayer",
-      "majorVersion": 1,
-      "minorVersion": 0
-    },
     {
       "machineName": "FontAwesome",
       "majorVersion": 4,

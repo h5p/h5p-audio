@@ -14,10 +14,10 @@ H5P.Audio = (function ($) {
   */
   function C(params, id, extras) {
     H5P.EventDispatcher.call(this);
+
     this.contentId = id;
     this.params = params;
     this.extras = extras;
-
     this.toggleButtonEnabled = true;
 
     // Retrieve previous state
@@ -90,17 +90,12 @@ H5P.Audio = (function ($) {
         this.setAttribute('aria-hidden', 'false');
       });
 
-    //Fit to wrapper
+    // Fit to wrapper
     if (this.params.fitToWrapper) {
       audioButton.css({
         'width': '100%',
         'height': '100%'
       });
-    }
-
-    // cpAutoplay is passed from coursepresentation
-    if (this.params.autoplay) {
-      self.play();
     }
 
     //Event listeners that change the look of the player depending on events.
@@ -130,7 +125,7 @@ H5P.Audio = (function ($) {
     });
 
     this.$audioButton = audioButton;
-    //Scale icon to container
+    // Scale icon to container
     self.resize();
   };
 
@@ -151,7 +146,6 @@ H5P.Audio = (function ($) {
     }
   };
 
-
   return C;
 })(H5P.jQuery);
 
@@ -161,13 +155,13 @@ H5P.Audio = (function ($) {
  * @param {jQuery} $wrapper Our poor container.
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
+  const self = this;
   $wrapper.addClass('h5p-audio-wrapper');
 
   // Check if browser supports audio.
   var audio = document.createElement('audio');
   if (audio.canPlayType === undefined) {
-    // Try flash
-    this.attachFlash($wrapper);
+    this.attachNotSupportedMessage($wrapper);
     return;
   }
 
@@ -186,8 +180,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   }
 
   if (!audio.children.length) {
-    // Try flash
-    this.attachFlash($wrapper);
+    this.attachNotSupportedMessage($wrapper);
     return;
   }
 
@@ -224,7 +217,6 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     this.addMinimalAudioPlayer($wrapper, true);
   }
   else {
-    audio.autoplay = this.params.autoplay === undefined ? false : this.params.autoplay;
     $wrapper.html(audio);
   }
 
@@ -236,68 +228,55 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   if (this.oldTime) {
     this.seekTo(this.oldTime);
   }
+
+  // Avoid autoplaying in authoring tool
+  if (window.H5PEditor === undefined) {
+    // Keep record of autopauses.
+    // I.e: we don't wanna autoplay if the user has excplicitly paused.
+    self.autoPaused = true;
+
+    // Set up intersection observer
+    new IntersectionObserver(function (entries) {
+      const entry = entries[0];
+
+      if (entry.intersectionRatio == 0) {
+        if (!self.audio.paused) {
+          // Audio element is hidden, pause it
+          self.autoPaused = true;
+          self.audio.pause();
+        }
+      }
+      else if (self.params.autoplay && self.autoPaused) {
+        // Audio element is visible. Autoplay if autoplay is enabled and it was
+        // not explicitly paused by a user
+        self.autoPaused = false;
+        self.audio.play();
+      }
+    }, {
+      root: document.documentElement,
+      threshold: [0, 1] // Get events when it is shown and hidden
+    }).observe($wrapper.get(0));
+  }
 };
 
 /**
- * Attaches a flash audio player to the wrapper.
+ * Attaches not supported message.
  *
  * @param {jQuery} $wrapper Our dear container.
  */
-H5P.Audio.prototype.attachFlash = function ($wrapper) {
-  if (this.params.files !== undefined && this.params.files instanceof Object) {
-    for (var i = 0; i < this.params.files.length; i++) {
-      var file = this.params.files[i];
-      if (file.mime === 'audio/mpeg' || file.mime === 'audio/mp3') {
-        var audioSource = H5P.getPath(file.path, this.contentId);
-        break;
-      }
-    }
-  }
-
-  if (audioSource === undefined) {
-    $wrapper.addClass('h5p-audio-not-supported');
-    $wrapper.html(
-      '<div class="h5p-audio-inner">' +
-        '<div class="h5p-audio-not-supported-icon"><span/></div>' +
-        '<span>' + this.params.audioNotSupported + '</span>' +
-      '</div>'
-    );
-
-    if (this.endedCallback !== undefined) {
-      this.endedCallback();
-    }
-    return;
-  }
-
-  var options = {
-    buffering: true,
-    clip: {
-      url: window.location.protocol + '//' + window.location.host + audioSource,
-      autoPlay: this.params.autoplay === undefined ? false : this.params.autoplay,
-      scaling: 'fit'
-    },
-    plugins: {
-      controls: null
-    }
-  };
-
-  if (this.params.controls === undefined || this.params.controls) {
-    options.plugins.controls = {
-      fullscreen: false,
-      autoHide: false
-    };
-  }
+H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
+  $wrapper.addClass('h5p-audio-not-supported');
+  $wrapper.html(
+    '<div class="h5p-audio-inner">' +
+      '<div class="h5p-audio-not-supported-icon"><span/></div>' +
+      '<span>' + this.params.audioNotSupported + '</span>' +
+    '</div>'
+  );
 
   if (this.endedCallback !== undefined) {
-    options.clip.onFinish = this.endedCallback;
-    options.clip.onError = this.endedCallback;
+    this.endedCallback();
   }
-
-  this.flowplayer = flowplayer($wrapper[0], {
-    src: "http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf",
-    wmode: "opaque"
-  }, options);
-};
+}
 
 /**
  * Stop the audio. TODO: Rename to pause?
