@@ -27,7 +27,7 @@
     },
     {
       "label": "Habilitar reproducción automática",
-      "description": "Con la reproducción automática el audio empieza a reproducirse inmediatamente. Si la reproducción automática está deshabilitada, el usuario presiona un botón de reproducción para iniciar el audio."
+      "description": "Con la reproducción automática el audio empieza a reproducirse inmediatamente.Tenga en cuenta que esto no está soportado por todos los navegadores."
     },
     {
       "label": "Reproducir audio (Lector de texto en voz alta)",
