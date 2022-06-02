@@ -27,7 +27,7 @@
     },
     {
       "label": "Permitir reprodución automática",
-      "description": "Coa reprodución automática, o audio reprodúcese automaticamente. Se se desactiva, o usuario terá que premer o botón de reprodución."
+      "description": "Coa reprodución automática, o audio reprodúcese automaticamente. Ollo, isto non é compatible con todos os navegadores."
     },
     {
       "label": "Reproducir audio (Texto falado)",
