@@ -27,7 +27,7 @@
     },
     {
       "label": "Povolit automatické přehrávání",
-      "description": "Při automatickém přehrávání se zvuk začne okamžitě přehrávat. Pokud je automatické přehrávání zakázáno, uživatel spustí zvuk stiskem tlačítka přehrávání."
+      "description": "Při automatickém přehrávání se zvuk začne okamžitě přehrávat. Pamatujte, že to není podporováno všemi prohlížeči."
     },
     {
       "label": "Přehrát zvuk (Čtecí zařízení)",
