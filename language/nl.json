@@ -27,7 +27,7 @@
     },
     {
       "label": "Activeer automatisch afspelen",
-      "description": "Met automatisch afspelen begint de audio direct met afspelen. Als automatisch afspelen is uitgeschakeld, dan dient de gebruiker de audio te starten met de afspeelknop ."
+      "description": "Met automatisch afspelen begint de audio direct met afspelen. Let op! Deze functie wordt niet door alle browsers ondersteund."
     },
     {
       "label": "Afspelen audio (Schermlezer)",

@@ -27,7 +27,7 @@
     },
     {
       "label": "Atļaut automātisku atskaņošanu",
-      "description": "Ar automātisku atskaņošanu, audio tiek atskaņots uzreiz. Ja automātiska atskaņošana ir atslēgta, lietotājam jāklikšķina poga, lai sāktu audio."
+      "description": "Ar automātisku atskaņošanu, audio tiek atskaņots uzreiz. Ņemiet vērā, ka ne visas pārlūkprogrammas to atbalsta."
     },
     {
       "label": "Atskaņot audio (asistīvās tehnoloģijas)",

@@ -27,7 +27,7 @@
     },
     {
       "label": "Gaitu erreprodukzio automatikoa",
-      "description": "Erreprodukzio automatikoarekin audioa instantean hasiko da. Erreprodukzio automatikoa aktibatua ez badago erabiltzaileak erreproduzitzeko botoia sakatu behar du audio hasteko."
+      "description": "Erreprodukzio automatikoarekin audioa unea hasiko da. Kontuan izan nabigatzaile guztiek ez dutela aukera hau onartzen."
     },
     {
       "label": "Erreproduzitu audioa (irakugailuetarako)",
