@@ -27,7 +27,7 @@
     },
     {
       "label": "Kendiliğinden oynat devrede",
-      "description": "Kendiliğinden oynat ile ses dosyası derhal devreye girer. Kendiliğinden oynat devrede değilse kullanıcı ses dosyasını başlatmak için oynat tuşunu tıklar."
+      "description": "Otomatik oynatma ile ses dosyası hemen oynatılmaya başlanır. Tüm web tarayıcıların bu özelliği desteklemediğini unutmayın."
     },
     {
       "label": "Ses dosyasını başlat (Readspeaker)",
