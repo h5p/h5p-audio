@@ -4,11 +4,11 @@
       "label": "Source files"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Inställningar för uppspelning",
+      "description": "Välj layout för spelaren",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalistisk"
         },
         {
           "label": "Full"
@@ -19,22 +19,22 @@
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Anpassa storlek"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Aktivera kontroller",
+      "description": "Kontroller låter användaren exempelvis pausa uppspelning"
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. Do note that this is not supported by all browsers."
+      "label": "Aktivera automatisk uppspelning",
+      "description": "Med automatisk uppspelning startar uppspelningen omedelbart. Notera att detta inte stöds av alla webbläsare."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Spela ljud (Skärmläsare)",
+      "default": "Spela ljud"
     },
     {
-      "label": "Pause audio (Readspeaker)",
+      "label": "Pausa ljud (Skärmläsare)",
       "default": "Pause audio"
     },
     {
@@ -42,8 +42,8 @@
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Meddelande om att ljud inte stöds",
+      "default": "Din webbläsare stödjer inte detta ljudformat"
     }
   ]
 }
