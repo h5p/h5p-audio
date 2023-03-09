@@ -5,13 +5,13 @@
     },
     {
       "label": "מצב נגן",
-      "description": "בחירת מערך הנגן",
+      "description": "בחירת תצורת תצוגת הנגן",
       "options": [
         {
           "label": "בסיסי"
         },
         {
-          "label": "מלאה"
+          "label": "מלא"
         },
         {
           "label": "שקופה"
@@ -22,7 +22,7 @@
       "label": "מתאימה לעטיפה"
     },
     {
-      "label": "Enable controls",
+      "label": "הפעלת פקדים",
       "description": "Controls allow the user to for instance pause the audio"
     },
     {
