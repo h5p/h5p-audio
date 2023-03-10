@@ -27,7 +27,7 @@
     },
     {
       "label": "Automatische Wiedergabe aktivieren",
-      "description": "Bei aktivierter, automatischer Wiedergabe wird die Tondatei sofort abgespielt. Ansonsten wird die Tondatei erst abgespielt, wenn der Nutzer den Play-Button gedrückt hat."
+      "description": "Bei aktivierter, automatischer Wiedergabe wird die Tondatei sofort abgespielt. Bitte beachte, dass dies nicht immer von allen Browsern unterstützt wird."
     },
     {
       "label": "Audio abspielen (Screenreader)",

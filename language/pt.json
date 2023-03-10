@@ -27,7 +27,7 @@
     },
     {
       "label": "Ativar reprodução automática",
-      "description": "O áudio é reproduzido automaticamente. Se a reprodução automática estiver desativada, o utilizador deve pressionar o botão de reprodução para iniciar o áudio."
+      "description": "O áudio é reproduzido automaticamente. Note que isto não é suportado por todos os navegadores."
     },
     {
       "label": "Reproduzir áudio (leitor de ecrã)",

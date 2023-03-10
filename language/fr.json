@@ -27,7 +27,7 @@
     },
     {
       "label": "Activer le démarrage automatique",
-      "description": "Le son démarre directement sans appuyer sur un bouton. Si cette option est désactivée, l'utilisateur doit appuyer sur le bouton PLAY pour lancer la lecture."
+      "description": "Avec la lecture automatique, l'audio démarre immédiatement. Noter que cela n'est pas compatible avec tous les navigateurs."
     },
     {
       "label": "Play audio (Readspeaker)",
