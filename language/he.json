@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "קבצי המקור"
     },
     {
       "label": "מצב נגן",
-      "description": "בחירת תצורת תצוגת הנגן",
+      "description": "בחירת תצורת תצוגת הנגן.",
       "options": [
         {
           "label": "בסיסי"
@@ -23,18 +23,18 @@
     },
     {
       "label": "הפעלת פקדים",
-      "description": "Controls allow the user to for instance pause the audio"
+      "description": "בקרות מאפשרות למשתמש למשל להשהות את השמע"
     },
     {
       "label": "הפעלת ניגון אוטומטי",
-      "description": "עם נגן אוטומטי השמע מתחיל לנגן מיד. אם נגן אוטומטי מושבת המשתמש לוחץ על כפתור הפעל כדי להתחיל את השמע."
+      "description": "עם הפעלה אוטומטית, האודיו מתחיל לפעול מיד. שים לב שזה לא נתמך על ידי כל הדפדפנים."
     },
     {
-      "label": "Play audio (Readspeaker)",
+      "label": "השמעת אודיו (רמקול קריאה)",
       "default": "נגן שמע"
     },
     {
-      "label": "Pause audio (Readspeaker)",
+      "label": "השהיית אודיו (רמקול קריאה)",
       "default": "השהיית שמע"
     },
     {
