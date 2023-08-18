@@ -250,7 +250,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
         // Audio element is visible. Autoplay if autoplay is enabled and it was
         // not explicitly paused by a user
         self.autoPaused = false;
-        self.audio.play();
+        self.play();
       }
     }, {
       root: document.documentElement,
@@ -300,7 +300,8 @@ H5P.Audio.prototype.play = function () {
     this.flowplayer.play();
   }
   if (this.audio !== undefined) {
-    this.audio.play();
+    // play() returns a Promise that can fail, e.g. while autoplaying
+    this.audio.play().catch((error) => {});
   }
 };
 
