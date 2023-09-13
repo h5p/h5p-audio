@@ -301,7 +301,9 @@ H5P.Audio.prototype.play = function () {
   }
   if (this.audio !== undefined) {
     // play() returns a Promise that can fail, e.g. while autoplaying
-    this.audio.play().catch((error) => {});
+    this.audio.play().catch((error) => {
+      console.warn(error);
+    });
   }
 };
 
