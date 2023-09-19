@@ -333,7 +333,7 @@ H5P.Audio.prototype.seekTo = function (seekTo) {
  * @returns {object} Current state.
  */
 H5P.Audio.prototype.getCurrentState = function () {
-  if (this.audio !== undefined) {
+  if (this.audio !== undefined && this.audio.currentTime > 0) {
     const currentTime = this.audio.ended ? 0 : this.audio.currentTime;
     return {
       currentTime: currentTime
