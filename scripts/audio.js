@@ -279,6 +279,16 @@ H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
 }
 
 /**
+ * Stop & reset playback.
+ *
+ * @returns {undefined}
+ */
+H5P.Audio.prototype.resetTask = function () {
+  this.stop();
+  this.seekTo(0);
+};
+
+/**
  * Stop the audio. TODO: Rename to pause?
  *
  * @returns {undefined}
