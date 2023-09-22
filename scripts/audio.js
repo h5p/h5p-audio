@@ -125,6 +125,7 @@ H5P.Audio = (function ($) {
     });
 
     H5P.Audio.MINIMAL_BUTTON = AUDIO_BUTTON + " " + PLAY_BUTTON;
+    H5P.Audio.MINIMAL_BUTTON_PAUSED = AUDIO_BUTTON + " " + PLAY_BUTTON_PAUSED;
 
     this.$audioButton = audioButton;
     // Scale icon to container
@@ -228,6 +229,9 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   // Set time to saved time from previous run
   if (this.oldTime) {
+    if (this.$audioButton) {
+      this.$audioButton.attr('class', H5P.Audio.MINIMAL_BUTTON_PAUSED);
+    }
     this.seekTo(this.oldTime);
   }
 
