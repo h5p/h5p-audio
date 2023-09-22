@@ -124,6 +124,8 @@ H5P.Audio = (function ($) {
         .addClass(PLAY_BUTTON_PAUSED);
     });
 
+    H5P.Audio.MINIMAL_BUTTON = AUDIO_BUTTON + " " + PLAY_BUTTON;
+
     this.$audioButton = audioButton;
     // Scale icon to container
     self.resize();
@@ -277,6 +279,19 @@ H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
     this.endedCallback();
   }
 }
+
+/**
+ * Stop & reset playback.
+ *
+ * @returns {undefined}
+ */
+H5P.Audio.prototype.resetTask = function () {
+  this.stop();
+  this.seekTo(0);
+  if (this.$audioButton) {
+    this.$audioButton.attr('class', H5P.Audio.MINIMAL_BUTTON);
+  }
+};
 
 /**
  * Stop the audio. TODO: Rename to pause?
