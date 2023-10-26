@@ -303,9 +303,6 @@ H5P.Audio.prototype.resetTask = function () {
  * @returns {undefined}
  */
 H5P.Audio.prototype.stop = function () {
-  if (this.flowplayer !== undefined) {
-    this.flowplayer.stop().close().unload();
-  }
   if (this.audio !== undefined) {
     this.audio.pause();
   }
@@ -315,9 +312,6 @@ H5P.Audio.prototype.stop = function () {
  * Play
  */
 H5P.Audio.prototype.play = function () {
-  if (this.flowplayer !== undefined) {
-    this.flowplayer.play();
-  }
   if (this.audio !== undefined) {
     // play() returns a Promise that can fail, e.g. while autoplaying
     this.audio.play().catch((error) => {
