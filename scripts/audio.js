@@ -117,11 +117,14 @@ H5P.Audio = (function ($) {
     });
 
     self.audio.addEventListener('pause', function () {
-      audioButton
-        .attr('aria-hidden', false)
-        .attr('aria-label', self.params.playAudio)
-        .removeClass(PAUSE_BUTTON)
-        .addClass(PLAY_BUTTON_PAUSED);
+      // Don't override if initial look is set
+      if (!audioButton.hasClass(PLAY_BUTTON)) {
+        audioButton
+          .attr('aria-hidden', false)
+          .attr('aria-label', self.params.playAudio)
+          .removeClass(PAUSE_BUTTON)
+          .addClass(PLAY_BUTTON_PAUSED);
+      }
     });
 
     H5P.Audio.MINIMAL_BUTTON = AUDIO_BUTTON + " " + PLAY_BUTTON;
