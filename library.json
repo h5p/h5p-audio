@@ -4,7 +4,7 @@
   "description": "Simple library that displays an audio player.",
   "majorVersion": 1,
   "minorVersion": 5,
-  "patchVersion": 8,
+  "patchVersion": 9,
   "runnable": 1,
   "machineName": "H5P.Audio",
   "embedTypes": [
