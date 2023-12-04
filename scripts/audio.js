@@ -117,12 +117,18 @@ H5P.Audio = (function ($) {
     });
 
     self.audio.addEventListener('pause', function () {
-      audioButton
-        .attr('aria-hidden', false)
-        .attr('aria-label', self.params.playAudio)
-        .removeClass(PAUSE_BUTTON)
-        .addClass(PLAY_BUTTON_PAUSED);
+      // Don't override if initial look is set
+      if (!audioButton.hasClass(PLAY_BUTTON)) {
+        audioButton
+          .attr('aria-hidden', false)
+          .attr('aria-label', self.params.playAudio)
+          .removeClass(PAUSE_BUTTON)
+          .addClass(PLAY_BUTTON_PAUSED);
+      }
     });
+
+    H5P.Audio.MINIMAL_BUTTON = AUDIO_BUTTON + " " + PLAY_BUTTON;
+    H5P.Audio.MINIMAL_BUTTON_PAUSED = AUDIO_BUTTON + " " + PLAY_BUTTON_PAUSED;
 
     this.$audioButton = audioButton;
     // Scale icon to container
@@ -226,6 +232,9 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   // Set time to saved time from previous run
   if (this.oldTime) {
+    if (this.$audioButton) {
+      this.$audioButton.attr('class', H5P.Audio.MINIMAL_BUTTON_PAUSED);
+    }
     this.seekTo(this.oldTime);
   }
 
@@ -250,7 +259,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
         // Audio element is visible. Autoplay if autoplay is enabled and it was
         // not explicitly paused by a user
         self.autoPaused = false;
-        self.audio.play();
+        self.play();
       }
     }, {
       root: document.documentElement,
@@ -279,14 +288,24 @@ H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
 }
 
 /**
+ * Stop & reset playback.
+ *
+ * @returns {undefined}
+ */
+H5P.Audio.prototype.resetTask = function () {
+  this.stop();
+  this.seekTo(0);
+  if (this.$audioButton) {
+    this.$audioButton.attr('class', H5P.Audio.MINIMAL_BUTTON);
+  }
+};
+
+/**
  * Stop the audio. TODO: Rename to pause?
  *
  * @returns {undefined}
  */
 H5P.Audio.prototype.stop = function () {
-  if (this.flowplayer !== undefined) {
-    this.flowplayer.stop().close().unload();
-  }
   if (this.audio !== undefined) {
     this.audio.pause();
   }
@@ -296,11 +315,11 @@ H5P.Audio.prototype.stop = function () {
  * Play
  */
 H5P.Audio.prototype.play = function () {
-  if (this.flowplayer !== undefined) {
-    this.flowplayer.play();
-  }
   if (this.audio !== undefined) {
-    this.audio.play();
+    // play() returns a Promise that can fail, e.g. while autoplaying
+    this.audio.play().catch((error) => {
+      console.warn(error);
+    });
   }
 };
 
@@ -333,7 +352,7 @@ H5P.Audio.prototype.seekTo = function (seekTo) {
  * @returns {object} Current state.
  */
 H5P.Audio.prototype.getCurrentState = function () {
-  if (this.audio !== undefined) {
+  if (this.audio !== undefined && this.audio.currentTime > 0) {
     const currentTime = this.audio.ended ? 0 : this.audio.currentTime;
     return {
       currentTime: currentTime
