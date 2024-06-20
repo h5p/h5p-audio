@@ -70,7 +70,10 @@ H5P.Audio = (function ($) {
       'class': AUDIO_BUTTON + " " + PLAY_BUTTON,
       'aria-label': this.params.playAudio
     }).appendTo(self.$inner)
-      .click( function () {
+      .click( function (event) {
+        if(self.buttonClickEventPropagationDisabled){
+          event.stopPropagation();
+        }
         if (!self.isEnabledToggleButton()) {
           return;
         }
@@ -150,6 +153,14 @@ H5P.Audio = (function ($) {
         this.$audioButton.css({'font-size': h / 2 + 'px'});
       }
     }
+  };
+
+  C.prototype.disableButtonClickEventPropagation = function () {
+    this.buttonClickEventPropagationDisabled = true;
+  };
+
+  C.prototype.enableButtonClickEventPropagation = function () {
+    this.buttonClickEventPropagationDisabled = false;
   };
 
   return C;
