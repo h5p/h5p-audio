@@ -32,7 +32,8 @@ H5P.Audio = (function ($) {
       autoplay: false,
       audioNotSupported: "Your browser does not support this audio",
       playAudio: "Play audio",
-      pauseAudio: "Pause audio"
+      pauseAudio: "Pause audio",
+      propagateButtonClickEvents: true
     }, params);
 
     // Required if e.g. used in CoursePresentation as area to click on
@@ -71,9 +72,10 @@ H5P.Audio = (function ($) {
       'aria-label': this.params.playAudio
     }).appendTo(self.$inner)
       .click( function (event) {
-        if(self.buttonClickEventPropagationDisabled){
+        if (!self.params.propagateButtonClickEvents){
           event.stopPropagation();
         }
+
         if (!self.isEnabledToggleButton()) {
           return;
         }
@@ -153,14 +155,6 @@ H5P.Audio = (function ($) {
         this.$audioButton.css({'font-size': h / 2 + 'px'});
       }
     }
-  };
-
-  C.prototype.disableButtonClickEventPropagation = function () {
-    this.buttonClickEventPropagationDisabled = true;
-  };
-
-  C.prototype.enableButtonClickEventPropagation = function () {
-    this.buttonClickEventPropagationDisabled = false;
   };
 
   return C;
