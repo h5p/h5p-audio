@@ -33,7 +33,6 @@
   scale: 0.95;
 }
 .h5p-audio-inner .h5p-audio-minimal-button:focus {
-    z-index: 3000;
     outline: 2px ridge var(--h5p-theme-main-cta-base);
     outline-offset: 2px;
 }
