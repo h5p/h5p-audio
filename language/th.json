@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "เต็มพื้นที่"
+      "label": "เต็มพื้นที่",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "ควบคุมการเล่นเสียงได้",

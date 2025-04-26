@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Přizpůsobit obalu"
+      "label": "Přizpůsobit obalu",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Povolit ovládací prvky",

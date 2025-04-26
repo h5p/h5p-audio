@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "ملء الحاوية"
+      "label": "ملء الحاوية",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "تفعيل ادوات التحكم",
