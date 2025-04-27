@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Past in de beschikbare plaats"
+      "label": "Past in de beschikbare plaats",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Activeer audiobediening",

@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Ajustar al marco"
+      "label": "Ajustar al marco",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Habilitar controles",

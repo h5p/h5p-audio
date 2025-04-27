@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Preencher"
+      "label": "Preencher",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Ativar controles",

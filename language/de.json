@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Verfügbaren Platz nutzen"
+      "label": "Verfügbaren Platz nutzen",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Steuerelemente aktivieren",

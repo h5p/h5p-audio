@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Tilpass størrelse"
+      "label": "Tilpass størrelse",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Slå på kontrollar",

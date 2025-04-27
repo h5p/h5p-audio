@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "크기 맞추기"
+      "label": "크기 맞추기",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "콘트롤 활성화",
