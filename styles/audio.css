@@ -35,7 +35,7 @@
   background: var(--h5p-theme-main-cta-dark);
 }
 .h5p-audio-inner .h5p-audio-minimal-button.h5p-audio-disabled {
-  color: #e9e9e4;
+  opacity: 0.4;
   cursor: inherit;
   pointer-events: none;
 }
@@ -57,7 +57,7 @@
   position: relative;
   box-sizing: border-box;
   padding: -2px;
-  border: 2px dashed #0468ce;
+  border: 2px dashed var(--h5p-theme-main-cta-base);
   border: 2px dashed rgba(4, 104, 206, 0.5);
   height: 100%;
 }
