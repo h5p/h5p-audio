@@ -1,6 +1,7 @@
 .h5p-audio-inner {
   height: 100%;
   width: 100%;
+  background-color: var(--h5p-theme-ui-base); 
 }
 
 .h5p-course-presentation .h5p-element.h5p-audio-wrapper {
@@ -8,62 +9,62 @@
 }
 
 .h5p-audio-inner .h5p-audio-minimal-button {
-  font-family: 'H5PFontAwesome4';
+  font-family: 'h5p-theme';
 
   display: block;
-  padding: 0.3em;
+  padding: var(--h5p-theme-spacing-s);
 
-  font-size: 0.8em;
-  border: 0.1em solid #fff;
+  font-size: var(--h5p-theme-font-size-l);
+  border: 0.1em solid var(--h5p-theme-main-cta-base); 
   border-radius: 50%;
 
   cursor: pointer;
-  color: #fff;
+  color: var(--h5p-theme-contrast-cta);
   text-decoration: none;
-
-  background: rgb(100,152,254); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(100,152,254,1)), color-stop(100%,rgba(4,104,206,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* IE10+ */
+  transition: all 0.1s linear 0s;
+  background: var(--h5p-theme-main-cta-base); 
 }
 
 .h5p-audio-inner .h5p-audio-minimal-button:hover {
   cursor: pointer;
+  background: var(--h5p-theme-main-cta-light); 
+  border-color: var(--h5p-theme-main-cta-light); 
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+  scale: 1.1;
+}
+.h5p-audio-inner .h5p-audio-minimal-button:focus {
+    outline: 2px ridge var(--h5p-theme-main-cta-base);
+    outline-offset: 2px;
+}
+
+.h5p-audio-inner .h5p-audio-minimal-button:active {
+  cursor: pointer;
+  background: var(--h5p-theme-main-cta-dark); 
 }
 
 .h5p-audio-inner .h5p-audio-minimal-button.h5p-audio-disabled {
-  background: -webkit-linear-gradient(top, rgba(177, 177, 177, 1) 0%, rgba(105, 105, 105, 1) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(177, 177, 177, 1) 0%, rgba(105, 105, 105, 1) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(177, 177, 177, 1) 0%, rgba(105, 105, 105, 1) 100%);
-  /* IE10+ */
   color: #e9e9e4;
   cursor: inherit;
   pointer-events: none;
 }
 
 .h5p-audio-inner .h5p-audio-minimal-play:before {
-  content: "\f028";
+  content: "\e91b";
 }
 
 .h5p-audio-inner .h5p-audio-minimal-play-paused,
 .h5p-audio-inner .h5p-audio-minimal-pause {
-  background: rgb(38,170,68); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(38,170,68,1) 0%, rgba(0,112,10,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(38,170,68,1)), color-stop(100%,rgba(0,112,10,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(38,170,68,1) 0%,rgba(0,112,10,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(38,170,68,1) 0%,rgba(0,112,10,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(38,170,68,1) 0%,rgba(0,112,10,1) 100%); /* IE10+ */
+  background: var(--h5p-theme-feedback-correct-main);
+  color: var(--h5p-theme-feedback-correct-secondary);
+  border-color: var(--h5p-theme-feedback-correct-main);
 }
+
 .h5p-audio-inner .h5p-audio-minimal-play-paused:before {
-  content: "\f04b";
+  content: "\e91f";
 }
 
 .h5p-audio-inner .h5p-audio-minimal-pause:before {
-  content: "\f04c";
+  content: "\e91e";
 }
 
 .editor .h5p-audio-transparent {
@@ -76,10 +77,10 @@
 }
 
 .editor .h5p-audio-transparent:before {
-  color: #0468ce;
+  color: var(--h5p-theme-main-cta-base); 
   opacity: 0.25;
-  content: "\f028";
-  font-family: 'H5PFontAwesome4';
+  content: "\e91b";
+  font-family: 'h5p-theme';
   font-size: 1.0em;
   text-decoration: none;
   padding-left: 0.25em;
@@ -88,21 +89,20 @@
 .h5p-audio-inner.h5p-audio-transparent .h5p-audio-minimal-button {
   display: block;
   cursor: pointer;
-  font-family: 'H5PFontAwesome4';
+  font-family: 'h5p-theme';
   text-decoration: none;
-  font-size: 0.8em;
   border: 0;
   background: transparent;
   border-radius: 0;
 }
 
 .h5p-audio-inner.h5p-audio-transparent .h5p-audio-minimal-button:hover {
-  background: #0580e2;
+  background: var(--h5p-theme-main-cta-light); 
   opacity: 0.2;
 }
 
 .h5p-audio-inner.h5p-audio-transparent .h5p-audio-minimal-button:active {
-  background: #0580e2;
+  background: var(--h5p-theme-main-cta-dark); 
   opacity: 0.4;
 }
 

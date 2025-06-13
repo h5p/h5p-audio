@@ -167,7 +167,7 @@ H5P.Audio = (function ($) {
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
   const self = this;
-  $wrapper.addClass('h5p-audio-wrapper');
+  $wrapper.addClass('h5p-audio-wrapper h5p-theme');
 
   // Check if browser supports audio.
   var audio = document.createElement('audio');
