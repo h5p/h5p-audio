@@ -1,17 +1,17 @@
 {
   "semantics": [
     {
-      "label": "Source files"
+      "label": "Fișiere sursă"
     },
     {
-      "label": "Player mode",
-      "description": "Select the layout of the player.",
+      "label": "Mod player",
+      "description": "Selectați aspectul playerului.",
       "options": [
         {
-          "label": "Minimalistic"
+          "label": "Minimalist"
         },
         {
-          "label": "Full"
+          "label": "Complet"
         },
         {
           "label": "Transparent"
@@ -19,31 +19,31 @@
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Ajustare la container"
     },
     {
-      "label": "Enable controls",
-      "description": "Controls allow the user to for instance pause the audio"
+      "label": "Activează controalele",
+      "description": "Controalele permit utilizatorului, de exemplu, să pună pauză fișierului audio."
     },
     {
-      "label": "Enable autoplay",
-      "description": "With autoplay the audio starts to play immediately. Do note that this is not supported by all browsers."
+      "label": "Activează redarea automată",
+      "description": "Cu redarea automată, fișierul audio pornește imediat. Rețineți că această funcționalitate nu este acceptată de toate browserele."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Redă audio (Cititor de ecran)",
+      "default": "Redă audio"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Pauză audio (Cititor de ecran)",
+      "default": "Pauză audio"
     },
     {
-      "label": "Audio content name",
+      "label": "Nume conținut audio",
       "default": "Audio"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Your browser does not support this audio"
+      "label": "Mesaj pentru audio neacceptat",
+      "default": "Browserul dumneavoastră nu suportă acest fișier audio."
     }
   ]
 }
