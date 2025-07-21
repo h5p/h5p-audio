@@ -4,14 +4,14 @@
       "label": "Lydfiler"
     },
     {
-      "label": "Avspiller modus",
-      "description": "Velg avspiller modus.",
+      "label": "Avspiller",
+      "description": "Velg utseende på avspiller.",
       "options": [
         {
-          "label": "Minimal"
+          "label": "Minimalistisk"
         },
         {
-          "label": "Full"
+          "label": "Komplett"
         },
         {
           "label": "Gjennomsiktig"
@@ -22,28 +22,28 @@
       "label": "Tilpass størrelse"
     },
     {
-      "label": "Slå på kontroller",
-      "description": "Kontrollene lar bl.a. brukeren sette lydavspillingen på pause"
+      "label": "Slå på kontrollere",
+      "description": "Lar brukeren for eksempel sette lydavspillinga på pause"
     },
     {
       "label": "Slå på automatisk avspilling",
-      "description": "Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått må brukeren trykke for å starte avspillingen."
+      "description": "Lyden spilles av med én gang. Obs: Denne funksjonen støttes ikke av alle nettlesere."
     },
     {
-      "label": "Spill lyd (Readspeaker)",
-      "default": "Spill lyd"
+      "label": "Spill av (for skjermleser)",
+      "default": "Spill av"
     },
     {
-      "label": "Pause lyd (Readspeaker)",
-      "default": "Pause lyd"
+      "label": "Pause (for skjermleser)",
+      "default": "Sett på pause"
     },
     {
-      "label": "Innholdsnavn for lyd",
+      "label": "Navn på lydinnhold",
       "default": "Lyd"
     },
     {
-      "label": "Melding vist når lydkilde ikke er støttet",
-      "default": "Nettleseren din støtter ikke denne lydkilden"
+      "label": "Melding om at lyd ikke kan spilles av",
+      "default": "Nettleseren din støtter ikke avspilling av denne lydfila."
     }
   ]
 }

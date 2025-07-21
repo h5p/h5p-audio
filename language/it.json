@@ -27,7 +27,7 @@
     },
     {
       "label": "Attiva autoplay",
-      "description": "Con l'autoplay l'audio si avvia immediatamente. Se l'autoplay è disattivato l'utente premerà il pulsante play per avviarlo."
+      "description": "Con l'autoplay l'audio si avvia immediatamente. NB. l'autoplay non è supportato su tutti i browser."
     },
     {
       "label": "Avvia l'audio (lettore vocale)",

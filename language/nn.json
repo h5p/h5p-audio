@@ -4,14 +4,14 @@
       "label": "Lydfiler"
     },
     {
-      "label": "Avspiller modus",
-      "description": "Velg avspiller modus.",
+      "label": "Avspelar",
+      "description": "Vel utsjånad på avspelar.",
       "options": [
         {
-          "label": "Minimal"
+          "label": "Minimalistisk"
         },
         {
-          "label": "Full"
+          "label": "Komplett"
         },
         {
           "label": "Gjennomsiktig"
@@ -19,31 +19,31 @@
       ]
     },
     {
-      "label": "Tilpass størrelse"
+      "label": "Tilpass storleik"
     },
     {
-      "label": "Slå på kontrollar",
-      "description": "Kontrollane lar mellom anna brukaren setje lydavspelinga på pause"
+      "label": "Slå på kontrollerar",
+      "description": "Lar brukaren mellom anna setje lydavspelinga på pause"
     },
     {
       "label": "Slå på automatisk avspeling",
-      "description": "Med automatisk avspeling begynner lyden å spele av seg sjølv med ein gang. Viss automatisk avspeling er slått av må brukaren trykkje for å starte avspelinga."
+      "description": "Lyden blir spelt av med éin gong. Obs: Ikkje alle nettlesarane støttar denne funksjonen."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Spel lyd"
+      "label": "Spel av (for skjermlesar)",
+      "default": "Spel av"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause lyd"
+      "label": "Pause (for skjermlesar)",
+      "default": "Set på pause"
     },
     {
-      "label": "Innhaldsnamn for lyd",
+      "label": "Namn på lydinnhald",
       "default": "Lyd"
     },
     {
-      "label": "Audio not supported message",
-      "default": "Nettlesaren din støttar ikkje denne lyden"
+      "label": "Melding om at lyd ikkje kan spelast av",
+      "default": "Nettlesaren din støttar ikkje avspeling av denne lydfila."
     }
   ]
 }
