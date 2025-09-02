@@ -27,7 +27,6 @@
   background: var(--h5p-theme-main-cta-light);
   border-color: var(--h5p-theme-main-cta-light);
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
-  scale: 1.1;
 }
 
 .h5p-audio-inner .h5p-audio-minimal-button:focus {
