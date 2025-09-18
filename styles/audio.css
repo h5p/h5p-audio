@@ -46,7 +46,10 @@
 }
 
 .h5p-audio-inner .h5p-audio-minimal-play:before {
-  content: "\e91b";
+  content: "\E942";
+  display: inline-block;
+  transform: translateX(-0.1em); /* Visually centering the icon */
+  width: 1em;  
 }
 
 .h5p-audio-inner .h5p-audio-minimal-play-paused, .h5p-audio-inner .h5p-audio-minimal-pause {
