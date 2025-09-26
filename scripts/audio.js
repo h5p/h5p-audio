@@ -149,10 +149,10 @@ H5P.Audio = (function ($) {
       var w = this.$container.width();
       var h = this.$container.height();
       if (w < h) {
-        this.$audioButton.css({'font-size': w / 2 + 'px'});
+        this.$audioButton.css({'font-size': (w / 2 - 4) + 'px'});
       }
       else {
-        this.$audioButton.css({'font-size': h / 2 + 'px'});
+        this.$audioButton.css({'font-size': (h / 2 - 4) + 'px'});
       }
     }
   };

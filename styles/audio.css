@@ -8,6 +8,12 @@
   overflow: visible !important;
 }
 
+.h5p-container.h5p-standalone.h5p-audio-wrapper.h5p-theme .h5p-audio-inner,
+.h5p-course-presentation .h5p-audio-outer-element .h5p-audio-inner {
+  box-sizing: border-box;
+  border: solid 4px transparent;
+}
+
 .h5p-audio-inner .h5p-audio-minimal-button {
   font-family: 'h5p-theme';
   display: block;
