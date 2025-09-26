@@ -113,8 +113,15 @@
 .h5p-audio-inner.h5p-audio-transparent .h5p-audio-minimal-play:before, .h5p-audio-inner.h5p-audio-transparent .h5p-audio-minimal-pause:before {
   content: none;
 }
-
+/*
 .h5peditor .h5p-audio-inner,
 .h5p-interactive-book .h5p-audio-inner {
-  padding: 5px;
+  box-sizing: border-box;
+  padding: 6px;
+}*/
+
+.h5peditor .h5p-layoutbuilder-block.h5p-audio-wrapper .h5p-audio-inner,
+.h5p-column-content.h5p-audio-wrapper .h5p-audio-inner {
+  box-sizing: border-box;
+  padding: 6px;
 }
