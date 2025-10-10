@@ -101,6 +101,7 @@ H5P.Audio = (function ($) {
         'width': '100%',
         'height': '100%'
       });
+      audioButton.addClass('h5p-audio-fit-wrapper');
     }
 
     //Event listeners that change the look of the player depending on events.
