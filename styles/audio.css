@@ -1,7 +1,7 @@
 .h5p-audio-inner {
   height: 100%;
   width: 100%;
-  background-color: var(--h5p-theme-ui-base);
+  /* background-color: var(--h5p-theme-ui-base); */
 }
 
 .h5p-course-presentation .h5p-element.h5p-audio-wrapper {
