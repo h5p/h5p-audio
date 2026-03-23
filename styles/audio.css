@@ -119,3 +119,10 @@
   box-sizing: border-box;
   padding: 6px;
 }
+
+.h5p-audio {
+  width: 100%;
+}
+.h5p-audio:not(.h5p-audio--fit-to-wrapper) {
+  max-width: 300px;
+}
