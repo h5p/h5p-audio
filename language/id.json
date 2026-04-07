@@ -1,0 +1,49 @@
+{
+  "semantics": [
+    {
+      "label": "Berkas sumber"
+    },
+    {
+      "label": "Mode pemutar",
+      "description": "Pilih tata letak pemutar.",
+      "options": [
+        {
+          "label": "Minimalis"
+        },
+        {
+          "label": "Penuh"
+        },
+        {
+          "label": "Transparan"
+        }
+      ]
+    },
+    {
+      "label": "Sesuaikan dengan pembungkus"
+    },
+    {
+      "label": "Aktifkan kontrol",
+      "description": "Kontrol mengizinkan pengguna untuk contohnya menjeda audio"
+    },
+    {
+      "label": "Aktifkan pemutar otomatis",
+      "description": "Dengan pemutar otomatis audio mulai diputar segera. Perlu diingat bahwa ini tidak didukung oleh semua peramban."
+    },
+    {
+      "label": "Putar audio (Pembaca)",
+      "default": "Putar audio"
+    },
+    {
+      "label": "Jeda audio (Pembaca)",
+      "default": "Jeda audio"
+    },
+    {
+      "label": "Nama konten audio",
+      "default": "Audio"
+    },
+    {
+      "label": "Pesan audio tidak didukung",
+      "default": "Peramban Anda tidak mendukung audio ini"
+    }
+  ]
+}
