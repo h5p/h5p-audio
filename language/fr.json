@@ -30,12 +30,12 @@
       "description": "Avec la lecture automatique, l'audio démarre immédiatement. Noter que cela n'est pas compatible avec tous les navigateurs."
     },
     {
-      "label": "Play audio (Readspeaker)",
-      "default": "Play audio"
+      "label": "Lire l'audio (Lecteur d'écran)",
+      "default": "Lire l'audio"
     },
     {
-      "label": "Pause audio (Readspeaker)",
-      "default": "Pause audio"
+      "label": "Mettre en pause l'audio (Lecteur d'écran)",
+      "default": "Mettre en pause l'audio"
     },
     {
       "label": "Nom du contenu audio",
