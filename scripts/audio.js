@@ -101,6 +101,7 @@ H5P.Audio = (function ($) {
         'width': '100%',
         'height': '100%'
       });
+      audioButton.addClass('h5p-audio-fit-wrapper');
     }
 
     //Event listeners that change the look of the player depending on events.
@@ -149,10 +150,10 @@ H5P.Audio = (function ($) {
       var w = this.$container.width();
       var h = this.$container.height();
       if (w < h) {
-        this.$audioButton.css({'font-size': w / 2 + 'px'});
+        this.$audioButton.css({'font-size': (w / 2 - 4) + 'px'});
       }
       else {
-        this.$audioButton.css({'font-size': h / 2 + 'px'});
+        this.$audioButton.css({'font-size': (h / 2 - 4) + 'px'});
       }
     }
   };
@@ -167,7 +168,7 @@ H5P.Audio = (function ($) {
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
   const self = this;
-  $wrapper.addClass('h5p-audio-wrapper');
+  $wrapper.addClass('h5p-audio-wrapper h5p-theme');
 
   // Check if browser supports audio.
   var audio = document.createElement('audio');
@@ -210,7 +211,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   audio.style.display = 'block';
 
   if (this.params.fitToWrapper === undefined || this.params.fitToWrapper) {
-    audio.style.width = '100%';
+    audio.classList.add('h5p-audio--fit-to-wrapper');
     if (!this.isRoot()) {
       // Only set height if this isn't a root
       audio.style.height = '100%';
