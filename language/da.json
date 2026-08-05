@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Tilpas til område"
+      "label": "Tilpas til område",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Aktiver kontrolpanel",

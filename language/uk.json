@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Розташувати по всій горизонталі"
+      "label": "Розташувати по всій горизонталі",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Увімкнути елементи керування",

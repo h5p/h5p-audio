@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Inafaa kwa kufunga"
+      "label": "Inafaa kwa kufunga",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Washa vidhibiti",

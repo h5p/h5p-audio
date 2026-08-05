@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Täida ümbrisraam"
+      "label": "Täida ümbrisraam",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Luba juhised",

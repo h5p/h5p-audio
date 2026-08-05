@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Ajustare la container"
+      "label": "Ajustare la container",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Activează controalele",

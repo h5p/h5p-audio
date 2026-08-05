@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Расположить по всей горизонтали"
+      "label": "Расположить по всей горизонтали",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Разрешить контроль",

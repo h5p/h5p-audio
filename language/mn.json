@@ -19,7 +19,8 @@
       "description": "Тоглуулагчийн байршлыг сонгоно уу."
     },
     {
-      "label": "Хүрээнд тохируулах"
+      "label": "Хүрээнд тохируулах",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Удирдах товчлуурыг идэвхжүүлэх",

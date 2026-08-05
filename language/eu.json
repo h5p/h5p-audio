@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Markora egokitu"
+      "label": "Markora egokitu",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Gaitu kontrolak",

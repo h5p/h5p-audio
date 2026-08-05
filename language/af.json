@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Pas op voublokkie"
+      "label": "Pas op voublokkie",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Aktiveer kontroles",

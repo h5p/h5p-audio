@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Fit to wrapper",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Enable controls",

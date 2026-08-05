@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "សមទៅនឹងស៊ុម"
+      "label": "សមទៅនឹងស៊ុម",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "បើកប៊ូតុងបញ្ជា",

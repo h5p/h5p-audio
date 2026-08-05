@@ -34,7 +34,7 @@
     "importance": "low",
     "label": "Fit to wrapper",
     "default": false,
-    "descriptions": "Adjust audioplayer size to use available space",
+    "description": "Adjust audioplayer size to use available space",
     "widget": "showWhen",
     "showWhen": {
       "rules": [

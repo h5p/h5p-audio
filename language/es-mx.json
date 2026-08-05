@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Ajustar al envoltorio"
+      "label": "Ajustar al envoltorio",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Habilitar controles",
