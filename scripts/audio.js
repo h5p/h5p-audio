@@ -98,7 +98,6 @@ H5P.Audio = (function ($) {
     // Fit to wrapper
     if (this.params.fitToWrapper) {
       audioButton.css({
-        'width': '100%',
         'height': '100%'
       });
     }
