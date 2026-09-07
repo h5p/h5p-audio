@@ -44,6 +44,22 @@
     {
       "label": "Audio not supported message",
       "default": "កម្មវិធីបើកវេបសាយរបស់អ្នកមិនអាចបើកឯកសារសម្លេងនេះទេ"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

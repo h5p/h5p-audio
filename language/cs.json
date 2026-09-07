@@ -44,6 +44,22 @@
     {
       "label": "Zvuk není podporován",
       "default": "Váš prohlížeč nepodporuje tento zvuk"
+    },
+    {
+      "label": "Textová alternativa",
+      "description": "Uveďte písemnou podobu informací přenášených tímto zvukem. Pomáhá to lidem, kteří zvuk neslyší."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

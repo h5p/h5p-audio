@@ -44,6 +44,22 @@
     {
       "label": "Ses dosyası desteklenmiyor mesajı",
       "default": "Tarayıcınız bu ses dosyasını desteklemiyor"
+    },
+    {
+      "label": "Metin alternatifi",
+      "description": "Bu sesin aktardığı bilgilerin yazılı karşılığını sağlayın. Bu, sesi duyamayan kişilere yardımcı olur."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

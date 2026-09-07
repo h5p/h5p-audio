@@ -44,6 +44,22 @@
     {
       "label": "Thông báo âm thanh không được hỗ trợ",
       "default": "Trình duyệt của bạn không thể phát âm thanh này"
+    },
+    {
+      "label": "Văn bản thay thế",
+      "description": "Cung cấp nội dung tương đương bằng văn bản cho thông tin do âm thanh này truyền tải. Điều này giúp những người không thể nghe âm thanh."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

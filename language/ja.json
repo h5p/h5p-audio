@@ -44,6 +44,22 @@
     {
       "label": "Audio not supported message",
       "default": "Your browser does not support this audio"
+    },
+    {
+      "label": "テキストによる代替",
+      "description": "この音声で伝えられる情報を書面で提供します。音声を聞くことができない人に役立ちます。"
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

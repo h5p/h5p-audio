@@ -44,6 +44,22 @@
     {
       "label": "Mensagem de áudio não suportado",
       "default": "O seu navegador não suporta este áudio"
+    },
+    {
+      "label": "Alternativa textual",
+      "description": "Forneça um equivalente escrito das informações transmitidas por este áudio. Isto ajuda as pessoas que não conseguem ouvir o áudio."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

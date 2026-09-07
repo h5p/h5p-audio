@@ -44,6 +44,22 @@
     {
       "label": "الملف الصوتي غير مدعوم",
       "default": "متصفحك لا يدعم هذا الملف الصوتي"
+    },
+    {
+      "label": "بديل نصي",
+      "description": "قدّم بديلاً مكتوباً للمعلومات التي ينقلها هذا الصوت. يساعد ذلك الأشخاص الذين لا يستطيعون سماع الصوت."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

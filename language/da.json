@@ -44,6 +44,22 @@
     {
       "label": "Audio not supported message",
       "default": "Your browser does not support this audio"
+    },
+    {
+      "label": "Tekstalternativ",
+      "description": "Angiv en skriftlig gengivelse af oplysningerne i denne lyd. Det hjælper personer, der ikke kan høre lyden."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

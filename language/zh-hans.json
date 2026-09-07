@@ -44,6 +44,22 @@
     {
       "label": "无法播放时显示讯息",
       "default": "你的浏览器不支持播放这个格式的音乐档案。"
+    },
+    {
+      "label": "文本替代内容",
+      "description": "提供此音频所传达信息的书面等效内容，帮助无法听到音频的人。"
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

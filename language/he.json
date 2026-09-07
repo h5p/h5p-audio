@@ -44,6 +44,22 @@
     {
       "label": "הודעה: שמע לא נתמך",
       "default": "הדפדפן שלך לא תומך בסוג שמע זה"
+    },
+    {
+      "label": "חלופה טקסטואלית",
+      "description": "יש לספק תיאור כתוב של המידע המועבר בשמע זה. הדבר מסייע לאנשים שאינם יכולים לשמוע את השמע."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

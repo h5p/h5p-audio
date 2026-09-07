@@ -44,6 +44,22 @@
     {
       "label": "Melding om at lyd ikkje kan spelast av",
       "default": "Nettlesaren din støttar ikkje avspeling av denne lydfila."
+    },
+    {
+      "label": "Tekstalternativ",
+      "description": "Gi ei skriftleg gjengiving av informasjonen i dette lydklippet. Det hjelper personar som ikkje kan høyre lyden."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

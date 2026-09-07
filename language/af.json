@@ -44,6 +44,22 @@
     {
       "label": "Klank word nie ondersteun nie boodskap",
       "default": "Jou webleser ondersteun nie hierdie klankgreep nie"
+    },
+    {
+      "label": "Teksalternatief",
+      "description": "Verskaf ’n geskrewe ekwivalent van die inligting wat deur hierdie klank oorgedra word. Dit help mense wat nie die klank kan hoor nie."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

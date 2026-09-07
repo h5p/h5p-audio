@@ -6,6 +6,15 @@ var H5P = window.H5P = window.H5P || {};
  * @external {jQuery} $ H5P.jQuery
  */
 H5P.Audio = (function ($) {
+  var instanceCounter = 0;
+  var defaultTextAlternativeLabel = 'Text alternative';
+  var defaultTextAlternativeTitle = 'Text alternative';
+  var defaultCloseTextAlternative = 'Close';
+
+  var getNonEmptyString = function (value, fallback) {
+    return typeof value === 'string' && value.trim() !== '' ? value : fallback;
+  };
+
   /**
   * @param {Object} params Options for this library.
   * @param {Number} id Content identifier.
@@ -16,6 +25,7 @@ H5P.Audio = (function ($) {
     H5P.EventDispatcher.call(this);
 
     this.contentId = id;
+    this.instanceId = ++instanceCounter;
     this.params = params;
     this.extras = extras;
     this.toggleButtonEnabled = true;
@@ -33,8 +43,29 @@ H5P.Audio = (function ($) {
       audioNotSupported: "Your browser does not support this audio",
       playAudio: "Play audio",
       pauseAudio: "Pause audio",
+      textAlternativeLabel: defaultTextAlternativeLabel,
+      textAlternativeTitle: defaultTextAlternativeTitle,
+      closeTextAlternative: defaultCloseTextAlternative,
       propagateButtonClickEvents: true
     }, params);
+    this.params.audioNotSupported = getNonEmptyString(
+      this.params.audioNotSupported,
+      "Your browser does not support this audio"
+    );
+    this.params.playAudio = getNonEmptyString(this.params.playAudio, "Play audio");
+    this.params.pauseAudio = getNonEmptyString(this.params.pauseAudio, "Pause audio");
+    this.params.textAlternativeLabel = getNonEmptyString(
+      this.params.textAlternativeLabel,
+      defaultTextAlternativeLabel
+    );
+    this.params.textAlternativeTitle = getNonEmptyString(
+      this.params.textAlternativeTitle,
+      defaultTextAlternativeTitle
+    );
+    this.params.closeTextAlternative = getNonEmptyString(
+      this.params.closeTextAlternative,
+      defaultCloseTextAlternative
+    );
 
     // Required if e.g. used in CoursePresentation as area to click on
     if (this.params.playerMode === 'transparent') {
@@ -137,8 +168,188 @@ H5P.Audio = (function ($) {
     H5P.Audio.MINIMAL_BUTTON_PAUSED = AUDIO_BUTTON + " " + PLAY_BUTTON_PAUSED;
 
     this.$audioButton = audioButton;
+    this.addTextAlternativeButton(self.$inner, transparentMode ? 'transparent' : 'minimalistic');
     // Scale icon to container
     self.resize();
+  };
+
+  /**
+   * Adds the optional text alternative control.
+   *
+   * @param {jQuery} $container Container for the control.
+   * @param {string} mode Player mode.
+   */
+  C.prototype.addTextAlternativeButton = function ($container, mode) {
+    if (typeof this.params.textAlternative !== 'string' ||
+        this.params.textAlternative.trim() === '') {
+      return;
+    }
+
+    var self = this;
+    var id = 'h5p-audio-text-alternative-' + this.instanceId;
+    var button = $('<button/>', {
+      'type': 'button',
+      'class': 'h5p-audio-text-alternative-button h5p-audio-text-alternative-' + mode,
+      'aria-label': this.params.textAlternativeLabel,
+      'aria-haspopup': 'dialog',
+      'aria-controls': id + '-dialog',
+      'aria-expanded': 'false',
+      'title': this.params.textAlternativeLabel
+    }).text(this.params.textAlternativeLabel).on('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      self.openTextAlternative(button);
+    }).appendTo($container);
+
+    this.$textAlternativeButton = button;
+  };
+
+  /**
+   * Opens the text alternative in an accessible modal dialog.
+   *
+   * @param {jQuery} $trigger Button that opened the dialog.
+   */
+  C.prototype.openTextAlternative = function ($trigger) {
+    if (this.$textAlternativeOverlay) {
+      return;
+    }
+
+    var self = this;
+    var id = 'h5p-audio-text-alternative-' + this.instanceId;
+    var $dialog = $('<div/>', {
+      'id': id + '-dialog',
+      'class': 'h5p-audio-text-alternative-dialog',
+      'role': 'dialog',
+      'aria-modal': 'true',
+      'aria-labelledby': id + '-title',
+      'aria-describedby': id + '-content'
+    });
+    var $title = $('<h2/>', {
+      'id': id + '-title',
+      'class': 'h5p-audio-text-alternative-title'
+    }).text(this.params.textAlternativeTitle);
+    var $close = $('<button/>', {
+      'type': 'button',
+      'class': 'h5p-audio-text-alternative-close',
+      'aria-label': this.params.closeTextAlternative
+    }).text(this.params.closeTextAlternative);
+    var $text = $('<div/>', {
+      'id': id + '-content',
+      'class': 'h5p-audio-text-alternative-content',
+      'tabindex': '0'
+    }).text(this.params.textAlternative);
+    var $overlay = $('<div/>', {
+      'class': 'h5p-audio-text-alternative-overlay',
+      'role': 'presentation'
+    }).append($dialog);
+    var previousActiveElement = document.activeElement;
+    var isolatedElements = [];
+    var closed = false;
+    var observer;
+    $('body').children().each(function () {
+      if (this !== $overlay[0]) {
+        isolatedElements.push({
+          element: this,
+          inert: this.inert
+        });
+        this.inert = true;
+      }
+    });
+    var close = function () {
+      if (closed) {
+        return;
+      }
+      closed = true;
+      $(document)
+        .off('keydown.h5pAudioTextAlternative-' + self.instanceId, keydown)
+        .off('focusin.h5pAudioTextAlternative-' + self.instanceId, focusin);
+      if (observer) {
+        observer.disconnect();
+      }
+      $overlay.remove();
+      isolatedElements.forEach(function (item) {
+        item.element.inert = item.inert;
+      });
+      self.$textAlternativeOverlay = undefined;
+      self.$textAlternativeObserver = undefined;
+      self.$textAlternativeClose = undefined;
+      $trigger.attr('aria-expanded', 'false');
+      var focusTarget = $trigger[0] && $trigger[0].isConnected ?
+        $trigger[0] : previousActiveElement;
+      if (focusTarget && focusTarget.isConnected && typeof focusTarget.focus === 'function') {
+        focusTarget.focus();
+      }
+    }.bind(this);
+    var getFocusable = function () {
+      return $dialog.find(
+        'a[href], area[href], button:not([disabled]), input:not([disabled]), ' +
+        'select:not([disabled]), textarea:not([disabled]), ' +
+        '[contenteditable="true"], [tabindex]:not([tabindex="-1"])'
+      ).filter(':visible');
+    };
+    var keydown = function (event) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        close();
+        return;
+      }
+      if (event.key !== 'Tab') {
+        return;
+      }
+      var focusable = getFocusable();
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      }
+      else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    var focusin = function (event) {
+      if (!$dialog[0].contains(event.target)) {
+        var focusable = getFocusable();
+        (focusable[0] || $dialog[0]).focus();
+      }
+    };
+
+    $close.on('click', close);
+    $overlay.on('click', function (event) {
+      if (event.target === $overlay[0]) {
+        close();
+      }
+    });
+    $dialog.append($title, $text, $close);
+    $('body').append($overlay);
+    this.$textAlternativeOverlay = $overlay;
+    $(document)
+      .on('keydown.h5pAudioTextAlternative-' + this.instanceId, keydown)
+      .on('focusin.h5pAudioTextAlternative-' + this.instanceId, focusin);
+    $trigger.attr('aria-expanded', 'true');
+    this.$textAlternativeObserver = typeof MutationObserver === 'function' ?
+      new MutationObserver(function () {
+        if (!$overlay[0].isConnected || !$dialog[0].isConnected ||
+            !self.$container || !self.$container[0].isConnected) {
+          close();
+        }
+      }) : undefined;
+    if (this.$textAlternativeObserver) {
+      this.$textAlternativeObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      observer = this.$textAlternativeObserver;
+    }
+    this.$textAlternativeClose = close;
+    $close.trigger('focus');
+  };
+
+  C.prototype.closeTextAlternative = function () {
+    if (this.$textAlternativeClose) {
+      this.$textAlternativeClose();
+    }
   };
 
   /**
@@ -168,6 +379,8 @@ H5P.Audio = (function ($) {
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
   const self = this;
+  this.closeTextAlternative();
+  this.$container = $wrapper;
   $wrapper.addClass('h5p-audio-wrapper h5p-theme');
 
   // Check if browser supports audio.
@@ -230,6 +443,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   }
   else {
     $wrapper.html(audio);
+    this.addTextAlternativeButton($wrapper, 'full');
   }
 
   if (audio.controls) {
@@ -287,6 +501,7 @@ H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
       '<span>' + this.params.audioNotSupported + '</span>' +
     '</div>'
   );
+  this.addTextAlternativeButton($wrapper, 'full');
 
   if (this.endedCallback !== undefined) {
     this.endedCallback();

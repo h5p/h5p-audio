@@ -44,6 +44,22 @@
     {
       "label": "Statusbericht niet ondersteunde audio",
       "default": "Je browser ondersteunt deze audio-opname niet"
+    },
+    {
+      "label": "Tekstalternatief",
+      "description": "Geef een geschreven equivalent van de informatie die door deze audio wordt overgebracht. Dit helpt mensen die de audio niet kunnen horen."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

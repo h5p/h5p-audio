@@ -44,6 +44,22 @@
     {
       "label": "Hinweis, dass keine Tonaufnahmen abgespielt werden können",
       "default": "Dein Browser unterstützt diese Tondatei nicht."
+    },
+    {
+      "label": "Textalternative",
+      "description": "Geben Sie eine schriftliche Entsprechung der durch dieses Audio vermittelten Informationen an. Dies hilft Menschen, die das Audio nicht hören können."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }
