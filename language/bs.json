@@ -44,6 +44,10 @@
     {
       "label": "Poruka za audio koji nije podržan.",
       "default": "Vaš pretraživač ne podržava ovaj audio"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

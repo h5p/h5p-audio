@@ -44,6 +44,10 @@
     {
       "label": "Hinweis, dass keine Tonaufnahmen abgespielt werden können",
       "default": "Dein Browser unterstützt diese Tondatei nicht."
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

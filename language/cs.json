@@ -44,6 +44,10 @@
     {
       "label": "Zvuk není podporován",
       "default": "Váš prohlížeč nepodporuje tento zvuk"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

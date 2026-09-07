@@ -44,6 +44,10 @@
     {
       "label": "Melding om at lyd ikke kan spilles av",
       "default": "Nettleseren din støtter ikke avspilling av denne lydfila."
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

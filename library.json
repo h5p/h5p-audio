@@ -18,6 +18,9 @@
   "preloadedJs": [
     {
       "path": "scripts/audio.js"
+    },
+    {
+      "path": "scripts/text-alternative.js"
     }
   ],
   "preloadedCss": [

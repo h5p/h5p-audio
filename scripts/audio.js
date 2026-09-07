@@ -6,6 +6,28 @@ var H5P = window.H5P = window.H5P || {};
  * @external {jQuery} $ H5P.jQuery
  */
 H5P.Audio = (function ($) {
+  const DEFAULT_TEXT_ALTERNATIVE_LABEL = 'Text alternative';
+  const DEFAULT_CLOSE_TEXT_ALTERNATIVE = 'Close';
+
+  const closeTextAlternative = (audio) => {
+    if (audio.textAlternative) {
+      audio.textAlternative.close();
+    }
+  };
+
+  const addTextAlternative = (audio, container, mode) => {
+    if (!H5P.AudioTextAlternative) {
+      return;
+    }
+
+    audio.textAlternative = audio.textAlternative ||
+      new H5P.AudioTextAlternative({
+        label: DEFAULT_TEXT_ALTERNATIVE_LABEL,
+        closeLabel: DEFAULT_CLOSE_TEXT_ALTERNATIVE
+      });
+    audio.textAlternative.attach(container, mode, audio.params.textAlternative);
+  };
+
   /**
   * @param {Object} params Options for this library.
   * @param {Number} id Content identifier.
@@ -137,6 +159,7 @@ H5P.Audio = (function ($) {
     H5P.Audio.MINIMAL_BUTTON_PAUSED = AUDIO_BUTTON + " " + PLAY_BUTTON_PAUSED;
 
     this.$audioButton = audioButton;
+    addTextAlternative(this, self.$inner[0], transparentMode ? 'transparent' : 'minimalistic');
     // Scale icon to container
     self.resize();
   };
@@ -168,6 +191,8 @@ H5P.Audio = (function ($) {
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
   const self = this;
+  closeTextAlternative(this);
+
   $wrapper.addClass('h5p-audio-wrapper h5p-theme');
 
   // Check if browser supports audio.
@@ -230,6 +255,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
   }
   else {
     $wrapper.html(audio);
+    addTextAlternative(this, $wrapper[0], 'full');
   }
 
   if (audio.controls) {

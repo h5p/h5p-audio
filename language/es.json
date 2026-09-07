@@ -44,6 +44,10 @@
     {
       "label": "Mensaje de audio no soportado",
       "default": "Tu navegador no es capaz de reproducir este audio"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

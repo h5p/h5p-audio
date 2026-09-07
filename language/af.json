@@ -44,6 +44,10 @@
     {
       "label": "Klank word nie ondersteun nie boodskap",
       "default": "Jou webleser ondersteun nie hierdie klankgreep nie"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

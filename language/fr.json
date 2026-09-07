@@ -44,6 +44,10 @@
     {
       "label": "Message L'audio n'est pas supporté",
       "default": "Votre navigateur ne supporte pas l'audio"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

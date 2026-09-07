@@ -104,5 +104,14 @@
     "importance": "low",
     "common": true,
     "default": "Your browser does not support this audio"
+  },
+  {
+    "name": "textAlternative",
+    "type": "text",
+    "widget": "textarea",
+    "label": "Text alternative",
+    "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio.",
+    "optional": true,
+    "importance": "low"
   }
 ]

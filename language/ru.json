@@ -44,6 +44,10 @@
     {
       "label": "Сообщение об ошибке аудио",
       "default": "Ваш браузер не поддерживает аудио"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

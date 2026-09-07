@@ -44,6 +44,10 @@
     {
       "label": "Statusbericht niet ondersteunde audio",
       "default": "Je browser ondersteunt deze audio-opname niet"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

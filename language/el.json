@@ -44,6 +44,10 @@
     {
       "label": "Μήνυμα μη υποστηριζόμενου αρχείου ήχου",
       "default": "Ο φυλλομετρητής δεν υποστηρίζει το συγκεκριμένο αρχείο ήχου"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

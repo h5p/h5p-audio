@@ -44,6 +44,10 @@
     {
       "label": "Meddelande om att ljud inte stöds",
       "default": "Din webbläsare stödjer inte detta ljudformat"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

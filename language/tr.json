@@ -44,6 +44,10 @@
     {
       "label": "Ses dosyası desteklenmiyor mesajı",
       "default": "Tarayıcınız bu ses dosyasını desteklemiyor"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

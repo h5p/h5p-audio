@@ -44,6 +44,10 @@
     {
       "label": "Garso nepalaikymo pranešimas",
       "default": "Jūsų naršyklė nepalaiko šio garso"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

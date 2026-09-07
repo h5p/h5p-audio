@@ -44,6 +44,10 @@
     {
       "label": "Sporočilo o nepodprtosti zvočnega posnetka",
       "default": "Spletni brskalnik ne podpira tega zvočnega posnetka."
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

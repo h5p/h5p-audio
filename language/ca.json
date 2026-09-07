@@ -44,6 +44,10 @@
     {
       "label": "Missatge “No s’admet àudio”",
       "default": "El vostre navegador no admet aquest àudio."
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }

@@ -44,6 +44,10 @@
     {
       "label": "Thông báo âm thanh không được hỗ trợ",
       "default": "Trình duyệt của bạn không thể phát âm thanh này"
+    },
+    {
+      "label": "Text alternative",
+      "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
     }
   ]
 }
