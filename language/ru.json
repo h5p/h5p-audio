@@ -44,6 +44,22 @@
     {
       "label": "Сообщение об ошибке аудио",
       "default": "Ваш браузер не поддерживает аудио"
+    },
+    {
+      "label": "Текстовая альтернатива",
+      "description": "Предоставьте письменный эквивалент информации, передаваемой этим аудио. Это помогает людям, которые не могут слышать аудио."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

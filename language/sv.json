@@ -44,6 +44,22 @@
     {
       "label": "Meddelande om att ljud inte stöds",
       "default": "Din webbläsare stödjer inte detta ljudformat"
+    },
+    {
+      "label": "Textalternativ",
+      "description": "Ange en skriftlig motsvarighet till informationen i detta ljud. Det hjälper personer som inte kan höra ljudet."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

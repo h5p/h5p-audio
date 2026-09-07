@@ -44,6 +44,22 @@
     {
       "label": "Повідомлення про помилку аудіо",
       "default": "Ваш браузер не підтримує аудіо"
+    },
+    {
+      "label": "Текстова альтернатива",
+      "description": "Надайте письмовий еквівалент інформації, яку передає це аудіо. Це допомагає людям, які не можуть чути аудіо."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

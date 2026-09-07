@@ -44,6 +44,22 @@
     {
       "label": "無法播放時顯示訊息",
       "default": "你的瀏覽器不支援播放這個格式的音樂檔案。"
+    },
+    {
+      "label": "文字替代內容",
+      "description": "提供此音訊所傳達資訊的書面等效內容，幫助無法聽到音訊的人。"
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

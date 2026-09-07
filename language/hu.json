@@ -44,6 +44,22 @@
     {
       "label": "Audio not supported message",
       "default": "Your browser does not support this audio"
+    },
+    {
+      "label": "Szöveges alternatíva",
+      "description": "Adja meg a hang által közvetített információ írott megfelelőjét. Ez segít azoknak, akik nem hallják a hangot."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

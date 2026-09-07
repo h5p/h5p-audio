@@ -44,6 +44,22 @@
     {
       "label": "Missatge “No s’admet àudio”",
       "default": "El vostre navegador no admet aquest àudio."
+    },
+    {
+      "label": "Alternativa textual",
+      "description": "Proporciona un equivalent escrit de la informació transmesa per aquest àudio. Això ajuda les persones que no poden sentir-lo."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

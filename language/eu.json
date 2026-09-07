@@ -44,6 +44,22 @@
     {
       "label": "Audioa ez da onartzen mezua",
       "default": "Zure nabigatzaileak ez du audio hau onartzen"
+    },
+    {
+      "label": "Testu-alternatiba",
+      "description": "Eman audio honek transmititzen duen informazioaren idatzizko baliokidea. Audioa entzun ezin duten pertsonei laguntzen die."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

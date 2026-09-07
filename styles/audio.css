@@ -2,6 +2,11 @@
   height: 100%;
   width: 100%;
   background-color: var(--h5p-theme-ui-base);
+  position: relative;
+}
+
+.h5p-audio-wrapper {
+  position: relative;
 }
 
 .h5p-course-presentation .h5p-element.h5p-audio-wrapper {
@@ -100,6 +105,13 @@
   border-radius: 0;
 }
 
+.h5p-audio-inner.h5p-audio-transparent .h5p-audio-text-alternative-button {
+  opacity: 0.9;
+  pointer-events: auto;
+  transition: background-color 0.1s linear, color 0.1s linear,
+    opacity 0.1s linear;
+}
+
 .h5p-audio-inner.h5p-audio-transparent .h5p-audio-minimal-button:hover {
   background: var(--h5p-theme-main-cta-light);
   opacity: 0.2;
@@ -125,4 +137,153 @@
 }
 .h5p-audio:not(.h5p-audio--fit-to-wrapper) {
   max-width: 300px;
+}
+
+.h5p-audio-text-alternative-button {
+  align-items: center;
+  background: var(--h5p-theme-ui-base);
+  border: 1px solid var(--h5p-theme-main-cta-base);
+  border-radius: 0.25em;
+  color: var(--h5p-theme-main-cta-base);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  justify-content: center;
+  min-height: 2.25em;
+  padding: 0.25em 0.75em;
+  position: relative;
+  z-index: 2;
+}
+
+.h5p-audio-text-alternative-button:hover,
+.h5p-audio-text-alternative-button:focus-visible {
+  background: var(--h5p-theme-main-cta-light);
+  color: var(--h5p-theme-contrast-cta);
+}
+
+.h5p-audio-text-alternative-transparent {
+  inset-block-start: 0.75em;
+  inset-inline-end: 0.75em;
+  position: absolute;
+}
+
+.h5p-audio-text-alternative-transparent:focus-visible {
+  opacity: 1;
+  outline: 2px ridge var(--h5p-theme-contrast-cta-white);
+  outline-offset: 2px;
+  z-index: 3;
+}
+
+.h5p-audio-text-alternative-full {
+  display: flex;
+  margin-block-start: 0.5em;
+  margin-inline-start: auto;
+  position: static;
+}
+
+.h5p-audio-inner.h5p-audio-transparent .h5p-audio-text-alternative-button {
+  max-width: calc(100% - 1.5em);
+}
+
+.h5p-audio-inner.h5p-audio-transparent .h5p-audio-text-alternative-button:before {
+  margin-inline-end: 0.25em;
+}
+
+.h5p-audio-text-alternative-minimalistic {
+  inset-block-start: 0.75em;
+  inset-inline-end: 0.75em;
+  position: absolute;
+}
+
+.h5p-audio-text-alternative-button:before {
+  content: "\e91b";
+  font-family: 'h5p-theme';
+  margin-inline-end: 0.4em;
+}
+
+.h5p-audio-text-alternative-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  padding: var(--h5p-theme-spacing-m, 1rem);
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.h5p-audio-text-alternative-dialog {
+  background: var(--h5p-theme-ui-base);
+  border: 1px solid var(--h5p-theme-text-primary);
+  border-radius: var(--h5p-theme-border-radius, 0.25em);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  max-height: min(80vh, 40rem);
+  max-width: 45rem;
+  min-width: min(20rem, 100%);
+  overflow: auto;
+  padding: var(--h5p-theme-spacing-l, 1.5rem);
+  position: relative;
+  width: 100%;
+}
+
+.h5p-audio-text-alternative-title {
+  color: var(--h5p-theme-text-primary);
+  font-size: var(--h5p-theme-font-size-l);
+  line-height: 1.25;
+  margin-block: 0 var(--h5p-theme-spacing-s, 1rem);
+  margin-inline: 0 5rem;
+}
+
+.h5p-audio-text-alternative-content {
+  color: var(--h5p-theme-text-primary);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.h5p-audio-text-alternative-close {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--h5p-theme-text-primary);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0;
+  justify-content: center;
+  line-height: 1;
+  min-block-size: 2.5rem;
+  min-inline-size: 2.5rem;
+  padding: 0.5em;
+  position: absolute;
+  inset-block-start: var(--h5p-theme-spacing-m, 1rem);
+  inset-inline-end: var(--h5p-theme-spacing-m, 1rem);
+}
+
+.h5p-audio-text-alternative-close:before {
+  content: "\e910";
+  font-family: 'h5p-theme';
+  font-size: var(--h5p-theme-font-size-l);
+}
+
+.h5p-audio-text-alternative-close:hover {
+  background: var(--h5p-theme-ui-hover, var(--h5p-theme-ui-base));
+}
+
+.h5p-audio-text-alternative-close:focus-visible {
+  outline: 2px ridge var(--h5p-theme-contrast-cta-white);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .h5p-audio-text-alternative-button {
+    font-size: var(--h5p-theme-font-size-s);
+    padding: 0.25em 0.5em;
+  }
+
+  .h5p-audio-text-alternative-dialog {
+    max-height: 90vh;
+    min-width: 0;
+    padding: var(--h5p-theme-spacing-m, 1rem);
+  }
 }

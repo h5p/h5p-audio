@@ -104,5 +104,35 @@
     "importance": "low",
     "common": true,
     "default": "Your browser does not support this audio"
+  },
+  {
+    "name": "textAlternative",
+    "type": "text",
+    "widget": "textarea",
+    "label": "Text alternative",
+    "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio.",
+    "optional": true,
+    "importance": "low"
+  },
+  {
+    "name": "textAlternativeLabel",
+    "type": "text",
+    "label": "Text alternative button label",
+    "common": true,
+    "default": "Text alternative"
+  },
+  {
+    "name": "textAlternativeTitle",
+    "type": "text",
+    "label": "Text alternative dialog title",
+    "common": true,
+    "default": "Text alternative"
+  },
+  {
+    "name": "closeTextAlternative",
+    "type": "text",
+    "label": "Close text alternative",
+    "common": true,
+    "default": "Close"
   }
 ]

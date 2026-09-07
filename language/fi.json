@@ -44,6 +44,22 @@
     {
       "label": "Ääntä ei tueta -viesti",
       "default": "Selaimesi ei tue tätä ääntä."
+    },
+    {
+      "label": "Tekstivastine",
+      "description": "Anna tämän äänen välittämille tiedoille kirjallinen vastine. Se auttaa ihmisiä, jotka eivät voi kuulla ääntä."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }

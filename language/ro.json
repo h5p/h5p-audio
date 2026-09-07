@@ -44,6 +44,22 @@
     {
       "label": "Mesaj pentru audio neacceptat",
       "default": "Browserul dumneavoastră nu suportă acest fișier audio."
+    },
+    {
+      "label": "Alternativă text",
+      "description": "Furnizați un echivalent scris al informațiilor transmise de acest fișier audio. Acest lucru ajută persoanele care nu pot auzi sunetul."
+    },
+    {
+      "label": "Text alternative button label",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Text alternative dialog title",
+      "default": "Text alternative"
+    },
+    {
+      "label": "Close text alternative",
+      "default": "Close"
     }
   ]
 }
