@@ -30,6 +30,7 @@ H5P.Audio = (function ($) {
       fitToWrapper: false,
       controls: true,
       autoplay: false,
+      shortDescription: "",
       audioNotSupported: "Your browser does not support this audio",
       playAudio: "Play audio",
       pauseAudio: "Pause audio",
@@ -69,7 +70,7 @@ H5P.Audio = (function ($) {
 
     var audioButton = $('<button/>', {
       'class': AUDIO_BUTTON + " " + PLAY_BUTTON,
-      'aria-label': this.params.playAudio
+      'aria-label': `${this.params.shortDescription} ${this.params.playAudio}`
     }).appendTo(self.$inner)
       .click( function (event) {
         if (!self.params.propagateButtonClickEvents){
@@ -108,7 +109,7 @@ H5P.Audio = (function ($) {
     self.audio.addEventListener('ended', function () {
       audioButton
         .attr('aria-hidden', false)
-        .attr('aria-label', self.params.playAudio)
+        .attr('aria-label', `${this.params.shortDescription} ${this.params.playAudio}` )
         .removeClass(PAUSE_BUTTON)
         .removeClass(PLAY_BUTTON_PAUSED)
         .addClass(PLAY_BUTTON);
@@ -127,7 +128,7 @@ H5P.Audio = (function ($) {
       if (!audioButton.hasClass(PLAY_BUTTON)) {
         audioButton
           .attr('aria-hidden', false)
-          .attr('aria-label', self.params.playAudio)
+          .attr('aria-label', `${this.params.shortDescription} ${this.params.playAudio}`)
           .removeClass(PAUSE_BUTTON)
           .addClass(PLAY_BUTTON_PAUSED);
       }
@@ -202,6 +203,10 @@ H5P.Audio.prototype.attach = function ($wrapper) {
 
   audio.className = 'h5p-audio';
   audio.controls = this.params.controls === undefined ? true : this.params.controls;
+
+  if (this.params.shortDescription) {
+    audio.setAttribute('aria-label', this.params.shortDescription);
+  }
 
   // Menu removed, because it's cut off if audio is used as H5P.Question intro
   const controlsList = 'nodownload noplaybackrate';
