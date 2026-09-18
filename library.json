@@ -17,10 +17,13 @@
   },
   "preloadedJs": [
     {
-      "path": "scripts/audio.js"
+      "path": "scripts/audio-controls.js"
     },
     {
       "path": "scripts/text-alternative.js"
+    },
+    {
+      "path": "scripts/audio.js"
     }
   ],
   "preloadedCss": [

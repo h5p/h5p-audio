@@ -109,9 +109,58 @@
     "name": "textAlternative",
     "type": "text",
     "widget": "textarea",
-    "label": "Text alternative",
+    "label": "Transcript or text alternative",
     "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio.",
     "optional": true,
     "importance": "low"
+  },
+  {
+    "name": "muteAudio",
+    "type": "text",
+    "label": "Mute audio (Readspeaker)",
+    "common": true,
+    "default": "Mute audio"
+  },
+  {
+    "name": "unmuteAudio",
+    "type": "text",
+    "label": "Unmute audio (Readspeaker)",
+    "common": true,
+    "default": "Unmute audio"
+  },
+  {
+    "name": "volume",
+    "type": "text",
+    "label": "Volume control (Readspeaker)",
+    "common": true,
+    "default": "Volume"
+  },
+  {
+    "name": "audioProgress",
+    "type": "text",
+    "label": "Audio progress control (Readspeaker)",
+    "common": true,
+    "default": "Audio progress"
+  },
+  {
+    "name": "transcript",
+    "type": "text",
+    "label": "Transcript button label",
+    "common": true,
+    "default": "Transcript"
+  },
+  {
+    "name": "textAlternativeTitle",
+    "type": "text",
+    "label": "Transcript or text alternative dialog title",
+    "common": true,
+    "default": "Transcript or text alternative"
+  },
+  {
+    "name": "closeTextAlternative",
+    "type": "text",
+    "label": "Close text alternative button label",
+    "common": true,
+    "default": "Close"
   }
 ]

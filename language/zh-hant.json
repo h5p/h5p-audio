@@ -46,8 +46,36 @@
       "default": "你的瀏覽器不支援播放這個格式的音樂檔案。"
     },
     {
-      "label": "Text alternative",
+      "label": "Transcript or text alternative",
       "description": "Provide a written equivalent of the information conveyed by this audio. This helps people who cannot hear the audio."
+    },
+    {
+      "label": "Mute audio (Readspeaker)",
+      "default": "Mute audio"
+    },
+    {
+      "label": "Unmute audio (Readspeaker)",
+      "default": "Unmute audio"
+    },
+    {
+      "label": "Volume control (Readspeaker)",
+      "default": "Volume"
+    },
+    {
+      "label": "Audio progress control (Readspeaker)",
+      "default": "Audio progress"
+    },
+    {
+      "label": "Transcript button label",
+      "default": "Transcript"
+    },
+    {
+      "label": "Transcript or text alternative dialog title",
+      "default": "Transcript or text alternative"
+    },
+    {
+      "label": "Close text alternative button label",
+      "default": "Close"
     }
   ]
 }

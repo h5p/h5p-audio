@@ -6,28 +6,6 @@ var H5P = window.H5P = window.H5P || {};
  * @external {jQuery} $ H5P.jQuery
  */
 H5P.Audio = (function ($) {
-  const DEFAULT_TEXT_ALTERNATIVE_LABEL = 'Text alternative';
-  const DEFAULT_CLOSE_TEXT_ALTERNATIVE = 'Close';
-
-  const closeTextAlternative = (audio) => {
-    if (audio.textAlternative) {
-      audio.textAlternative.close();
-    }
-  };
-
-  const addTextAlternative = (audio, container, mode) => {
-    if (!H5P.AudioTextAlternative) {
-      return;
-    }
-
-    audio.textAlternative = audio.textAlternative ||
-      new H5P.AudioTextAlternative({
-        label: DEFAULT_TEXT_ALTERNATIVE_LABEL,
-        closeLabel: DEFAULT_CLOSE_TEXT_ALTERNATIVE
-      });
-    audio.textAlternative.attach(container, mode, audio.params.textAlternative);
-  };
-
   /**
   * @param {Object} params Options for this library.
   * @param {Number} id Content identifier.
@@ -53,8 +31,16 @@ H5P.Audio = (function ($) {
       controls: true,
       autoplay: false,
       audioNotSupported: "Your browser does not support this audio",
+      contentName: 'Audio',
       playAudio: "Play audio",
       pauseAudio: "Pause audio",
+      muteAudio: 'Mute audio',
+      unmuteAudio: 'Unmute audio',
+      volume: 'Volume',
+      audioProgress: 'Audio progress',
+      transcript: 'Transcript',
+      textAlternativeTitle: 'Transcript or text alternative',
+      closeTextAlternative: 'Close',
       propagateButtonClickEvents: true
     }, params);
 
@@ -159,7 +145,10 @@ H5P.Audio = (function ($) {
     H5P.Audio.MINIMAL_BUTTON_PAUSED = AUDIO_BUTTON + " " + PLAY_BUTTON_PAUSED;
 
     this.$audioButton = audioButton;
-    addTextAlternative(this, self.$inner[0], transparentMode ? 'transparent' : 'minimalistic');
+    this.addTextAlternative(
+      self.$inner[0],
+      transparentMode ? 'transparent' : 'minimalistic'
+    );
     // Scale icon to container
     self.resize();
   };
@@ -169,7 +158,8 @@ H5P.Audio = (function ($) {
    */
   C.prototype.resize = function () {
     // Find the smallest value of height and width, and use it to choose the font size.
-    if (this.params.fitToWrapper && this.$container && this.$container.width()) {
+    if (this.params.fitToWrapper && this.$container && this.$audioButton &&
+      this.$container.width()) {
       var w = this.$container.width();
       var h = this.$container.height();
       if (w < h) {
@@ -185,15 +175,104 @@ H5P.Audio = (function ($) {
 })(H5P.jQuery);
 
 /**
+ * Remove optional controls before reattaching the audio player.
+ */
+H5P.Audio.prototype.detachAddedControls = function () {
+  if (this.textAlternative) {
+    this.textAlternative.detach();
+  }
+
+  if (this.fullControls) {
+    this.fullControls.detach();
+    this.fullControls = undefined;
+  }
+};
+
+/**
+ * Check whether text alternative content is available.
+ *
+ * @returns {boolean} True if a text alternative is available.
+ */
+H5P.Audio.prototype.hasTextAlternative = function () {
+  return typeof this.params.textAlternative === 'string' &&
+    this.params.textAlternative.trim() !== '';
+};
+
+/**
+ * Add the optional text alternative control.
+ *
+ * @param {HTMLElement} container Container for the control.
+ * @param {string} mode Player mode.
+ */
+H5P.Audio.prototype.addTextAlternative = function (container, mode) {
+  if (!H5P.AudioTextAlternative) {
+    return;
+  }
+
+  this.textAlternative = this.textAlternative || new H5P.AudioTextAlternative({
+    buttonLabel: this.params.transcript,
+    dialogTitle: this.params.textAlternativeTitle,
+    closeLabel: this.params.closeTextAlternative,
+    onResize: () => {
+      this.trigger('resize');
+    }
+  });
+  this.textAlternative.params.resizeElement =
+    this.isRoot && this.isRoot() ? this.wrapper : undefined;
+  this.textAlternative.attach(container, mode, this.params.textAlternative);
+};
+
+/**
+ * Add the custom full audio player.
+ *
+ * @param {HTMLElement} container Player container.
+ */
+H5P.Audio.prototype.addFullAudioPlayer = function (container) {
+  if (!H5P.AudioControls) {
+    return;
+  }
+
+  this.fullControls = new H5P.AudioControls(this.audio, {
+    audio: this.params.contentName,
+    play: this.params.playAudio,
+    pause: this.params.pauseAudio,
+    mute: this.params.muteAudio,
+    unmute: this.params.unmuteAudio,
+    volume: this.params.volume,
+    progress: this.params.audioProgress
+  });
+
+  const controls = this.fullControls.attach(container);
+  controls.classList.toggle(
+    'h5p-audio-full-controls--fit-to-wrapper',
+    this.params.fitToWrapper
+  );
+  this.addTextAlternative(controls, 'full');
+};
+
+/**
  * Wipe out the content of the wrapper and put our HTML in it.
  *
  * @param {jQuery} $wrapper Our poor container.
  */
 H5P.Audio.prototype.attach = function ($wrapper) {
   const self = this;
-  closeTextAlternative(this);
+  const wrapper = $wrapper[0];
+  this.wrapper = wrapper;
+  this.detachAddedControls();
+  this.audio = undefined;
+  this.$audioButton = undefined;
+  this.$container = undefined;
+  this.$inner = undefined;
 
-  $wrapper.addClass('h5p-audio-wrapper h5p-theme');
+  wrapper.classList.add('h5p-audio-wrapper', 'h5p-theme');
+  wrapper.classList.remove(
+    'h5p-audio-controls',
+    'h5p-audio-not-supported',
+    'h5p-audio-has-text-alternative-wrapper',
+    'h5p-audio-text-alternative-is-open'
+  );
+  wrapper.replaceChildren();
 
   // Check if browser supports audio.
   var audio = document.createElement('audio');
@@ -254,8 +333,17 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     this.addMinimalAudioPlayer($wrapper, true);
   }
   else {
-    $wrapper.html(audio);
-    addTextAlternative(this, $wrapper[0], 'full');
+    $wrapper[0].append(audio);
+
+    if (audio.controls && H5P.AudioControls && this.hasTextAlternative()) {
+      audio.controls = false;
+      audio.classList.add('h5p-audio-custom-controls');
+      wrapper.classList.add('h5p-audio-controls');
+      this.addFullAudioPlayer(wrapper);
+    }
+    else {
+      this.addTextAlternative($wrapper[0], 'full');
+    }
   }
 
   if (audio.controls) {
@@ -314,10 +402,12 @@ H5P.Audio.prototype.attachNotSupportedMessage = function ($wrapper) {
     '</div>'
   );
 
+  this.addTextAlternative($wrapper[0], 'unsupported');
+
   if (this.endedCallback !== undefined) {
     this.endedCallback();
   }
-}
+};
 
 /**
  * Stop & reset playback.
