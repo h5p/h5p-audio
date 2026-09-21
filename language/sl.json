@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Prilagodi širini okna"
+      "label": "Prilagodi širini okna",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Onemogoči kontrolnike v predvajalniku.",

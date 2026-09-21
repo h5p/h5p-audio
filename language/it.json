@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Adatta al contenitore"
+      "label": "Adatta al contenitore",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Attiva controlli",

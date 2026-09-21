@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Напаснат към рамката"
+      "label": "Напаснат към рамката",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Активиране на контролите",

@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Remplir le contenant"
+      "label": "Remplir le contenant",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Activer les contrôles",

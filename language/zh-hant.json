@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "自適應畫面"
+      "label": "自適應畫面",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "啟用控制項",

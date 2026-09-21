@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Ietilpināt visā platumā"
+      "label": "Ietilpināt visā platumā",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Atļaut vadīklas",

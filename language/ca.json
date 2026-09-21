@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Ajusta al continent"
+      "label": "Ajusta al continent",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Activa els controls",

@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Sarmalayıcıya uydur"
+      "label": "Sarmalayıcıya uydur",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Kontrol düğmeleri devrede",

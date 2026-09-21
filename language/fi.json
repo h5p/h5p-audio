@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Sovita kehykseen"
+      "label": "Sovita kehykseen",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Salli säätimet",

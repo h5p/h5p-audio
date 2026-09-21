@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "სრულ ჰორიზონტალზე განთავსება"
+      "label": "სრულ ჰორიზონტალზე განთავსება",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "მართვაზე დაშვება",

@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Anpassa storlek"
+      "label": "Anpassa storlek",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Aktivera kontroller",

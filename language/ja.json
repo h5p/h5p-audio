@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "ラッパーに合わせる"
+      "label": "ラッパーに合わせる",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "コントロールを有効にします",

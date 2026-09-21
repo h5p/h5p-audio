@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "به اندازه کادر پوشش"
+      "label": "به اندازه کادر پوشش",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "فعال‌سازی کنترل‌ها",

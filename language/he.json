@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "מתאימה לעטיפה"
+      "label": "מתאימה לעטיפה",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "הפעלת פקדים",

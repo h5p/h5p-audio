@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Ajustar"
+      "label": "Ajustar",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Ativar controlos",

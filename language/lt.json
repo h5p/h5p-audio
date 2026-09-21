@@ -19,7 +19,8 @@
       "description": "Pasirinkite grotuvo išdėstymą."
     },
     {
-      "label": "Išdėstyti per visą plotį"
+      "label": "Išdėstyti per visą plotį",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Įjungti valdiklius",

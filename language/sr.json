@@ -19,7 +19,8 @@
       ]
     },
     {
-      "label": "Одговара омоту"
+      "label": "Одговара омоту",
+      "description": "Adjust audioplayer size to use available space"
     },
     {
       "label": "Омогући контроле",
