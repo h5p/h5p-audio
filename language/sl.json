@@ -14,7 +14,7 @@
           "label": "Celoten"
         },
         {
-          "label": "Prosojno"
+          "label": "Prosojen"
         }
       ]
     },
@@ -22,7 +22,7 @@
       "label": "Prilagodi širini okna"
     },
     {
-      "label": "Onemogoči kontrolnike v predvajalniku.",
+      "label": "Omogoči kontrolnike",
       "description": "Kontrolniki na primer uporabniku dovoljujejo začasno prekinitev predvajanja."
     },
     {
