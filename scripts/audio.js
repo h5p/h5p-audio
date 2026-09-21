@@ -268,7 +268,7 @@ H5P.Audio.prototype.attach = function ($wrapper) {
         self.play();
       }
     }, {
-      root: document.documentElement,
+      root: H5P.isFramed ? document.documentElement : null,
       threshold: [0, 1] // Get events when it is shown and hidden
     }).observe($wrapper.get(0));
   }
