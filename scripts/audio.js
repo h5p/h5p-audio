@@ -214,7 +214,9 @@ H5P.Audio.prototype.attach = function ($wrapper) {
     audio.classList.add('h5p-audio--fit-to-wrapper');
     if (!this.isRoot()) {
       // Only set height if this isn't a root
-      audio.style.height = '100%';
+      audio.style.height = (!!window.chrome && this.params.playerMode === 'full') ?
+        '54px' : // Chromium based browsers like Chrome, Edge or Opera need explicit default height
+        '100%';
     }
   }
 
