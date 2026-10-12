@@ -5,7 +5,7 @@
     },
     {
       "label": "Erreprodukzio modua",
-      "description": "Hautatu erreproduzigailuaren diseinua.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalista"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Markora egokitu"
+      "label": "Markora egokitu",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Gaitu kontrolak",
-      "description": "Kontrolek aukera ematen diote erabiltzaileari, adibidez, audioa gelditzeko"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Gaitu erreprodukzio automatikoa",
-      "description": "Erreprodukzio automatikoarekin audioa unea hasiko da. Kontuan izan nabigatzaile guztiek ez dutela aukera hau onartzen."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Erreproduzitu audioa (irakugailuetarako)",

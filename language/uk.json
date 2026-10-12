@@ -5,7 +5,7 @@
     },
     {
       "label": "Режим плеєру",
-      "description": "Виберіть макет плеєру.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Мінімалістичний"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Розташувати по всій горизонталі"
+      "label": "Розташувати по всій горизонталі",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Увімкнути елементи керування",
-      "description": "Елементи керування дозволяють користувачеві, наприклад, призупиняти аудіо"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Дозволити автоматичне відтворення",
-      "description": "З автовідтворенням аудіо починає відтворюватися негайно. Зауважте, що це підтримується не всіма браузерами."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Відтворити аудіо (асистуючі технології)",

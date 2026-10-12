@@ -5,7 +5,7 @@
     },
     {
       "label": "Mod player",
-      "description": "Selectați aspectul playerului.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalist"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Ajustare la container"
+      "label": "Ajustare la container",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Activează controalele",
-      "description": "Controalele permit utilizatorului, de exemplu, să pună pauză fișierului audio."
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Activează redarea automată",
-      "description": "Cu redarea automată, fișierul audio pornește imediat. Rețineți că această funcționalitate nu este acceptată de toate browserele."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Redă audio (Cititor de ecran)",

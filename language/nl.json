@@ -5,7 +5,7 @@
     },
     {
       "label": "Spelermodus",
-      "description": "Selecteer de spelermodus.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalistisch"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Past in de beschikbare plaats"
+      "label": "Past in de beschikbare plaats",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Activeer audiobediening",
-      "description": "De audiobediening stelt je in staat om bijvoorbeeld de audio te pauzeren"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Activeer automatisch afspelen",
-      "description": "Met automatisch afspelen begint de audio direct met afspelen. Let op! Deze functie wordt niet door alle browsers ondersteund."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Afspelen audio (Schermlezer)",

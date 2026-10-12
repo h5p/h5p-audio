@@ -5,7 +5,7 @@
     },
     {
       "label": "Chế độ của trình phát",
-      "description": "Chọn giao diện của trình phát.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Tối giản"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Fit to wrapper",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Bật nút điều khiển",
-      "description": "Các nút điều khiển cho phép người dùng ngừng phát âm thanh chẳng hạn."
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Bật tự động phát",
-      "description": "Khi bật tự động phát, âm thanh sẽ được phát ngay lập tức. Nếu tắt tự động phát thì người dùng cần nhấn nút phát để âm thanh bắt đầu phát."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Phát âm thanh (Readspeaker)",

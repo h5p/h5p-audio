@@ -5,7 +5,7 @@
     },
     {
       "label": "Avspelar",
-      "description": "Vel utsjånad på avspelar.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalistisk"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Tilpass storleik"
+      "label": "Tilpass storleik",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Slå på kontrollerar",
-      "description": "Lar brukaren mellom anna setje lydavspelinga på pause"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Slå på automatisk avspeling",
-      "description": "Lyden blir spelt av med éin gong. Obs: Ikkje alle nettlesarane støttar denne funksjonen."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Spel av (for skjermlesar)",

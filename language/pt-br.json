@@ -5,7 +5,7 @@
     },
     {
       "label": "Modo de reprodução",
-      "description": "Selecione o layout do reprodutor.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalista"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Preencher"
+      "label": "Preencher",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Ativar controles",
-      "description": "Os controles permitem ao usuário, por exemplo, pausar o áudio"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Ativar reprodução automática",
-      "description": "O áudio é reproduzido automaticamente. Se a reprodução automática estiver desativada, o usuário deve pressionar o botão de reprodução para iniciar o áudio."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Reproduzir o áudio (Leitor de tela)",

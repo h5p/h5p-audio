@@ -5,7 +5,7 @@
     },
     {
       "label": "Modo de reprodución",
-      "description": "Selecciona o deseño do reprodutor.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalista"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Axustar ao marco"
+      "label": "Axustar ao marco",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Permitir controles",
-      "description": "Os controles permiten que o usuario pause o audio, entre outras cousas"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Permitir reprodución automática",
-      "description": "Coa reprodución automática, o audio reprodúcese automaticamente. Ollo, isto non é compatible con todos os navegadores."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Reproducir audio (Texto falado)",

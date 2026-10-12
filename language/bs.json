@@ -5,7 +5,7 @@
     },
     {
       "label": "Izgled playera",
-      "description": "Odaberi izgled playera.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalno"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Fit to wrapper"
+      "label": "Fit to wrapper",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Omogući kontrolu",
-      "description": "Kontrole omogućavaju korisniku da pauzira audio."
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Omogući autoplay",
-      "description": "Sa autoplay audio počinje automatski. Ako je autoplay onemogućen korisnik pritiskom na play pusta audio."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Play audio (Readspeaker)",

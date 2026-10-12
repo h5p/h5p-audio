@@ -12,23 +12,18 @@
     "importance": "low",
     "label": "Player mode",
     "details": "Select the layout of the player.",
-    "state": "update",
     "options": [
       {
         "value": "minimalistic",
-        "label": "Minimalistic: Shows a simplified player with the essential playback controls.",
-        "state": "update"
-
+        "label": "Minimalistic: Shows a simplified player with the essential playback controls."
       },
       {
         "value": "full",
-        "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls.",
-        "state": "update"
+        "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
       },
       {
         "value": "transparent",
-        "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound.",
-        "state": "update"
+        "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
       }
     ],
     "default": "minimalistic"
@@ -40,7 +35,6 @@
     "label": "Fit to wrapper",
     "default": false,
     "details": "Makes the audio player fill the available width of its container.",
-    "state": "update",
     "widget": "showWhen",
     "showWhen": {
       "rules": [
@@ -62,7 +56,6 @@
     "label": "Enable controls",
     "default": true,
     "details": "Controls allow the user to for instance pause the audio",
-    "state": "update",
     "widget": "showWhen",
     "showWhen": {
       "rules": [
@@ -78,8 +71,7 @@
     "type": "boolean",
     "importance": "low",
     "label": "Enable autoplay",
-    "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers.",
-    "state": "update"
+    "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
   },
   {
     "name": "playAudio",

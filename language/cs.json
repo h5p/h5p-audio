@@ -5,7 +5,7 @@
     },
     {
       "label": "Režim přehrávače",
-      "description": "Vyberte rozložení přehrávače.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalistický"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Přizpůsobit obalu"
+      "label": "Přizpůsobit obalu",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Povolit ovládací prvky",
-      "description": "Ovládací prvky umožňují uživateli například pozastavit zvuk"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Povolit automatické přehrávání",
-      "description": "Při automatickém přehrávání se zvuk začne okamžitě přehrávat. Pamatujte, že to není podporováno všemi prohlížeči."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Přehrát zvuk (Čtecí zařízení)",

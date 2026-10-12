@@ -5,7 +5,7 @@
     },
     {
       "label": "Predvajalnik",
-      "description": "Nastavitev videza predvajalnika.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalističen"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Prilagodi širini okna"
+      "label": "Prilagodi širini okna",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Onemogoči kontrolnike v predvajalniku.",
-      "description": "Kontrolniki na primer uporabniku dovoljujejo začasno prekinitev predvajanja."
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Omogoči samodejno predvajanje",
-      "description": "Nastavitev samodejnega predvajanja. Neizbežno v primeru prosojnosti predvajalnika."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Predvajaj zvok",

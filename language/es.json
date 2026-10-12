@@ -5,7 +5,7 @@
     },
     {
       "label": "Modo de reproducción",
-      "description": "Seleccione el diseño del reproductor.",
+      "details": "Select the layout of the player.",
       "options": [
         {
           "label": "Minimalista"
@@ -19,15 +19,16 @@
       ]
     },
     {
-      "label": "Ajustar al marco"
+      "label": "Ajustar al marco",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Habilitar controles",
-      "description": "Los controles permiten al usuario, por ejemplo, pausar el audio"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Habilitar reproducción automática",
-      "description": "Con la reproducción automática el audio empieza a reproducirse inmediatamente. Ten en cuenta que esto no está permitido en todos los navegadores."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Reproducir audio (Lector de pantalla)",
