@@ -11,19 +11,24 @@
     "type": "select",
     "importance": "low",
     "label": "Player mode",
-    "description": "Select the layout of the player.",
+    "details": "Select the layout of the player.",
+    "state": "update",
     "options": [
       {
         "value": "minimalistic",
-        "label": "Minimalistic"
+        "label": "Minimalistic: Shows a simplified player with the essential playback controls.",
+        "state": "update"
+
       },
       {
         "value": "full",
-        "label": "Full"
+        "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls.",
+        "state": "update"
       },
       {
         "value": "transparent",
-        "label": "Transparent"
+        "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound.",
+        "state": "update"
       }
     ],
     "default": "minimalistic"
@@ -34,7 +39,8 @@
     "importance": "low",
     "label": "Fit to wrapper",
     "default": false,
-    "descriptions": "Adjust audioplayer size to use available space",
+    "details": "Makes the audio player fill the available width of its container.",
+    "state": "update",
     "widget": "showWhen",
     "showWhen": {
       "rules": [
@@ -55,7 +61,8 @@
     "importance": "low",
     "label": "Enable controls",
     "default": true,
-    "description": "Controls allow the user to for instance pause the audio",
+    "details": "Controls allow the user to for instance pause the audio",
+    "state": "update",
     "widget": "showWhen",
     "showWhen": {
       "rules": [
@@ -71,7 +78,8 @@
     "type": "boolean",
     "importance": "low",
     "label": "Enable autoplay",
-    "description": "With autoplay the audio starts to play immediately. Do note that this is not supported by all browsers"
+    "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers.",
+    "state": "update"
   },
   {
     "name": "playAudio",
