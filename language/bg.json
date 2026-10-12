@@ -4,30 +4,31 @@
       "label": "Изходни файлове"
     },
     {
-      "label": "Режим на плейъра",
-      "description": "Изберете оформлението на плейъра.",
+      "label": "Player mode",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Минималистичен"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Пълен"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Прозрачен"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "Напаснат към рамката"
+      "label": "Fit to wrapper",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
-      "label": "Активиране на контролите",
-      "description": "Контролите позволяват на потребителя например да постави на пауза на звука"
+      "label": "Enable controls",
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
-      "label": "Активиране на автоматичното възпроизвеждане",
-      "description": "С автоматичното пускане аудиото започва да се възпроизвежда веднага. Ако функцията за автоматично пускане е забранена, потребителят натиска бутон за възпроизвеждане, за да стартира аудиото."
+      "label": "Enable autoplay",
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Възпроизвеждане на звук (автоматично прочитане на текста)",
