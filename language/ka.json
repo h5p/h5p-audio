@@ -8,13 +8,13 @@
       "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "მინიმალისტური"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "სრული"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "გამჭვირვალე"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
