@@ -5,29 +5,30 @@
     },
     {
       "label": "Atskaņotāja režīms",
-      "description": "Izvēlieties atskaņotāja izkārtojumu.",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Minimālistisks"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Pilns"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Caurspīdīgs"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "Ietilpināt visā platumā"
+      "label": "Ietilpināt visā platumā",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Atļaut vadīklas",
-      "description": "Vadīklas atļauj lietotājam, piemēram, pauzēt audio"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Atļaut automātisku atskaņošanu",
-      "description": "Ar automātisku atskaņošanu, audio tiek atskaņots uzreiz. Ņemiet vērā, ka ne visas pārlūkprogrammas to atbalsta."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Atskaņot audio (asistīvās tehnoloģijas)",

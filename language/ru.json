@@ -5,29 +5,30 @@
     },
     {
       "label": "Режим плеера",
-      "description": "Выберите макет плеера.",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Минималистичная эмблема"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Полная звуковая дорожка"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Прозрачный"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "Расположить по всей горизонтали"
+      "label": "Расположить по всей горизонтали",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Разрешить контроль",
-      "description": "Контроль позволит пользователю, например, поставить аудио на паузу"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Разрешить автоматическое воспроизведение",
-      "description": "С автоматическим воспроизведением дорожка начнёт воспроизводиться сразу. Если автовоспроизведение запрещено, пользователю необходимо нажать кнопку воспроизведения самостоятельно."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Воспроизвести аудио (ассистирующие технологии)",
