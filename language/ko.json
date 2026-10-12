@@ -4,30 +4,31 @@
       "label": "소스 파일"
     },
     {
-      "label": "플레이어 모드",
-      "description": "재생기 유형 선택",
+      "label": "Player mode",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "간단 모드"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-           "label": "전체 모드"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "투명 모드"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "크기 맞추기"
+      "label": "Fit to wrapper",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
-      "label": "콘트롤 활성화",
-      "description": "컨트롤을 통해 사용자가 오디오를 일시 중지 등을 할 수 있음"
+      "label": "Enable controls",
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
-      "label": "자동 재생 활성화",
-      "description": "자동 재생으로 오디오가 즉시 재생되기 시작한다. 자동 재생이 비활성화된 경우 사용자는 재생 버튼을 눌러 오디오를 시작합니다."
+      "label": "Enable autoplay",
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "오디오를 재생 (자동 읽어주기 기능)",

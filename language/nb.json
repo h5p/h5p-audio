@@ -4,30 +4,31 @@
       "label": "Lydfiler"
     },
     {
-      "label": "Avspiller modus",
-      "description": "Velg avspiller modus.",
+      "label": "Player mode",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Minimal"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Full"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Gjennomsiktig"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "Tilpass størrelse"
+      "label": "Fit to wrapper",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
-      "label": "Slå på kontroller",
-      "description": "Kontrollene lar bl.a. brukeren sette lydavspillingen på pause"
+      "label": "Enable controls",
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
-      "label": "Slå på automatisk avspilling",
-      "description": "Med automatisk avspilling begynner lyden å spille av seg selv med en gang. Hvis automatisk avspilling er avslått må brukeren trykke for å starte avspillingen."
+      "label": "Enable autoplay",
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Spill lyd (Readspeaker)",
