@@ -5,29 +5,30 @@
     },
     {
       "label": "Μορφή προγράμματος αναπαραγωγής",
-      "description": "Επιλέξτε την εμφάνιση του προγράμματος αναπαραγωγής.",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Απλή"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Πλήρης"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Διάφανη"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "Προσαρμογή στην περιοχή ενσωμάτωσης"
+      "label": "Προσαρμογή στην περιοχή ενσωμάτωσης",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Ενεργοποίηση κουμπιών ελέγχου προγράμματος αναπαραγωγής",
-      "description": "Τα κουμπιά ελέγχου του προγράμματος αναπαραγωγής επιτρέπουν στον χρήστη π.χ. να κάνει παύση (pause) του ήχου"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Ενεργοποίηση αυτόματης αναπαραγωγής",
-      "description": "Με την αυτόματη αναπαραγωγή ο ήχος ξεκινά να παίζει αυτόματα. Εάν η αυτόματη αναπαραγωγή είναι απενεργοποιημένη, ο χρήστης χρειάζεται να πατήσει το κουμπί αναπαραγωγής (play) του ήχου για να ξεκινήσει ο ήχος να παίζει."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Αναπαραγωγή ήχου (Ακουστική υποβοήθηση)",

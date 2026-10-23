@@ -5,29 +5,30 @@
     },
     {
       "label": "ម៉ូតនៃកម្មវិធីចាក់សម្លេង",
-      "description": "ជ្រើសរើសទម្រង់នៃកម្មវិធីចាក់សម្លេង។",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "តិចតួចបំផុត"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "ពេញ"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "ថ្លា"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "សមទៅនឹងស៊ុម"
+      "label": "សមទៅនឹងស៊ុម",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "បើកប៊ូតុងបញ្ជា",
-      "description": "ប៊ូតុងបញ្ជាអនុញ្ញាតឲ្យអ្នកប្រើអាចផ្អាកសម្លេងបាន"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "អនុញ្ញាតឲ្យលេងដោយស្វ័យប្រវត្តិ",
-      "description": "ជាមួយមុខងារនេះ សម្លេងនឹងចាប់ផ្តើមលេងដោយខ្លួនឯង។ ប្រសិនបើបិទមុខងារនេះ អ្នកប្រើនឹងត្រូវចុចប៊ូតុងលេង ដើម្បីចាប់ផ្តើមសម្លេង។"
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Play audio (Readspeaker)",

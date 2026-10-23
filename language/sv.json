@@ -5,29 +5,30 @@
     },
     {
       "label": "Inställningar för uppspelning",
-      "description": "Välj layout för spelaren",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Minimalistisk"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Full"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Transparent"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "Anpassa storlek"
+      "label": "Anpassa storlek",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Aktivera kontroller",
-      "description": "Kontroller låter användaren exempelvis pausa uppspelning"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Aktivera automatisk uppspelning",
-      "description": "Med automatisk uppspelning startar uppspelningen omedelbart. Notera att detta inte stöds av alla webbläsare."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Spela ljud (Skärmläsare)",

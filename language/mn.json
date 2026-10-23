@@ -5,29 +5,30 @@
     },
     {
       "label": "Тоглуулах горим",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Минимал"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Бүтэн"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Тунгалаг"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
-      ],
-      "description": "Тоглуулагчийн байршлыг сонгоно уу."
+      ]
     },
     {
-      "label": "Хүрээнд тохируулах"
+      "label": "Хүрээнд тохируулах",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Удирдах товчлуурыг идэвхжүүлэх",
-      "description": "Хэрэглэгч аудиог зогсоох эсэхийг шийднэ"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Автомат тоглуулагчийг идэвхжүүлэх",
-      "description": "Автомат тоглуулагч нь аудиог шууд эхлүүлдэг. Энэ нь бүх браузераар дэмжигдэхгүй гэдгийг анхаарна уу."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Аудиог тоглуулах (Уншигч",

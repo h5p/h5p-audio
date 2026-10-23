@@ -5,29 +5,30 @@
     },
     {
       "label": "Grotuvo režimas",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Minimalistinis"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Pilnas"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Permatomas"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
-      ],
-      "description": "Pasirinkite grotuvo išdėstymą."
+      ]
     },
     {
-      "label": "Išdėstyti per visą plotį"
+      "label": "Išdėstyti per visą plotį",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Įjungti valdiklius",
-      "description": "Valdikliai leidžia naudotojui, pavyzdžiui, pristabdyti garsą"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Įjungti automatinį paleidimą",
-      "description": "Naudojant automatinį paleidimą, garsas pradedamas leisti iš karto. Atminkite, kad tai palaiko ne visos naršyklės."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Leisti garsą (garsiakalbis)",
