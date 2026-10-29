@@ -5,29 +5,30 @@
     },
     {
       "label": "Avspiller",
-      "description": "Velg utseende på avspiller.",
+      "details": "Select the layout of the player.",
       "options": [
         {
-          "label": "Minimalistisk"
+          "label": "Minimalistic: Shows a simplified player with the essential playback controls."
         },
         {
-          "label": "Komplett"
+          "label": "Full: Shows the complete audio player, including playback controls, progress and volume controls."
         },
         {
-          "label": "Gjennomsiktig"
+          "label": "Transparent: The controls are hidden, but a hover effect shows the playback area can be clicked to play the sound."
         }
       ]
     },
     {
-      "label": "Tilpass størrelse"
+      "label": "Tilpass størrelse",
+      "details": "Makes the audio player fill the available width of its container."
     },
     {
       "label": "Slå på kontrollere",
-      "description": "Lar brukeren for eksempel sette lydavspillinga på pause"
+      "details": "Controls allow the user to for instance pause the audio"
     },
     {
       "label": "Slå på automatisk avspilling",
-      "description": "Lyden spilles av med én gang. Obs: Denne funksjonen støttes ikke av alle nettlesere."
+      "details": "With autoplay, the audio starts playing automatically. Autoplay may not be supported by all browsers."
     },
     {
       "label": "Spill av (for skjermleser)",
