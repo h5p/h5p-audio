@@ -74,6 +74,14 @@
     "description": "With autoplay the audio starts to play immediately. Do note that this is not supported by all browsers"
   },
   {
+    "name": "shortDescription",
+    "type": "text",
+    "importance": "low",
+    "label": "Short description",
+    "description": "A short audio description that will be used as the aria-label for the audio and announced by assistive technologies",
+    "optional": true
+  },
+  {
     "name": "playAudio",
     "type": "text",
     "importance": "low",
